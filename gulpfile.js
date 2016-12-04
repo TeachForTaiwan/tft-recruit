@@ -1,15 +1,17 @@
-var gulp = require('gulp');
-var compass = require('gulp-compass') ;
-var uglify = require('gulp-uglify');
-var plumber = require('gulp-plumber');
-var minifyCSS = require('gulp-minify-css');
+const gulp = require('gulp');
+const compass = require('gulp-compass') ;
+const uglify = require('gulp-uglify');
+const plumber = require('gulp-plumber');
+const minifyCSS = require('gulp-minify-css');
+const babel = require('gulp-babel');
 
-var imagemin = require('gulp-imagemin');
-var concat = require('gulp-concat');
-var rename = require('gulp-rename');
+const imagemin = require('gulp-imagemin');
+const concat = require('gulp-concat');
+const rename = require('gulp-rename');
 
-var chalk = require('chalk');
+const chalk = require('chalk');
 
+ 
 /*
 	`gulp default`
 	sasss , js , watch
@@ -30,7 +32,13 @@ gulp.task('sass',function(){
 gulp.task('js', function(){
 	return gulp.src(['./js/**/*.js'])
 		.pipe(plumber())	
-		.pipe(uglify())
+		.pipe(babel({
+      presets: ['es2015']
+    }))
+    /* -- TODO --
+     MINIFY js ,if readt to online!!
+		*/
+		// .pipe(uglify())
 		.pipe(rename(function(path){
 			logPath(path , "yellow");
     }))
