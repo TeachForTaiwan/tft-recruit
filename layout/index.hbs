@@ -3,16 +3,35 @@
 <html style = "height:100%;width:100%;margin:0px;">
 <head>
 	{{> head}}
-	<title> {{title}}</title>
-	<link rel="stylesheet" href = "./dist/css/index.css">
+	<title>{{title}}</title>
 
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<!-- bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- swiper -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css" integrity="sha256-qmCTrpLvkz/GexFbP14i9p8vymHbYOEQEZflvEKaXHU=" crossorigin="anonymous" />
+	<link rel="stylesheet" href="./dist/css/main.css">
+	<link rel="stylesheet" href = "./dist/css/layout/index.css">
 </head>
 <body>
 	{{> header}}
-	<h1>{{first_word}}</h1>
+	<!-- Swiper -->
+    <div class="swiper-container swiper-index">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://dummyimage.com/1920x1080/000/fff" alt=""></div>
+            <div class="swiper-slide"><img src="https://dummyimage.com/1920x1080/000/fff" alt=""></div>
+            <div class="swiper-slide"><img src="https://dummyimage.com/1920x1080/000/fff" alt=""></div>
+            <div class="swiper-slide"><img src="https://dummyimage.com/1920x1080/000/fff" alt=""></div>
+            <div class="swiper-slide"><img src="https://dummyimage.com/1920x1080/000/fff" alt=""></div>
+            <div class="swiper-slide"><img src="https://dummyimage.com/1920x1080/000/fff" alt=""></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination--index"></div>
+    </div>
 
 	{{> footer}}
 </body>
-
-<script type="text/javascript" src = "./dist/js/index.js"></script>
+<!-- swiper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.min.js" integrity="sha256-mPcYboxAQddS1GRB/EMb+sp0NBVB5oTBwRMv/y5hoOg=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./dist/js/index.js"></script>
 </html>

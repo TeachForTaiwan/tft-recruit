@@ -1,0 +1,74 @@
+.l-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 110px;
+    background: $color-default--bg;
+    z-index: 9;
+    top: 0;
+    padding: 0.5em 1em;
+    .m-social {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        justify-content: flex-start;
+        a {
+            img {
+                border-radius: 3px;
+            }
+        }
+    }
+    .m-logo {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            margin-bottom: 0.2rem;
+        }
+    }
+    .m-apply {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .countdown {
+            color: $color-countdown--text;
+        }
+        .btn-apply {
+            background: $color-btn-apply--bg;
+            color: $color-btn-apply--text;
+            border-radius: 2em;
+            font-weight: bold;
+            padding: 0.5em 1.5em;
+        }
+    }
+}
+
+.m-menu {
+    background: $color-menu--bg;
+    color: $color-menu--text;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    top: $height-header;
+    z-index: 9;
+    white-space: nowrap;
+    .list {
+        &:hover {
+            background: lighten($color-menu--bg, 2%);
+        }
+    }
+    .text {
+        line-height: $height-menu;
+        padding: 0 3em;
+        font-size: 1rem;
+    }
+}
