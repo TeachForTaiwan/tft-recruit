@@ -1,1 +1,0 @@
-body:before{white-space:pre;font-family:monospace;content:"Error: Undefined variable: \"$height-header\".\A         on line 2 of /Users/tse/Desktop/CODE/tft-recruit/sass/layout/index.scss\A \A 1: .swiper-index {\A 2:   margin-top: calc(#{$height-header} + #{$height-menu});\A 3: }"}
