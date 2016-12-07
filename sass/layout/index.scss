@@ -1,5 +1,3 @@
-@import "variable";
-@import "mixin";
 .swiper-index {
-    margin-top: calc(#{$height-header} + #{$height-menu});
+  margin-top: calc(#{$height-header} + #{$height-menu});
 }
