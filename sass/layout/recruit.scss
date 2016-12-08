@@ -1,3 +1,25 @@
-a{
-	
+@import 'main';
+
+
+.main-recruit{
+  display: flex;
+	justify-content: center;
+
+	> .btn{
+		@extend %btn-reset;
+    margin: 45px 4em;
+    font-weight: bold;
+		letter-spacing: $letter-spacing-s;
+    &:hover{
+    	background-color: $color-waterBlue ;
+    	color: $color-white;
+    	font-weight: bold;
+    }
+	}
+
+	> .btn-recruit-disable{
+		background-color: transparent ;
+		color: $color-gray ;
+		font-weight: normal;
+	}
 }

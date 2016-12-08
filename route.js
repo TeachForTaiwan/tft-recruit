@@ -5,7 +5,7 @@ var route = [
     {
       data: {
         path: './',
-        title: 'TFT - 為臺灣而教',
+        title: '',
         first_word: 'It is a good template'
       },
       partials: './partial.js',

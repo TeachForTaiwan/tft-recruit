@@ -2,6 +2,12 @@
  * colors
  */
 
+$color-waterBlue: #47ADC7;
+$color-pinkRed: #EE1F24;
+$color-yellow: #FDD000;
+$color-white: #FFF;
+$color-gray: #7D7B7D;
+
 $color-default--bg: #FAFAFA;
 $color-menu--bg: #47ADC7;
 $color-menu--text: #FFF;
@@ -19,6 +25,10 @@ $font-default: "Georgia",
 "Droid Sans Fallback",
 "Microsoft YaHei",
 sans-serif;
+
+
+$letter-spacing-s: 2px;
+$letter-spacing-m: 4px;
 
 /**
  * W & H

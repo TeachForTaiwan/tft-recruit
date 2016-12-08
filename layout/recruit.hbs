@@ -2,12 +2,17 @@
 <html lang="zh-TW">
 <head>
 	{{> head}}
-	<title> {{title}}</title>
+	<title> TFT 教師招募網站 - {{title}}</title>
 	<link rel="stylesheet" href = "./dist/css/layout/recruit.css">
 </head>
 <body>
 	{{> header}}	
-	<main class="container">
+	<main class="main-recruit container-reset">
+		<button class="btn" id = "info">教師招募活動說明</button>
+		<button class="btn btn-recruit-disable" id = "calendar">教師招募活動總表</button>
+	</main>
+
+	<section class="container" id = "recruit-info">
 		<!-- recruit-info -->
 		<div class="row">
 			<figure class="m-info-type col-sm-6 col-md-3" data-lightbox="type-1">
@@ -95,6 +100,9 @@
 			</article>
 		</div>
 		<!-- /recruit-info -->
+	</section>
+
+	<section class="container is-hidden" id = "recruit-calendar">
 		<!-- recruit-calendar -->
 		<div class="m-calendar">
 			<ul class="month-sel">
@@ -140,7 +148,10 @@
 			<section class="month-mar"></section>
 		</div>
 		<!-- /recruit-calendar -->
-	</main>
+	</section>
 	{{> footer}}
 </body>
+<!-- Jquery -->
+<script type="text/javascript" src="./src/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="./dist/js/recruit.js"></script>
 </html>

@@ -28,3 +28,9 @@ a {
 em {
     font-style: normal;
 }
+
+.btn{
+    &:focus{
+        outline: none !important;
+    }
+}

@@ -42,11 +42,10 @@
             color: $color-countdown--text;
         }
         .btn-apply {
+            @extend %btn-reset;
             background: $color-btn-apply--bg;
             color: $color-btn-apply--text;
-            border-radius: 2em;
             font-weight: bold;
-            padding: 0.5em 1.5em;
         }
     }
 }

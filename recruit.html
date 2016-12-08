@@ -1,9 +1,9 @@
 <html lang="zh-TW"><head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body>/&gt;<meta name="author" content="Teach For Taiwan"><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><!-- bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><!-- swiper --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css" integrity="sha256-qmCTrpLvkz/GexFbP14i9p8vymHbYOEQEZflvEKaXHU=" crossorigin="anonymous"><!-- component font ie loading mixin variable base --><link rel="stylesheet" href="./dist/css/main.css">	<title> 招募活動</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="author" content="Teach For Taiwan"><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><!-- bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><!-- swiper --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css" integrity="sha256-qmCTrpLvkz/GexFbP14i9p8vymHbYOEQEZflvEKaXHU=" crossorigin="anonymous"><script type="text/javascript" src="./dist/js/global.js"></script>	<title> TFT 教師招募網站 - 招募活動</title>
 	<link rel="stylesheet" href="./dist/css/layout/recruit.css">
-
-
-	<header class="l-header"><div class="m-social"><a href="javascript:;"><img src="https://dummyimage.com/30x30/000/fff" alt=""></a><a href="javascript:;"><img src="https://dummyimage.com/30x30/000/fff" alt=""></a><a href="javascript:;"><img src="https://dummyimage.com/30x30/000/fff" alt=""></a></div><div class="m-logo"><a href="javascript:;"><img src="https://dummyimage.com/300x35/000/fff" alt=""></a><a href="javascript:;"><img src="https://dummyimage.com/210x50/000/fff" alt=""></a></div><div class="m-apply"><div class="countdown">距離報名截止時間還有<span id="countdownDIV"><span class="days"></span><span class="smalltext">天</span><span class="hours"></span><span class="smalltext">小時</span><span class="minutes"></span><span class="smalltext">分</span><span class="seconds"></span><span class="smalltext">秒</span></span></div><a href="javascript:;"><button class="btn btn-apply">立即申請</button></a></div></header><nav>
+</head>
+<body>
+	<header class="l-header"><div class="m-social"><a href="javascript:;"><img src="https://dummyimage.com/30x30/000/fff" alt=""></a><a href="javascript:;"><img src="https://dummyimage.com/30x30/000/fff" alt=""></a><a href="javascript:;"><img src="https://dummyimage.com/30x30/000/fff" alt=""></a></div><div class="m-logo"><a href="javascript:;"><img src="https://dummyimage.com/300x35/000/fff" alt=""></a><a href="index.html"><img src="https://dummyimage.com/210x50/000/fff" alt=""></a></div><div class="m-apply"><div class="countdown">距離報名截止時間還有<span id="countdownDIV"><span class="days"></span><span class="smalltext">天</span><span class="hours"></span><span class="smalltext">小時</span><span class="minutes"></span><span class="smalltext">分</span><span class="seconds"></span><span class="smalltext">秒</span></span></div><a href="javascript:;"><button class="btn btn-apply">立即申請</button></a></div></header><nav>
 <ul class="m-nav">
 <li class="list"><a href="solution.html"><em class="text">問題與解方</em></a></li>
 <li class="list"><a href="achievment.html"><em class="text">改變與成果</em></a></li>
@@ -12,7 +12,12 @@
 <li class="list"><a href="recruit.html"><em class="text">招募活動</em></a></li>
 <li class="list"><a href="faq.html"><em class="text">FAQ</em></a></li>
 </ul>
-</nav>	<main class="container">
+</nav>	<main class="main-recruit container-reset">
+		<button class="btn" id="info">教師招募活動說明</button>
+		<button class="btn btn-recruit-disable" id="calendar">教師招募活動總表</button>
+	</main>
+
+	<section class="container" id="recruit-info">
 		<!-- recruit-info -->
 		<div class="row">
 			<figure class="m-info-type col-sm-6 col-md-3" data-lightbox="type-1">
@@ -100,6 +105,9 @@
 			</article>
 		</div>
 		<!-- /recruit-info -->
+	</section>
+
+	<section class="container is-hidden" id="recruit-calendar">
 		<!-- recruit-calendar -->
 		<div class="m-calendar">
 			<ul class="month-sel">
@@ -145,6 +153,9 @@
 			<section class="month-mar"></section>
 		</div>
 		<!-- /recruit-calendar -->
-	</main>
+	</section>
 	<h1>footer</h1>
-</body></html>
+
+<script type="text/javascript" src="./src/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="./dist/js/recruit.js"></script>
+</body><!-- Jquery --></html>
