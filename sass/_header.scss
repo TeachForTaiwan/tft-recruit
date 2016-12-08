@@ -6,9 +6,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: fixed;
     width: 100%;
-    height: 110px;
     background: $color-default--bg;
     z-index: 9;
     top: 0;
@@ -21,7 +19,12 @@
         a {
             img {
                 border-radius: 3px;
+                width: 1.8rem;
+                margin: 0 0.2em;
             }
+        }
+        @media (max-width: 479px) {
+            display: none;
         }
     }
     .m-logo {
@@ -40,6 +43,9 @@
         align-items: flex-end;
         .countdown {
             color: $color-countdown--text;
+            @media (max-width: 767px) {
+                display: none;
+            }
         }
         .btn-apply {
             @extend %btn-reset;
@@ -48,30 +54,143 @@
             font-weight: bold;
         }
     }
+    @media (max-width: 767px) {
+        display: none;
+    }
 }
 
-.m-nav {
+.menu {
+    position: relative;
     background: $color-menu--bg;
-    color: $color-menu--text;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    width: 100%;
-    top: $height-header;
-    z-index: 9;
-    white-space: nowrap;
-    .list {
-        &:hover {
-            background: lighten($color-menu--bg, 2%);
+    height: $height-menu;
+    .m-nav {
+        color: $color-menu--text;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        top: $height-header;
+        z-index: 9;
+        white-space: nowrap;
+        .list {
+            &:hover {
+                background: lighten($color-menu--bg, 2%);
+            }
+        }
+        .text {
+            line-height: $height-menu;
+            padding: 0 3em;
+            font-size: 1rem;
+        }
+        @media (max-width: 1199px) {
+            .text {
+                padding: 0 2em;
+            }
+        }
+        @media (max-width: 991px) {
+            justify-content: flex-start;
+            .text {
+                padding: 0 1em;
+            }
+        }
+        @media (max-width: 767px) {
+            display: none;
         }
     }
-    .text {
-        line-height: $height-menu;
-        padding: 0 3em;
-        font-size: 1rem;
+    .m-nav--mobile {
+        display: none;
+        width: 100%;
+        color: $color-menu--text;
+        background: $color-menu--bg;
+        transition: 0.5s;
+        z-index: 9;
+        position: absolute;
+        list-style: none;
+        padding: $height-menu 0;
+        top: 0;
+        transform: translateY(-100%);
+        &.is-active {
+            transform: translateY(0);
+            .list:after{
+                opacity:0.2;
+            }
+        }
+        .list {
+            padding: 0.5em;
+            padding-left: 1.2em;
+            position: relative;
+            
+            &:after{
+                content:"";
+                left: 0;
+                height: 2px;
+                width: 100%;
+                opacity: 0;
+                background: $color-menu--text;
+                position: absolute;
+                transition:1s;
+            }
+            &:hover{
+                &:after{
+                    opacity: 0.5;
+                }   
+            }
+        }
+        @media (max-width: 767px) {
+            display: block;
+        }
+    }
+    .menu_button {
+        @media (min-width: 768px) {
+            display: none;
+        }
+        width: 50px;
+        height: 50px;
+        transition: .7s;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: translateX(-50%);
+        z-index: 99;
+        cursor: pointer;
+        .menu_button_container {
+            position: relative;
+            .menu-line {
+                position: absolute;
+                left: 12px;
+                width: 16px;
+                height: 1px;
+                background-color: #FFF;
+                transition: .3s;
+                &:nth-child(1) {
+                    top: 20px;
+                }
+                &:nth-child(2) {
+                    top: 25px;
+                }
+                &:nth-child(3) {
+                    top: 30px;
+                }
+            }
+        }
+        &.is-active {
+            .menu-line {
+                &:nth-child(1) {
+                    transform: translate(0, 5px) rotate(45deg);
+                }
+                &:nth-child(2) {
+                    transform: scale(0);
+                }
+                &:nth-child(3) {
+                    transform: translate(0, -5px) rotate(-45deg);
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        height: $height-menu;
     }
 }

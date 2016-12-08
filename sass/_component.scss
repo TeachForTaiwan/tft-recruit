@@ -1,13 +1,8 @@
 /*
     Module css
 */
-
 .is-hidden{
 	display: none !important;
-}
-
-.container-reset {
-  margin-top: calc(#{$height-header} + #{$height-menu});
 }
 
 %btn-reset{
