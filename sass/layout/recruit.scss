@@ -1,134 +1,167 @@
 @import 'main';
-
-section{
-	@include animation(section-show 0.1s linear);		
+section {
+	margin-bottom: 3em;
+    @include animation(section-show 0.1s linear);
 }
 
-.main-recruit{
-  display: flex;
-	justify-content: center;
-
-	> .btn{
-    margin: 45px 4em;
-    font-weight: bold;
-		letter-spacing: $letter-spacing-s;
-    &:hover{
-    	background-color: $color-waterBlue ;
-    	color: $color-white;
-    	font-weight: bold;
+.main-recruit {
+    display: flex;
+    justify-content: center;
+    > .btn {
+        margin: 45px 4em;
+        font-weight: bold;
+        letter-spacing: $letter-spacing-s;
+        &:hover {
+            background-color: $color-waterBlue;
+            color: $color-white;
+            font-weight: bold;
+        }
+        @media (max-width: 767px) {
+        	margin:45px 0;
+        	font-size: calc(1vw + 10px);
+        }
     }
-	}
-
-	> .btn-recruit-disable{
-		background-color: transparent ;
-		color: $color-gray ;
-		font-weight: normal;
-	}
+    > .btn-recruit-disable {
+        background-color: transparent;
+        color: $color-gray;
+        font-weight: normal;
+    }
 }
 
-
-.m-info-type{
-	text-align: center;
-
-	img{
-		width: 60%;
-		cursor: pointer;
-	}
-
-	> figcaption{
-		color: $color-pinkRed;
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin: 20px 5px 4px 5px;
-    letter-spacing: $letter-spacing-s;
-	}
-
-	p{
-		font-size: 0.9rem;
-		color: $color-waterBlue;
-	}
+.m-info-type {
+    text-align: center;
+    img {
+        width: 60%;
+        cursor: pointer;
+    }
+    > figcaption {
+        color: $color-pinkRed;
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin: 20px 5px 4px 5px;
+        letter-spacing: $letter-spacing-s;
+        @media (max-width: 767px) {
+        	margin: 0.5em 0 0;
+        }
+    }
+    p {
+        font-size: 0.9rem;
+        color: $color-waterBlue;
+    }
 }
-
 
 // Modal css
-.md-overlay{
-	background-color: rgba(71,173,199,0.2);
-	// background-color: transparent;
+.md-overlay {
+    // background-color: rgba(71, 173, 199, 0.2);
+    background: rgba(10,10,10,0.5);
+    // background-color: transparent;
 }
 
-.md-modal{
-	max-width: 1200px;
-	width: 80%;
+.blurFix{
+	filter:blur(1px)!important;
 }
 
-.md-content{
-	background-color: $color-waterBlue;
-	border-radius: $border-radius-normal;
+.md-modal {
+    max-width: 1200px;
+    width: 80%;
+    max-height: 95%;
+    filter: blur(0); //fix text blurring bug
+    @media (max-width: 767px) {
+    	width: 95%;
 
-	h3{
-    font-size: 2em;
+    }
+    &.md-show{
+    	overflow: auto;
+    }
+}
+
+.md-content {
+    background-color: $color-waterBlue;
     border-radius: $border-radius-normal;
-	}
-
-	button{
-    font-size: 1em;
-    padding: .1em 1em;
-	}
-
-	.row{
-    font-size: 1em;
-
-		h2{
-			background-color: $color-white;
-	    color: $color-pinkRed;
-	    padding: .5em;
-	    border-radius: $border-radius-button;
-	    width: 90%;
-	    font-size: 1.3em;
-	    font-weight: bold;
-	    text-align: center;
-
-	    letter-spacing: $letter-spacing-m;
-		}
-
-		.subTitle{
-      top: 1.3em;
-      font-weight: bold;
-		}
-
-		.content-event{
-			color: white;
-	    font-size: .9em;
-			td{
-		    padding: 13px 10px 0px 0px;
-			}
-		}
-
-		.btn-type-1{
-			position: relative;
-			left: 4em;
-		}
-	}
-
-	> .content-container{
-    font-size: .8em;
-    padding: 5px 40px 1.5em;
-	}
-
-	> div{
-		letter-spacing: $letter-spacing-s;
-		padding: 1.1em 40px 5px;
-	}
+    h3 {
+        font-size: 2em;
+        border-radius: $border-radius-normal;
+        white-space: nowrap;
+    }
+    button {
+        font-size: 1em;
+        padding: .1em 1em;
+        @media (max-width: 767px) {
+        	margin: 0;
+    		float: right;
+    		font-size: 0.8em;
+        }
+    }
+    table{
+    	@media (max-width: 767px) {
+    		margin-bottom: 2em;
+    	}
+    }
+    .row {
+        font-size: 1em;
+        h2 {
+            background-color: $color-white;
+            color: $color-pinkRed;
+            padding: .5em;
+            border-radius: $border-radius-button;
+            width: 90%;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: $letter-spacing-m;
+        }
+        .subTitle {
+            top: 1.3em;
+            font-weight: bold;
+            white-space: nowrap;
+            @media (max-width: 767px) {
+            	top:0;
+            	padding: 10px 1em;
+            }
+        }
+        .content-event {
+            color: white;
+            font-size: .9em;
+            td {
+                padding: 13px 10px 0px 0px;
+            }
+        }
+        .btn-type-1 {
+            position: relative;
+            left: 4em;
+            @media (max-width: 767px) {
+            	left: auto;
+    			float: right;
+    			font-size: 0.8em;
+            }
+        }
+    }
+    > .content-container {
+        font-size: .8em;
+        padding: 5px 40px 1.5em;
+        @media (max-width: 767px) {
+        	padding: 10px;
+        }
+    }
+    > div {
+        letter-spacing: $letter-spacing-s;
+        padding: 1.1em 40px 5px;
+        @media (max-width: 767px) {
+        	padding: 1.1em 10px 5px;
+        }
+    }
 }
 
-.type-button{
-  position: absolute;
-  right: 2em;
-  top: 18px;
-  background: transparent;
-  border: 0px;
-
-  .glyphicon {
-    font-size: 2em;
-   }
+.type-button {
+    position: absolute;
+    right: 2em;
+    top: 18px;
+    background: transparent;
+    border: 0px;
+    .glyphicon {
+        font-size: 2em;
+    }
+    @media (max-width: 767px) {
+    	right: 0;
+    }
 }
