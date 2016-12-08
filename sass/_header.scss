@@ -47,12 +47,6 @@
                 display: none;
             }
         }
-        .btn-apply {
-            @extend %btn-reset;
-            background: $color-btn-apply--bg;
-            color: $color-btn-apply--text;
-            font-weight: bold;
-        }
     }
     @media (max-width: 767px) {
         display: none;

@@ -30,6 +30,7 @@ em {
 }
 
 .btn{
+    @extend %btn-reset;
     &:focus{
         outline: none !important;
     }

@@ -1,14 +1,46 @@
 /*
-    Module css
-*/
+ * State
+ */
 .is-hidden{
 	display: none !important;
+}
+
+/*
+ * color
+ */
+.color-yellow{
+	color: $color-yellow;
+	letter-spacing: $letter-spacing-m;
+}
+
+/*
+ * Btn
+ */
+.btn-bg-white{
+	background-color: $color-white !important;
+	color: $color-pinkRed !important;
+	font-weight: bold;
+}
+
+.btn-bg-red{
+	background-color: $color-pinkRed !important;
+	color: $color-white !important;
+	font-weight: bold;
 }
 
 %btn-reset{
 	color: $color-white;
 	background-color: $color-waterBlue;
-	border-radius: 2em;
+	border-radius: $border-radius-button;
 	font-size: 1rem;
   padding: 0.5em 1.5em;
+}
+
+
+/*
+ * Keyframes
+ */
+@include keyframes(section-show) {
+	from{ opacity: 0;}
+	to{ opacity: 1;}
 }

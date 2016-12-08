@@ -1,9 +1,12 @@
 <html lang="zh-TW"><head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="author" content="Teach For Taiwan"><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><!-- bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><!-- swiper --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css" integrity="sha256-qmCTrpLvkz/GexFbP14i9p8vymHbYOEQEZflvEKaXHU=" crossorigin="anonymous"><script type="text/javascript" src="./dist/js/global.js"></script>	<title> TFT 教師招募網站 - 招募活動</title>
+	<!-- Modal Effect -->
+	<link rel="stylesheet" type="text/css" href="src/modalEffect/modalEffect.css">
 	<link rel="stylesheet" href="./dist/css/layout/recruit.css">
+	<script src="src/modalEffect/modernizr.custom.js"></script>
 </head>
 <body>
-	<header class="l-header"><div class="m-social"><a href="javascript:;"><img src="dist/img/icon-fb.svg" alt="Facebook - 為臺灣而教"></a><a href="javascript:;"><img src="dist/img/icon-instagram.svg" alt="Instagram - 為臺灣而教"></a><a href="javascript:;"><img src="dist/img/icon-youtube.svg" alt="Youtube - 為臺灣而教"></a></div><div class="m-logo"><a href="javascript:;"><img src="https://dummyimage.com/300x35/000/fff" alt=""></a><a href="index.html"><img src="https://dummyimage.com/210x50/000/fff" alt=""></a></div><div class="m-apply"><div class="countdown">距離報名截止時間還有<br><span id="countdownDIV"><span class="days"></span><span class="smalltext">天</span><span class="hours"></span><span class="smalltext">小時</span><span class="minutes"></span><span class="smalltext">分</span><span class="seconds"></span><span class="smalltext">秒</span></span></div><a href="javascript:;"><button class="btn btn-apply">立即申請</button></a></div></header><nav class="menu">
+	<header class="l-header"><div class="m-social"><a href="javascript:;"><img src="dist/img/icon-fb.svg" alt="Facebook - 為臺灣而教"></a><a href="javascript:;"><img src="dist/img/icon-instagram.svg" alt="Instagram - 為臺灣而教"></a><a href="javascript:;"><img src="dist/img/icon-youtube.svg" alt="Youtube - 為臺灣而教"></a></div><div class="m-logo"><a href="javascript:;"><img src="https://dummyimage.com/300x35/000/fff" alt=""></a><a href="index.html"><img src="https://dummyimage.com/210x50/000/fff" alt=""></a></div><div class="m-apply"><div class="countdown">距離報名截止時間還有<br><span id="countdownDIV"><span class="days"></span><span class="smalltext">天</span><span class="hours"></span><span class="smalltext">小時</span><span class="minutes"></span><span class="smalltext">分</span><span class="seconds"></span><span class="smalltext">秒</span></span></div><a href="javascript:;"><button class="btn btn-bg-red">立即申請</button></a></div></header><nav class="menu">
 
 <div class="menu_button">
 <div class="menu_button_container">
@@ -43,91 +46,520 @@
 		<!-- recruit-info -->
 		<div class="row">
 			<figure class="m-info-type col-sm-6 col-md-3" data-lightbox="type-1">
-				<img src="dist/img/recruit/recruit-info-1.svg" alt="面對面：校園擺攤計畫">
+				<img class="md-trigger" data-modal="info-type-1" src="dist/img/recruit/recruit-info-1.svg" alt="面對面：校園擺攤計畫">
 				<figcaption>面對面：校園擺攤計畫</figcaption>
 				<p>TFT的校園實體活動不僅能面對面了解TFT，更有機會抽大獎回家。</p>
 			</figure>
 			<figure class="m-info-type col-sm-6 col-md-3" data-lightbox="type-2">
-				<img src="dist/img/recruit/recruit-info-2.svg" alt="">
-				<figcaption>面對面：校園擺攤計畫</figcaption>
-				<p>TFT的校園實體活動不僅能面對面了解TFT，更有機會抽大獎回家。</p>
+				<img class="md-trigger" data-modal="info-type-2" src="dist/img/recruit/recruit-info-2.svg" alt="">
+				<figcaption>之友會</figcaption>
+				<p>各領域對教育充滿熱忱的你，歡迎一起參加實體活動「TFT 之友會」吧！</p>
 			</figure>
 			<figure class="m-info-type col-sm-6 col-md-3" data-lightbox="type-3">
-				<img src="dist/img/recruit/recruit-info-3.svg" alt="">
-				<figcaption>面對面：校園擺攤計畫</figcaption>
-				<p>TFT的校園實體活動不僅能面對面了解TFT，更有機會抽大獎回家。</p>
+				<img class="md-trigger" data-modal="info-type-3" src="dist/img/recruit/recruit-info-3.svg" alt="">
+				<figcaption>對外演講</figcaption>
+				<p>依不同聽眾群需求精心設計多元演講主題，讓你更精準地了解TFT計畫。</p>
 			</figure>
 			<figure class="m-info-type col-sm-6 col-md-3" data-lightbox="type-4">
-				<img src="dist/img/recruit/recruit-info-4.svg" alt="">
-				<figcaption>面對面：校園擺攤計畫</figcaption>
-				<p>TFT的校園實體活動不僅能面對面了解TFT，更有機會抽大獎回家。</p>
+				<img class="md-trigger" data-modal="info-type-4" src="dist/img/recruit/recruit-info-4.svg" alt="">
+				<figcaption>Coffee Date</figcaption>
+				<p>面對面深談，一起走過申請TFT的心路歷程。</p>
 			</figure>
 			<figure class="m-info-type col-sm-6 col-md-3" data-lightbox="type-5">
-				<img src="dist/img/recruit/recruit-info-5.svg" alt="">
-				<figcaption>面對面：校園擺攤計畫</figcaption>
-				<p>TFT的校園實體活動不僅能面對面了解TFT，更有機會抽大獎回家。</p>
+				<img class="md-trigger" data-modal="info-type-5" src="dist/img/recruit/recruit-info-5.svg" alt="">
+				<figcaption>校園博覽會 / 招募說明會</figcaption>
+				<p>TFT前進各大校園就業博覽會！加入我們，成為改變的一份子！</p>
 			</figure>
 			<figure class="m-info-type col-sm-6 col-md-3" data-lightbox="type-6">
-				<img src="dist/img/recruit/recruit-info-6.svg" alt="">
-				<figcaption>面對面：校園擺攤計畫</figcaption>
-				<p>TFT的校園實體活動不僅能面對面了解TFT，更有機會抽大獎回家。</p>
+				<img class="md-trigger" data-modal="info-type-6" src="dist/img/recruit/recruit-info-6.svg" alt="">
+				<figcaption>線上快問快答</figcaption>
+				<p>TFT首次直播節目開播！企劃將於近期上線，敬請期待。</p>
 			</figure>
 			<figure class="m-info-type col-sm-6 col-md-3" data-lightbox="type-7">
-				<img src="dist/img/recruit/recruit-info-7.svg" alt="">
-				<figcaption>面對面：校園擺攤計畫</figcaption>
-				<p>TFT的校園實體活動不僅能面對面了解TFT，更有機會抽大獎回家。</p>
+				<img class="md-trigger" data-modal="info-type-7" src="dist/img/recruit/recruit-info-7.svg" alt="">
+				<figcaption>熱線你和我</figcaption>
+				<p>兩年計畫的疑難雜症，預約熱線，一對一解答困惑。企劃將於近期上線，敬請期待。</p>
 			</figure>
 			<figure class="m-info-type col-sm-6 col-md-3" data-lightbox="type-8">
-				<img src="dist/img/recruit/recruit-info-8.svg" alt="">
-				<figcaption>面對面：校園擺攤計畫</figcaption>
-				<p>TFT的校園實體活動不僅能面對面了解TFT，更有機會抽大獎回家。</p>
+				<img class="md-trigger" data-modal="info-type-8" src="dist/img/recruit/recruit-info-8.svg" alt="">
+				<figcaption>海外說明會</figcaption>
+				<p>Time to go home！捲起袖子，回家參與這場溫柔到不行的社會改造吧！</p>
 			</figure>
 		</div>
+
 		<div class="m-lightbox">
-			<button class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
-			<article class="type-1">
-				<div class="row">
-					<h2 class="title">面對面：校園擺攤計畫</h2>
-					<p class="subtitle">適合參加族群 | 大學生，想初步了解TFT計畫者</p>
-				</div>
-				<div class="row">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam reprehenderit placeat rerum non, aliquid voluptatum! Unde qui modi et cum a explicabo, aliquid possimus distinctio ducimus voluptas. Magni, officia, corrupti!</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quidem aliquid, molestias, officia soluta nihil vero distinctio iure nam commodi beatae ad hic accusantium laudantium excepturi ratione, natus inventore, omnis!</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nobis blanditiis unde molestias! Aspernatur blanditiis rerum vero veniam necessitatibus explicabo eveniet mollitia iure, neque vitae est sed rem ipsum. Laudantium.</p>
-					<h3>活動場次</h3>
-					<p>
-						<time>2016.12.14 10:00-15:00</time>
-						<button class="btn">立刻報名</button>
-					</p>
-					<p>
-						<time>2016.12.14 10:00-15:00</time>
-						<button class="btn">立刻報名</button>
-					</p>
+			<article class="type-1 md-modal md-effect-8" id="info-type-1">
+				<div class="md-content">
+					<button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button>
+
+					<div class="title-container row">
+						<div class="col-sm-6 col-md-5">
+							<h2>面對面：校園擺攤計畫</h2>
+						</div>
+						<p class="col-sm-6 col-md-7 subTitle">適合參加族群 | 大學生，想初步了解TFT計畫者</p>
+					</div>
+					<div class="content-container row">
+						<div class="col-sm-6 col-md-5">
+							<p style="padding-top:0px;">在這個科技便利的時代，我們總習慣透過冰冷的螢幕去討論各種熱烈的議題，好像只要一個讚就能表達立場，又或是一個分享就能表達認同。有時候，日子久了，不小心會忘記人與人討論時那個美好的樣子，所以這一次，我們決定前進校園，與 你 面 對 面 說 說 話！</p>
+							<p>邀請在校園的你一同前來討論教育的多元樣貌，邀請你，一起成為改變的起點，捲起袖子，共同投入這場溫柔的社會改造。 
+							<br>
+							<br>
+							<span class="color-yellow"><strong>改變一旦開始，就會持續發生！</strong></span></p>
+						</div>
+						<div class="col-sm-6 col-md-7">
+							<h3>活動場次</h3>
+							<table>
+								<tbody>
+					        <tr class="content-event">
+					        	<td>輔大 </td>
+					        	<td>12.14 - 12.16</td>
+					        	<td>10:00 - 15:00</td>
+					        	<td>輔仁大學風華廣場</td>
+					        </tr>
+					        <tr>
+					        	<td></td>
+					        	<td></td>
+					        	<td></td>
+					        	<td>
+					        		<button class="btn btn-bg-white btn-type-1">立刻報名</button>
+					        	</td>
+					        </tr>
+
+					        <tr class="content-event">
+					        	<td>陽明 </td>
+					        	<td>12.19 - 12.23</td>
+					        	<td>12:00 - 13:20</td>
+					        	<td>陽明大學音前廣場</td>
+					        </tr>
+					        <tr>
+					        	<td></td>
+					        	<td></td>
+					        	<td></td>
+					        	<td>
+					        		<button class="btn btn-bg-white btn-type-1">立刻報名</button>
+					        	</td>
+					        </tr>
+
+					        <tr class="content-event">
+					        	<td>台大 </td>
+					        	<td>2.20 - 2.24</td>
+					        	<td>11:00 - 13:30</td>
+					        	<td>台大小福前擺攤區</td>
+					        </tr>
+					        <tr>
+					        	<td></td>
+					        	<td></td>
+					        	<td></td>
+					        	<td>
+					        		<button class="btn btn-bg-white btn-type-1">立刻報名</button>
+					        	</td>
+					        </tr>
+
+					      </tbody>
+							</table>
+						</div>
+					</div>
 				</div>
 			</article>
-			<article class="type-2">
-				<div class="title-container row">
-					<h2 class="title">面對面：校園擺攤計畫</h2>
-					<p class="subtitle">適合參加族群 | 大學生，想初步了解TFT計畫者</p>
-				</div>
-				<div class="content-container row">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam reprehenderit placeat rerum non, aliquid voluptatum! Unde qui modi et cum a explicabo, aliquid possimus distinctio ducimus voluptas. Magni, officia, corrupti!</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quidem aliquid, molestias, officia soluta nihil vero distinctio iure nam commodi beatae ad hic accusantium laudantium excepturi ratione, natus inventore, omnis!</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nobis blanditiis unde molestias! Aspernatur blanditiis rerum vero veniam necessitatibus explicabo eveniet mollitia iure, neque vitae est sed rem ipsum. Laudantium.</p>
-					<h3>活動場次</h3>
-					<p>
-						<time>2016.12.14 10:00-15:00</time>
-						<button class="btn">立刻報名</button>
-					</p>
-					<p>
-						<time>2016.12.14 10:00-15:00</time>
-						<button class="btn">立刻報名</button>
-					</p>
+
+			<article class="type-2 md-modal md-effect-8" id="info-type-2">
+				<div class="md-content">
+					<button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button>
+
+					<div class="title-container row">
+						<div class="col-sm-6 col-md-5">
+							<h2>Coffee Date</h2>
+						</div>
+						<p class="col-sm-6 col-md-7 subTitle">適合參加族群 | 已完成報名程序，想更深入了解計畫</p>
+					</div>
+					<div class="content-container row">
+						<div class="col-sm-6 col-md-5">
+							<p style="padding-top:0px;">你想帶來改變，但對於自己將要面臨的改變，還有著些許的不安嗎？面對轉職的焦慮，對計畫更深入的疑問，或許只要面對面的深談，你就能確立決心。一杯咖啡的時間，讓TFT為你解答內心中的疑惑，讓我們在咖啡香中，將埋藏已久的使命化為實際行動。
+							<br>
+							<br>
+							<span class="color-yellow"><strong>歡迎有高度意願申請TFT教師的你來<a href="javascript:;">點杯咖啡</a></strong></span></p>
+						</div>
+						<div class="col-sm-6 col-md-7">
+							<h3>活動進行方式</h3>
+							<p>由1位TFT後勤夥伴與1~4位申請者進行深度討論，除了聽聽TFT後勤人員的回答外，也有機會與其他申請者交流。</p>
+							<h3>活動場次</h3>
+							<table>
+								<tbody>
+					        <tr class="content-event">
+					        	<td>北部場 </td>
+					        	<td>12月底</td>
+					        	<td>後門咖啡</td>
+					        	<td>
+					        		<button class="btn btn-bg-white">立刻報名</button>
+					        	</td>
+					        </tr>
+
+					        <tr class="content-event">
+					        	<td>中部場 </td>
+					        	<td>comming soon...</td>
+					        	<td></td>
+					        	<td>
+					        		<button class="btn btn-bg-red">敬請期待</button>
+					        	</td>	        
+					        </tr>
+
+					        <tr class="content-event">
+					        	<td>南部場 </td>
+					        	<td>comming soon...</td>
+					        	<td></td>
+					        	<td>
+					        		<button class="btn btn-bg-red">敬請期待</button>
+					        	</td>
+					        </tr>
+					      </tbody>
+							</table>
+						</div>
+					</div>
 				</div>
 			</article>
-		</div>
-		<!-- /recruit-info -->
+
+
+			<article class="type-3 md-modal md-effect-8" id="info-type-3">
+				<div class="md-content">
+					<button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button>
+
+					<div class="title-container row">
+						<div class="col-sm-6 col-md-5">
+							<h2>Coffee Date</h2>
+						</div>
+						<p class="col-sm-6 col-md-7 subTitle">適合參加族群 | 已完成報名程序，想更深入了解計畫</p>
+					</div>
+					<div class="content-container row">
+						<div class="col-sm-6 col-md-5">
+							<p style="padding-top:0px;">你想帶來改變，但對於自己將要面臨的改變，還有著些許的不安嗎？面對轉職的焦慮，對計畫更深入的疑問，或許只要面對面的深談，你就能確立決心。一杯咖啡的時間，讓TFT為你解答內心中的疑惑，讓我們在咖啡香中，將埋藏已久的使命化為實際行動。
+							<br>
+							<br>
+							<span class="color-yellow"><strong>歡迎有高度意願申請TFT教師的你來<a href="javascript:;">點杯咖啡</a></strong></span></p>
+						</div>
+						<div class="col-sm-6 col-md-7">
+							<h3>活動進行方式</h3>
+							<p>由1位TFT後勤夥伴與1~4位申請者進行深度討論，除了聽聽TFT後勤人員的回答外，也有機會與其他申請者交流。</p>
+							<h3>活動場次</h3>
+							<table>
+								<tbody>
+					        <tr class="content-event">
+					        	<td>北部場 </td>
+					        	<td>12月底</td>
+					        	<td>後門咖啡</td>
+					        	<td>
+					        		<button class="btn btn-bg-white">立刻報名</button>
+					        	</td>
+					        </tr>
+
+					        <tr class="content-event">
+					        	<td>中部場 </td>
+					        	<td>comming soon...</td>
+					        	<td></td>
+					        	<td>
+					        		<button class="btn btn-bg-red">敬請期待</button>
+					        	</td>	        
+					        </tr>
+
+					        <tr class="content-event">
+					        	<td>南部場 </td>
+					        	<td>comming soon...</td>
+					        	<td></td>
+					        	<td>
+					        		<button class="btn btn-bg-red">敬請期待</button>
+					        	</td>
+					        </tr>
+					      </tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<article class="type-4 md-modal md-effect-8" id="info-type-4">
+				<div class="md-content">
+					<button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button>
+
+					<div class="title-container row">
+						<div class="col-sm-6 col-md-5">
+							<h2>Coffee Date</h2>
+						</div>
+						<p class="col-sm-6 col-md-7 subTitle">適合參加族群 | 已完成報名程序，想更深入了解計畫</p>
+					</div>
+					<div class="content-container row">
+						<div class="col-sm-6 col-md-5">
+							<p style="padding-top:0px;">你想帶來改變，但對於自己將要面臨的改變，還有著些許的不安嗎？面對轉職的焦慮，對計畫更深入的疑問，或許只要面對面的深談，你就能確立決心。一杯咖啡的時間，讓TFT為你解答內心中的疑惑，讓我們在咖啡香中，將埋藏已久的使命化為實際行動。
+							<br>
+							<br>
+							<span class="color-yellow"><strong>歡迎有高度意願申請TFT教師的你來<a href="javascript:;">點杯咖啡</a></strong></span></p>
+						</div>
+						<div class="col-sm-6 col-md-7">
+							<h3>活動進行方式</h3>
+							<p>由1位TFT後勤夥伴與1~4位申請者進行深度討論，除了聽聽TFT後勤人員的回答外，也有機會與其他申請者交流。</p>
+							<h3>活動場次</h3>
+							<table>
+								<tbody>
+					        <tr class="content-event">
+					        	<td>北部場 </td>
+					        	<td>12月底</td>
+					        	<td>後門咖啡</td>
+					        	<td>
+					        		<button class="btn btn-bg-white">立刻報名</button>
+					        	</td>
+					        </tr>
+
+					        <tr class="content-event">
+					        	<td>中部場 </td>
+					        	<td>comming soon...</td>
+					        	<td></td>
+					        	<td>
+					        		<button class="btn btn-bg-red">敬請期待</button>
+					        	</td>	        
+					        </tr>
+
+					        <tr class="content-event">
+					        	<td>南部場 </td>
+					        	<td>comming soon...</td>
+					        	<td></td>
+					        	<td>
+					        		<button class="btn btn-bg-red">敬請期待</button>
+					        	</td>
+					        </tr>
+					      </tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<article class="type-5 md-modal md-effect-8" id="info-type-5">
+				<div class="md-content">
+					<button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button>
+
+					<div class="title-container row">
+						<div class="col-sm-6 col-md-5">
+							<h2>Coffee Date</h2>
+						</div>
+						<p class="col-sm-6 col-md-7 subTitle">適合參加族群 | 已完成報名程序，想更深入了解計畫</p>
+					</div>
+					<div class="content-container row">
+						<div class="col-sm-6 col-md-5">
+							<p style="padding-top:0px;">你想帶來改變，但對於自己將要面臨的改變，還有著些許的不安嗎？面對轉職的焦慮，對計畫更深入的疑問，或許只要面對面的深談，你就能確立決心。一杯咖啡的時間，讓TFT為你解答內心中的疑惑，讓我們在咖啡香中，將埋藏已久的使命化為實際行動。
+							<br>
+							<br>
+							<span class="color-yellow"><strong>歡迎有高度意願申請TFT教師的你來<a href="javascript:;">點杯咖啡</a></strong></span></p>
+						</div>
+						<div class="col-sm-6 col-md-7">
+							<h3>活動進行方式</h3>
+							<p>由1位TFT後勤夥伴與1~4位申請者進行深度討論，除了聽聽TFT後勤人員的回答外，也有機會與其他申請者交流。</p>
+							<h3>活動場次</h3>
+							<table>
+								<tbody>
+					        <tr class="content-event">
+					        	<td>北部場 </td>
+					        	<td>12月底</td>
+					        	<td>後門咖啡</td>
+					        	<td>
+					        		<button class="btn btn-bg-white">立刻報名</button>
+					        	</td>
+					        </tr>
+
+					        <tr class="content-event">
+					        	<td>中部場 </td>
+					        	<td>comming soon...</td>
+					        	<td></td>
+					        	<td>
+					        		<button class="btn btn-bg-red">敬請期待</button>
+					        	</td>	        
+					        </tr>
+
+					        <tr class="content-event">
+					        	<td>南部場 </td>
+					        	<td>comming soon...</td>
+					        	<td></td>
+					        	<td>
+					        		<button class="btn btn-bg-red">敬請期待</button>
+					        	</td>
+					        </tr>
+					      </tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<article class="type-6 md-modal md-effect-8" id="info-type-6">
+				<div class="md-content">
+					<button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button>
+
+					<div class="title-container row">
+						<div class="col-sm-6 col-md-5">
+							<h2>Coffee Date</h2>
+						</div>
+						<p class="col-sm-6 col-md-7 subTitle">適合參加族群 | 已完成報名程序，想更深入了解計畫</p>
+					</div>
+					<div class="content-container row">
+						<div class="col-sm-6 col-md-5">
+							<p style="padding-top:0px;">你想帶來改變，但對於自己將要面臨的改變，還有著些許的不安嗎？面對轉職的焦慮，對計畫更深入的疑問，或許只要面對面的深談，你就能確立決心。一杯咖啡的時間，讓TFT為你解答內心中的疑惑，讓我們在咖啡香中，將埋藏已久的使命化為實際行動。
+							<br>
+							<br>
+							<span class="color-yellow"><strong>歡迎有高度意願申請TFT教師的你來<a href="javascript:;">點杯咖啡</a></strong></span></p>
+						</div>
+						<div class="col-sm-6 col-md-7">
+							<h3>活動進行方式</h3>
+							<p>由1位TFT後勤夥伴與1~4位申請者進行深度討論，除了聽聽TFT後勤人員的回答外，也有機會與其他申請者交流。</p>
+							<h3>活動場次</h3>
+							<table>
+								<tbody>
+					        <tr class="content-event">
+					        	<td>北部場 </td>
+					        	<td>12月底</td>
+					        	<td>後門咖啡</td>
+					        	<td>
+					        		<button class="btn btn-bg-white">立刻報名</button>
+					        	</td>
+					        </tr>
+
+					        <tr class="content-event">
+					        	<td>中部場 </td>
+					        	<td>comming soon...</td>
+					        	<td></td>
+					        	<td>
+					        		<button class="btn btn-bg-red">敬請期待</button>
+					        	</td>	        
+					        </tr>
+
+					        <tr class="content-event">
+					        	<td>南部場 </td>
+					        	<td>comming soon...</td>
+					        	<td></td>
+					        	<td>
+					        		<button class="btn btn-bg-red">敬請期待</button>
+					        	</td>
+					        </tr>
+					      </tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<article class="type-7 md-modal md-effect-8" id="info-type-7">
+				<div class="md-content">
+					<button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button>
+
+					<div class="title-container row">
+						<div class="col-sm-6 col-md-5">
+							<h2>Coffee Date</h2>
+						</div>
+						<p class="col-sm-6 col-md-7 subTitle">適合參加族群 | 已完成報名程序，想更深入了解計畫</p>
+					</div>
+					<div class="content-container row">
+						<div class="col-sm-6 col-md-5">
+							<p style="padding-top:0px;">你想帶來改變，但對於自己將要面臨的改變，還有著些許的不安嗎？面對轉職的焦慮，對計畫更深入的疑問，或許只要面對面的深談，你就能確立決心。一杯咖啡的時間，讓TFT為你解答內心中的疑惑，讓我們在咖啡香中，將埋藏已久的使命化為實際行動。
+							<br>
+							<br>
+							<span class="color-yellow"><strong>歡迎有高度意願申請TFT教師的你來<a href="javascript:;">點杯咖啡</a></strong></span></p>
+						</div>
+						<div class="col-sm-6 col-md-7">
+							<h3>活動進行方式</h3>
+							<p>由1位TFT後勤夥伴與1~4位申請者進行深度討論，除了聽聽TFT後勤人員的回答外，也有機會與其他申請者交流。</p>
+							<h3>活動場次</h3>
+							<table>
+								<tbody>
+					        <tr class="content-event">
+					        	<td>北部場 </td>
+					        	<td>12月底</td>
+					        	<td>後門咖啡</td>
+					        	<td>
+					        		<button class="btn btn-bg-white">立刻報名</button>
+					        	</td>
+					        </tr>
+
+					        <tr class="content-event">
+					        	<td>中部場 </td>
+					        	<td>comming soon...</td>
+					        	<td></td>
+					        	<td>
+					        		<button class="btn btn-bg-red">敬請期待</button>
+					        	</td>	        
+					        </tr>
+
+					        <tr class="content-event">
+					        	<td>南部場 </td>
+					        	<td>comming soon...</td>
+					        	<td></td>
+					        	<td>
+					        		<button class="btn btn-bg-red">敬請期待</button>
+					        	</td>
+					        </tr>
+					      </tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<article class="type-8 md-modal md-effect-8" id="info-type-8">
+				<div class="md-content">
+					<button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button>
+
+					<div class="title-container row">
+						<div class="col-sm-6 col-md-5">
+							<h2>Coffee Date</h2>
+						</div>
+						<p class="col-sm-6 col-md-7 subTitle">適合參加族群 | 已完成報名程序，想更深入了解計畫</p>
+					</div>
+					<div class="content-container row">
+						<div class="col-sm-6 col-md-5">
+							<p style="padding-top:0px;">你想帶來改變，但對於自己將要面臨的改變，還有著些許的不安嗎？面對轉職的焦慮，對計畫更深入的疑問，或許只要面對面的深談，你就能確立決心。一杯咖啡的時間，讓TFT為你解答內心中的疑惑，讓我們在咖啡香中，將埋藏已久的使命化為實際行動。
+							<br>
+							<br>
+							<span class="color-yellow"><strong>歡迎有高度意願申請TFT教師的你來<a href="javascript:;">點杯咖啡</a></strong></span></p>
+						</div>
+						<div class="col-sm-6 col-md-7">
+							<h3>活動進行方式</h3>
+							<p>由1位TFT後勤夥伴與1~4位申請者進行深度討論，除了聽聽TFT後勤人員的回答外，也有機會與其他申請者交流。</p>
+							<h3>活動場次</h3>
+							<table>
+								<tbody>
+					        <tr class="content-event">
+					        	<td>北部場 </td>
+					        	<td>12月底</td>
+					        	<td>後門咖啡</td>
+					        	<td>
+					        		<button class="btn btn-bg-white">立刻報名</button>
+					        	</td>
+					        </tr>
+
+					        <tr class="content-event">
+					        	<td>中部場 </td>
+					        	<td>comming soon...</td>
+					        	<td></td>
+					        	<td>
+					        		<button class="btn btn-bg-red">敬請期待</button>
+					        	</td>	        
+					        </tr>
+
+					        <tr class="content-event">
+					        	<td>南部場 </td>
+					        	<td>comming soon...</td>
+					        	<td></td>
+					        	<td>
+					        		<button class="btn btn-bg-red">敬請期待</button>
+					        	</td>
+					        </tr>
+					      </tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<!-- overlay element for ModalEffect -->
+			<div class="md-overlay"></div>
+		</div>	
 	</section>
+	<!-- /recruit-info -->
 
 	<section class="container is-hidden" id="recruit-calendar">
 		<!-- recruit-calendar -->
@@ -179,5 +611,14 @@
 	<h1>footer</h1>
 
 <script type="text/javascript" src="./src/jquery-2.2.4.min.js"></script>
+
+<!-- modal effect.js -->
+<script src="./src/modalEffect/classie.js"></script>
+<script src="./src/modalEffect/modalEffects.js"></script>
+<script>
+	// this is important for IEs in Md-effects
+	var polyfilter_scriptpath = '/src/modalEffect/';
+</script>
+
 <script type="text/javascript" src="./dist/js/recruit.js"></script>
 </body><!-- Jquery --></html>

@@ -1,21 +1,14 @@
 @import 'main';
 
 section{
-	@include animation(show 0.1s linear);		
+	@include animation(section-show 0.1s linear);		
 }
-
-@include keyframes(show) {
-	from{ opacity: 0;}
-	to{ opacity: 1;}
-}
-
 
 .main-recruit{
   display: flex;
 	justify-content: center;
 
 	> .btn{
-		@extend %btn-reset;
     margin: 45px 4em;
     font-weight: bold;
 		letter-spacing: $letter-spacing-s;
@@ -31,4 +24,111 @@ section{
 		color: $color-gray ;
 		font-weight: normal;
 	}
+}
+
+
+.m-info-type{
+	text-align: center;
+
+	img{
+		width: 60%;
+		cursor: pointer;
+	}
+
+	> figcaption{
+		color: $color-pinkRed;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 20px 5px 4px 5px;
+    letter-spacing: $letter-spacing-s;
+	}
+
+	p{
+		font-size: 0.9rem;
+		color: $color-waterBlue;
+	}
+}
+
+
+// Modal css
+.md-overlay{
+	background-color: rgba(71,173,199,0.2);
+	// background-color: transparent;
+}
+
+.md-modal{
+	max-width: 1200px;
+	width: 80%;
+}
+
+.md-content{
+	background-color: $color-waterBlue;
+	border-radius: $border-radius-normal;
+
+	h3{
+    font-size: 2em;
+    border-radius: $border-radius-normal;
+	}
+
+	button{
+    font-size: 1em;
+    padding: .1em 1em;
+	}
+
+	.row{
+    font-size: 1em;
+
+		h2{
+			background-color: $color-white;
+	    color: $color-pinkRed;
+	    padding: .5em;
+	    border-radius: $border-radius-button;
+	    width: 90%;
+	    font-size: 1.3em;
+	    font-weight: bold;
+	    text-align: center;
+
+	    letter-spacing: $letter-spacing-m;
+		}
+
+		.subTitle{
+      top: 1.3em;
+      font-weight: bold;
+		}
+
+		.content-event{
+			color: white;
+	    font-size: .9em;
+			td{
+		    padding: 13px 10px 0px 0px;
+			}
+		}
+
+		.btn-type-1{
+			position: relative;
+			left: 4em;
+		}
+	}
+
+	> .content-container{
+    font-size: .8em;
+    padding: 5px 40px 1.5em;
+	}
+
+	> div{
+		letter-spacing: $letter-spacing-s;
+		padding: 1.1em 40px 5px;
+	}
+}
+
+.type-button{
+  position: absolute;
+  right: 2em;
+  top: 18px;
+  background: transparent;
+  border: 0px;
+
+  .glyphicon {
+    font-size: 2em;
+   }
 }
