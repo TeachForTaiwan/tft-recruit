@@ -66,6 +66,16 @@ var route = [
       partials: './partial.js',
       layout:  "./layout/faq.hbs",
       filename: "./faq.html"
+    },
+    {
+      data: {
+        path: './',
+        title: 'onePage',
+        first_word: 'It is a good template'
+      },
+      partials: './partial.js',
+      layout:  "./layout/onepage.hbs",
+      filename: "./onepage.html"
     }
   ];
 module.exports = route;
