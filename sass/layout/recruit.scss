@@ -111,7 +111,12 @@ table{
     .content-sub{
         margin: 10px 0px;
         @media (max-width: 767px) {
-            
+            button{
+                margin: auto;
+                float: inherit;
+                font-size: 1.5em;
+
+            }
         }
     }
     .content-remind{
@@ -187,6 +192,7 @@ table{
     top: 18px;
     background: transparent;
     border: 0px;
+    z-index: 10;
     .glyphicon {
         font-size: 2em;
     }
