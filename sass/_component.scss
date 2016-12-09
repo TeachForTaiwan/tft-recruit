@@ -21,6 +21,11 @@
 	letter-spacing: $letter-spacing-m;
 }
 
+.color-gray{
+	color: $color-gray !important; 
+	letter-spacing: $letter-spacing-m;
+}
+
 /*
  * Btn
  */
@@ -32,6 +37,12 @@
 
 .btn-bg-red{
 	background-color: $color-pinkRed !important;
+	color: $color-white !important;
+	font-weight: bold;
+}
+
+.btn-bg-gray{
+	background-color: $color-gray !important;
 	color: $color-white !important;
 	font-weight: bold;
 }

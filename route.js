@@ -70,7 +70,7 @@ var route = [
     {
       data: {
         path: './',
-        title: 'onePage',
+        title: '',
         first_word: 'It is a good template'
       },
       partials: './partial.js',

@@ -82,8 +82,10 @@ section {
 .md-content {
     background-color: $color-waterBlue;
     border-radius: $border-radius-normal;
+    color: $color-white;
     h3 {
         font-size: 2em;
+        margin-top: 0.2em;
         border-radius: $border-radius-normal;
         white-space: nowrap;
     }
@@ -101,6 +103,13 @@ section {
     		margin-bottom: 2em;
     	}
     }
+    .content-sub{
+        margin: 10px 0px;
+    }
+    .content-remind{
+        font-size: .8em;
+        color:$color-yellow;
+    }
     .row {
         font-size: 1em;
         h2 {
@@ -114,12 +123,8 @@ section {
             text-align: center;
             letter-spacing: $letter-spacing-m;
         }
-        ul{
-            padding: 0 0 .5em 20px;
-            font-size: .8em;
-        }
-        li{
-            padding: 0px;
+        tr{
+            color: $color-white;
         }
 
         .subTitle {
@@ -132,7 +137,6 @@ section {
             }
         }
         .content-event {
-            color: white;
             font-size: .9em;
             td {
                 padding: 13px 10px 0px 0px;
