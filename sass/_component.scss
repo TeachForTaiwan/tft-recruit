@@ -5,6 +5,14 @@
 	display: none !important;
 }
 
+.is-btn-disable{
+	cursor: not-allowed;
+
+	&:hover{
+		cursor: not-allowed;		
+	}
+}
+
 /*
  * color
  */
