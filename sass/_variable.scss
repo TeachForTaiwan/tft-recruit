@@ -2,20 +2,26 @@
  * colors
  */
 
+$color-pink:#e95371;
+$color-green: #91B122;
+$color-yellow: #FDD000;
 $color-waterBlue: #47ADC7;
 $color-pinkRed: #EE1F24;
-$color-yellow: #FDD000;
 $color-light-yellow: #FFFB46;
-$color-white: #FFF;
+$color-white: #FFFFFF;
 $color-gray: #7D7B7D;
-$color-pink:#e95371;
+$color-light-gray: #FAFAFA;
 
-$color-default--bg: #FAFAFA;
-$color-menu--bg: #0ca2b9;
-$color-menu--text: #FFF;
-$color-countdown--text: #EE1F24;
-$color-btn-apply--bg: #EE1F24;
-$color-btn-apply--text: #FFF;
+$color-btn--text: $color-pink;
+$color-btn--bg: $color-white;
+$color-btn--border: $color-pink;
+$color-default--bg: $color-light-gray;
+$color-menu--bg: $color-waterBlue;
+$color-menu--text: $color-white;
+$color-countdown--text: $color-pink;
+$color-btn-apply--bg: $color-pink;
+$color-btn-apply--text: $color-white;
+$color-main-title:$color-gray;
 
 
 /**
@@ -44,5 +50,9 @@ $height-menu: 50px;
  * DIV
  */
 $border-radius-normal: 18px;
-$border-radius-button: 3em;
+$border-radius-button: 0;
 
+/**
+ * anim
+ */
+$recruit-info-transition: .1s ease-in-out;
