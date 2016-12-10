@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
 @import 'main';
 
 section {
@@ -201,3 +202,64 @@ table{
     	right: 0;
     }
 }
+
+
+/*
+ * Calendar
+ */
+
+#recruit-calendar{
+    font-weight: normal;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.calendar-month-box{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: .1em;
+    color: $color-gray;
+
+    h2{
+        font-size: 1.4em;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover{
+            color: $color-pinkRed;
+        }
+    }
+
+    .month-active{
+        color: $color-pinkRed;
+    }
+ }
+
+.grid{
+    text{
+        fill: $color-gray;
+    }
+
+    .calendar-event{
+        font-size: .8em;
+    }
+}
+
+.day{
+    stroke: $color-waterBlue;
+    stroke-width: 1px;
+    fill: transparent;
+}
+
+.xAxial{
+    line{
+        display: none;
+    }
+    path{
+        display: none;
+    }
+    text{
+        font-size: 2em;
+        fill: $color-pinkRed;
+        font-weight: bold;
+    }
+}
+

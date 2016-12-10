@@ -20,7 +20,7 @@
 </script>
 	
 	{{> onepage-header}}
-	
+
 	<main class="main-recruit">
 		<button class="btn btn-section" id = "info">教師招募活動說明</button>
 		<button class="btn btn-section btn-recruit-disable" id = "calendar">教師招募活動總表</button>
@@ -38,7 +38,10 @@
 <script type="text/javascript" src="./src/jquery-2.2.4.min.js"></script>
 <script src="./src/modalEffect/classie.js"></script>
 <script src="./src/modalEffect/modalEffects.js"></script>
+<script type="text/javascript" src="./src/d3v4.4.min.js"></script>
 <script>
+	var calendarEvent;
+
 	// this is important for IEs in Md-effects
 	var polyfilter_scriptpath = '/src/modalEffect/';
 
@@ -50,7 +53,13 @@
 			$('.md-modal').removeClass('blurFix');
 		},100)
 	});
+
+	d3.json('../../src/calendarEvent.json', function(error, data){
+		if(error)
+			alert('Parse calendar event ERROR!\n' + error);
+
+		calendarEvent = data;
+	})
 </script>
-<script type="text/javascript" src="./src/d3v4.4.min.js"></script>
 <script type="text/javascript" src="./dist/js/recruit.js"></script>
 </html>
