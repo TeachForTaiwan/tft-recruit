@@ -56,6 +56,14 @@ table{
         em{
             color: $color-white;
         }
+        .info-icons{
+            .icon-item{
+                display: none;
+                &.mouseover{
+                    display: block;
+                }
+            }
+        }
     }
     > .gap{
         cursor: pointer;
@@ -63,9 +71,17 @@ table{
         border:1px solid $color-pink;
         padding:1em;
     }
-    img {
-        width: 60%;
-        cursor: pointer;
+    // img {
+    //     width: 60%;
+    //     cursor: pointer;
+    // }
+    .info-icons{
+        .icon-item{
+            transition:$recruit-info-transition;
+            &.mouseover{
+                display: none;
+            }
+        }
     }
     > figcaption {
         transition: $recruit-info-transition;
