@@ -241,6 +241,10 @@ table{
     .calendar-event{
         font-size: .8em;
     }
+
+    circle{
+        fill: $color-waterBlue;
+    }
 }
 
 .day{
@@ -262,4 +266,28 @@ table{
         font-weight: bold;
     }
 }
+
+.tooltip{
+    transition: opacity linear .3s;
+
+    background-color: $color-waterBlue;
+    color: $color-white;
+    
+    text-align: center;    
+    padding: .5em;
+    line-height: 1.5;
+    font-size: .7em;
+    &:after {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        margin-left: -10px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent $color-waterBlue;
+    }
+}
+
+
 

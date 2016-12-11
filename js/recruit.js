@@ -6,13 +6,17 @@ const calendarWidth = $('#recruit-calendar').width();
 const margin = {
   calendarX: 30,
   calendarY: 20,
-  xaxisY: 40
+  xaxisY: 40,
+  circleR: 5
 };
 const rectHeight = (calendarHeight - margin.calendarY * 7) / 5; // 4(間距) + 2(兩側)
 const rectWidth = (calendarWidth - margin.calendarX * 8) / 7;
 const svg = d3.select('#recruit-calendar').append('svg')
   .attr('width', calendarWidth)
   .attr('height', calendarHeight);
+
+const tooltip = d3.select('#recruit-calendar')
+	.append('tooltip').attr('class', 'tooltip');
 
 let curSelectId = 'info';
 $('.btn-section').click(function() {
@@ -33,7 +37,9 @@ $('.btn-section').click(function() {
 // Calendar Code-------------
 let startDay = d3.timeSunday(d3.timeMonth(today));
 let endDay = d3.timeSunday(new Date(2016, (today.getMonth()+ 1) ));
-var calendarEvent;
+
+var calendarEvent; // read json
+
 d3.json('../../src/calendarEvent.json', function(error, data){
 	if(error)
 		alert('Parse calendar event ERROR!\n' + error);
@@ -76,8 +82,6 @@ function _format(time, option) {
       return time.getDay(); // Sunday = 0
     case 'w':
       let formatW = d3.timeFormat('%W'); // 取得一年中的第幾週
-      // console.log(formatW(startDay));
-      // console.log(time);
       return formatW(time) - formatW(startDay);
     case 'a':
       let formata = d3.timeFormat('%a'); // 取得星期幾
@@ -123,6 +127,23 @@ function getRectY(time) {
   return (getWeek - 1) * (rectHeight + margin.calendarY) + margin.calendarY + margin.xaxisY / 2; // Add padding in section
 }
 
+/*
+ * TODO: tooltip
+ * TODO: 能同時顯示兩筆資料（因為現在用d3跑，所以一筆綁一筆）
+ex: 		
+		"21":[{
+				"title":"陽明校園擺攤",
+				"showing": "台中場",
+				"time": "14:00 - 16:00",
+				"location": "客家文化中心 3F 媒體簡報室"
+			},{
+				"title":"交大講座",
+				"showing": "台中場",
+				"time": "14:00 - 16:00",
+				"location": "客家文化中心 3F 媒體簡報室"
+			}],
+*/
+
 function drawCalendar(startDay, endDay, option){
 	/*
 	 * 's' : start(default)
@@ -152,14 +173,15 @@ function drawCalendar(startDay, endDay, option){
 	}
 
 	function _init(){
-		//  calendar
+		
+		let month = _format(today, 'm');
 		let dayGrid = svg.selectAll("g")
 		  .data(calendarRange)
 		  .enter()
 		  .append("g")
 			  .attr('class', 'grid');
 
-		// draw
+		// rect
 		dayGrid
 		  .append('rect')
 			  .attr('class', 'day')
@@ -174,7 +196,12 @@ function drawCalendar(startDay, endDay, option){
 			  .style('display', function(d){
 			  	return displayNone(d, today);
 			  })
+			  .on("mouseout", function(d) {
+	        tooltip
+	        	.style("display", "none")
+	      });
 
+		// date
 		dayGrid
 		  .append('text')
 		  	.attr('class', 'date')
@@ -191,23 +218,57 @@ function drawCalendar(startDay, endDay, option){
 			  	return displayNone(d, today);
 			  })
 
+		// circle
+		dayGrid
+			.append('circle')
+				.attr('cx', function(d, i){
+					return getRectX(d) + 10 + margin.circleR;
+				})
+				.attr('cy', function(d){
+					return getRectY(d) + 60 -  margin.circleR ;
+				})
+				.attr('r', margin.circleR)
+				.style('display', function(d){
+					if(calendarEvent[month][d.getDate()] === undefined || displayNone(d, today) === 'none')
+				  	return 'none';
+				  else
+				  	return 'block';
+			  })
+
+		// calendar-event
 		dayGrid
 			.append('text')
 				.attr('class', 'calendar-event')
 				.attr('x', function(d){
-					return getRectX(d) + 10;
+					return getRectX(d) + 23;
 				})
 				.attr('y', function(d){
-					return getRectY(d) + 60;
+					// if(!Array.isArray(calendarEvent[month][d.getDate()]))
+					// 	return getRectY(d) + 60 ;
+					return getRectY(d) + 60 ;
 				})
 				.style('display', function(d){
 			  	return displayNone(d, today);
 			  })
 				.text(function(d){
-					let month = _format(today, 'm');
 					if(calendarEvent[month][d.getDate()] !== undefined)
-						return calendarEvent[month][d.getDate()];
+						return calendarEvent[month][d.getDate()].title;
 				})
+				.on("mousemove", function(d) {
+
+	        tooltip
+	        	.style('left', (d3.event.pageX - $('.tooltip').width() / 2) + 'px')
+	        	.style('top', (d3.event.pageY + $('.tooltip').height() / 2) + "px")
+	        	.style("opacity", "1")
+	        	.style("display", "inline-block")
+	        	.html(
+	        		calendarEvent[month][d.getDate()].showing + 
+	        		" " + 
+	        		calendarEvent[month][d.getDate()].time + 
+	        		"<br>" + 
+	        		calendarEvent[month][d.getDate()].location
+	        	);
+	      })
 
 		svg
 		  .append("g")
@@ -220,61 +281,58 @@ function drawCalendar(startDay, endDay, option){
 
 	function _change(){
 		// console.log(calendarRange);
+		const monMiddle = calendarRange[15];
+
 		let dayGrid = svg.selectAll(".grid")
-		let xi = 0, yi = 0, di = 0, ti = 0;
+		let di = 0, ti = 0, ci = 0;
+		let month = _format(monMiddle, 'm');
 		 
 		dayGrid
 		  .selectAll('rect')
 			.transition()
 			.duration(500)
-			.attr('x', function() {
-				console.log(calendarRange[xi]);
-		    return getRectX(calendarRange[xi++]);
-		  })
-		  .attr('y', function() {
-		    return getRectY(calendarRange[yi++]);
-		  })
 		  .style('opacity', function(){
-		  	return opacityHidden(calendarRange[di++], calendarRange[15]);
+		  	return opacityHidden(calendarRange[di++], monMiddle);
 		  })
 		  .style('display', 'block')
 
-		// reset 
-		xi = 0, yi = 0, di = 0, ti = 0;
+		// date
+		di = 0, ti = 0;
 		dayGrid
 		  .selectAll('.date')
-		  .transition()
-			.duration(800)
-			  .attr('x', function() {
-			    return getRectX(calendarRange[xi++]) + 10;
-			  })
-			  .attr('y', function() {
-			    return getRectY(calendarRange[yi++]) + 30;
-			  })
 			  .text(function() {
 			    return calendarRange[ti++].getDate();
 			  })
 			  .style('display', function(){
-			  	return displayNone(calendarRange[di++], calendarRange[15]);
+			  	return displayNone(calendarRange[di++], monMiddle);
 			  })
 
-		xi = 0, yi = 0, di = 0, ti = 0;
+		// circle
+		di = 0, ci = 0;
+		dayGrid
+			.selectAll('.grid circle')
+				.style('display', function(){
+					if(calendarEvent[month][calendarRange[ci].getDate()] === undefined || displayNone(calendarRange[di], monMiddle) === 'none'){
+				  	ci += 1; di += 1;
+				  	return 'none';
+					}
+				  else{
+				  	ci += 1; di += 1;
+				  	return 'block';
+				  }
+
+			  })
+
+		// calendar-event
+		di = 0, ti = 0;
 		dayGrid
 			.selectAll('.calendar-event')
-				.attr('x', function(){
-					return getRectX(calendarRange[xi++]) + 10;
-				})
-				.attr('y', function(){
-					return getRectY(calendarRange[yi++]) + 60;
-				})
-				.style('display', 'block')
-				.style('opacity', function(){
-					return opacityHidden(calendarRange[di++], calendarRange[15]);
+				.style('display', function(){
+					return displayNone(calendarRange[di++], monMiddle);
 				})
 				.text(function(){
-					let month = _format(calendarRange[15], 'm');
 					if(calendarEvent[month][calendarRange[ti].getDate()] !== undefined)
-						return calendarEvent[month][calendarRange[ti++].getDate()];
+						return calendarEvent[month][calendarRange[ti++].getDate()].title;
 
 					ti++;
 				})
