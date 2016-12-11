@@ -40,7 +40,7 @@ let endDay = d3.timeSunday(new Date(2016, (today.getMonth()+ 1) ));
 
 var calendarEvent; // read json
 
-d3.json('../../src/calendarEvent.json', function(error, data){
+d3.json('../src/calendarEvent.json', function(error, data){
 	if(error)
 		alert('Parse calendar event ERROR!\n' + error);
 
