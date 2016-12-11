@@ -17,13 +17,18 @@ table{
         margin: 45px 4em;
         font-weight: bold;
         letter-spacing: $letter-spacing-s;
+        background-color: $color-btn--bg;
+        color: $color-btn--text;
+        border: 1px solid $color-btn--border;
+        padding: 0.8em 4em;
         &:hover {
-            background-color: $color-waterBlue;
-            color: $color-white;
+            background-color: $color-btn--bg;
+            color: $color-btn--text;
+            border: 1px solid $color-btn--border;
             font-weight: bold;
         }
-        &:focus{
-            color: $color-white;
+        &:active{
+            box-shadow: none;
         }
         @media (max-width: 767px) {
         	margin:45px 0;
@@ -33,18 +38,55 @@ table{
     > .btn-recruit-disable {
         background-color: transparent;
         color: $color-gray;
+        border:none;
         font-weight: normal;
     }
 }
 
 .m-info-type {
     text-align: center;
-    img {
-        width: 60%;
+    margin-bottom: 2em;
+    &:hover{
+        > .gap{
+            background: $color-pink;
+            color: $color-white;
+        }
+        p{
+            color: $color-white;
+        }
+        em{
+            color: $color-white;
+        }
+        .info-icons{
+            .icon-item{
+                display: none;
+                &.mouseover{
+                    display: block;
+                }
+            }
+        }
+    }
+    > .gap{
         cursor: pointer;
+        transition: $recruit-info-transition;
+        border:1px solid $color-pink;
+        padding:1em;
+    }
+    // img {
+    //     width: 60%;
+    //     cursor: pointer;
+    // }
+    .info-icons{
+        .icon-item{
+            transition:$recruit-info-transition;
+            &.mouseover{
+                display: none;
+            }
+        }
     }
     > figcaption {
-        color: $color-pinkRed;
+        transition: $recruit-info-transition;
+        color: $color-gray;
         font-weight: bold;
         font-size: 1.1rem;
         margin: 20px 5px 4px 5px;
@@ -54,8 +96,12 @@ table{
         }
     }
     p {
+        transition: $recruit-info-transition;
         font-size: 0.9rem;
-        color: $color-waterBlue;
+        color: $color-gray;
+    }
+    em{
+        transition: $recruit-info-transition;
     }
 }
 
@@ -129,7 +175,7 @@ table{
         font-size: 1em;
         h2 {
             background-color: $color-white;
-            color: $color-pinkRed;
+            color: $color-pink;
             padding: .5em;
             border-radius: $border-radius-button;
             width: 90%;
@@ -224,12 +270,12 @@ table{
         font-weight: bold;
         cursor: pointer;
         &:hover{
-            color: $color-pinkRed;
+            color: $color-pink;
         }
     }
 
     .month-active{
-        color: $color-pinkRed;
+        color: $color-pink;
     }
  }
 
@@ -243,12 +289,12 @@ table{
     }
 
     circle{
-        fill: $color-waterBlue;
+        fill: $color-pink;
     }
 }
 
 .day{
-    stroke: $color-waterBlue;
+    stroke: $color-pink;
     stroke-width: 1px;
     fill: transparent;
 }
@@ -262,7 +308,7 @@ table{
     }
     text{
         font-size: 2em;
-        fill: $color-pinkRed;
+        fill: $color-pink;
         font-weight: bold;
     }
 }
@@ -270,7 +316,7 @@ table{
 .tooltip{
     transition: opacity linear .3s;
 
-    background-color: $color-waterBlue;
+    background-color: $color-pink;
     color: $color-white;
     
     text-align: center;    
@@ -285,7 +331,7 @@ table{
         margin-left: -10px;
         border-width: 10px;
         border-style: solid;
-        border-color: transparent transparent $color-waterBlue;
+        border-color: transparent transparent $color-pink;
     }
 }
 

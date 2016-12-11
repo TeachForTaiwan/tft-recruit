@@ -17,10 +17,10 @@
         flex: 1;
         justify-content: flex-start;
         a {
-            padding: 1em .5em;
+            padding: 0 0 1em;
             img {
                 border-radius: 3px;
-                width: 1.8rem;
+                width: 2.2rem;
                 margin: 0 0.2em;
             }
         }
@@ -35,6 +35,11 @@
         align-items: center;
         img {
             margin-bottom: 0.2rem;
+            max-height: 80px;
+        }
+        .main-title{
+            font-size: 1.2rem;
+            color: $color-main-title;
         }
     }
     .m-apply {

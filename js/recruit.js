@@ -199,6 +199,7 @@ function drawCalendar(startDay, endDay, option){
 			  .on("mouseout", function(d) {
 	        tooltip
 	        	.style("display", "none")
+	        	.style("opacity", "0")
 	      });
 
 		// date

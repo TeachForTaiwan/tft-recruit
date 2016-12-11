@@ -171,7 +171,7 @@ function drawCalendar(startDay, endDay, option) {
 		}).style('display', function (d) {
 			return displayNone(d, today);
 		}).on("mouseout", function (d) {
-			tooltip.style("display", "none");
+			tooltip.style("display", "none").style("opacity", "0");
 		});
 
 		// date
