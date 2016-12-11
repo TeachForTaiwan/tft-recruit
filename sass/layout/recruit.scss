@@ -33,6 +33,7 @@ table{
         @media (max-width: 767px) {
         	margin:45px 0;
         	font-size: calc(1vw + 10px);
+            width: 50%;
         }
     }
     > .btn-recruit-disable {
@@ -58,6 +59,7 @@ table{
             color: $color-white;
         }
         .info-icons{
+            
             .icon-item{
                 display: none;
                 &.mouseover{
@@ -72,11 +74,9 @@ table{
         border:1px solid $color-pink;
         padding:1em;
     }
-    // img {
-    //     width: 60%;
-    //     cursor: pointer;
-    // }
     .info-icons{
+        width: 100%;
+        margin:1.5em auto;
         .icon-item{
             transition:$recruit-info-transition;
             &.mouseover{
@@ -132,14 +132,17 @@ table{
 }
 
 .md-content {
-    background-color: $color-waterBlue;
+    background-color: $color-md-content--bg;
     border-radius: $border-radius-normal;
-    color: $color-white;
+    color: $color-md-content--text;
     h3 {
         font-size: 2em;
         margin-top: 0.2em;
         border-radius: $border-radius-normal;
         white-space: nowrap;
+        @media (max-width: 767px) {
+            font-size: 1.4em;
+        }
     }
     button {
         font-size: 1em;
