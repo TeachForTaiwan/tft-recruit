@@ -39,6 +39,24 @@ $('.btn-section').click(function () {
 	}
 });
 
+// Info Code-------------
+
+// same height all info cards
+var sameHeightAllCards = function sameHeightAllCards() {
+	var cardLen = $('.m-info-type .gap').length;
+	var maxHeight = 0;
+	for (var i = 0; i < cardLen; i++) {
+		if ($('.m-info-type:nth-child(' + (i + 1) + ') .gap').height() > maxHeight) {
+			maxHeight = $('.m-info-type:nth-child(' + (i + 1) + ') .gap').height();
+			console.log(maxHeight);
+		}
+	}
+	for (var _i = cardLen - 1; _i >= 0; _i--) {
+		$('.m-info-type:nth-child(' + (_i + 1) + ') .gap').height(maxHeight);
+	}
+};
+sameHeightAllCards();
+
 // Calendar Code-------------
 var startDay = d3.timeSunday(d3.timeMonth(today));
 var endDay = d3.timeSunday(new Date(2016, today.getMonth() + 1));

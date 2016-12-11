@@ -40,6 +40,25 @@ $('.btn-section').click(function() {
   }
 })
 
+// Info Code-------------
+
+// same height all info cards
+const sameHeightAllCards = ()=>{
+	const cardLen = $('.m-info-type .gap').length;
+	let maxHeight = 0;
+	for (let i = 0; i<cardLen;i++) {
+		if($(`.m-info-type:nth-child(${i+1}) .gap`).height()>maxHeight){
+			maxHeight = $(`.m-info-type:nth-child(${i+1}) .gap`).height();
+	console.log(maxHeight);
+		}
+	}
+	for (let i = cardLen - 1; i >= 0; i--) {
+		$(`.m-info-type:nth-child(${i+1}) .gap`).height(maxHeight);
+	}	
+}
+sameHeightAllCards();
+
+
 // Calendar Code-------------
 let startDay = d3.timeSunday(d3.timeMonth(today));
 let endDay = d3.timeSunday(new Date(2016, (today.getMonth()+ 1) ));
