@@ -53,6 +53,9 @@ table{
             background: $color-pink;
             color: $color-white;
         }
+        figcaption{
+            color: $color-white;
+        }
         p{
             color: $color-white;
         }
@@ -85,16 +88,19 @@ table{
             }
         }
     }
-    > figcaption {
-        transition: $recruit-info-transition;
+    figcaption {
         color: $color-gray;
         font-weight: bold;
         font-size: 1.1rem;
-        margin: 20px 5px 4px 5px;
         letter-spacing: $letter-spacing-s;
         @media (max-width: 767px) {
-        	margin: 0.5em 0 0;
+        	// margin: 0.5em 0 0;
         }
+    }
+    .sub-title{
+        padding:0 2em;
+        text-align: justify;
+        text-align-last: left;
     }
     p {
         transition: $recruit-info-transition;
@@ -205,6 +211,10 @@ table{
             border-top: dashed 1px $color-white;
             @media (max-width: 767px) {
                 margin:1em 0;
+            }
+            .desc{
+                padding-left: 0;
+                padding-right: 0;
             }
             td {
                 padding: 13px 10px 0px 0px;
