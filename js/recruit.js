@@ -11,12 +11,18 @@ const margin = {
 };
 const rectHeight = (calendarHeight - margin.calendarY * 7) / 5; // 4(間距) + 2(兩側)
 const rectWidth = (calendarWidth - margin.calendarX * 8) / 7;
+
 const svg = d3.select('#recruit-calendar').append('svg')
-  .attr('width', calendarWidth)
-  .attr('height', calendarHeight);
+  .attr('width', function(){
+  	return (calendarWidth < 0)? 0: calendarWidth;
+  })
+  .attr('height', function(){
+  	return (calendarHeight < 0)? 0: calendarHeight;
+  });
 
 const tooltip = d3.select('#recruit-calendar')
 	.append('tooltip').attr('class', 'tooltip');
+
 
 let curSelectId = 'info';
 $('.btn-section').click(function() {
@@ -40,12 +46,16 @@ let endDay = d3.timeSunday(new Date(2016, (today.getMonth()+ 1) ));
 
 var calendarEvent; // read json
 
-d3.json('../src/calendarEvent.json', function(error, data){
+d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/src/calendarEvent.json', function(error, data){
 	if(error)
 		alert('Parse calendar event ERROR!\n' + error);
 
 	calendarEvent = data;
-	drawCalendar(startDay, endDay);
+
+	if( $(window).width() > 767){
+		drawCalendar(startDay, endDay);
+	}
+
 })
 
 $('.calendar-month').click(function(){
