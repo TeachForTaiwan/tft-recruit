@@ -46,10 +46,9 @@ $('.btn-section').click(function() {
 const sameHeightAllCards = ()=>{
 	const cardLen = $('.m-info-type .gap').length;
 	let maxHeight = 0;
-	for (let i = 0; i<cardLen;i++) {
+	for (let i = cardLen - 1; i >= 0; i--) {
 		if($(`.m-info-type:nth-child(${i+1}) .gap`).height()>maxHeight){
 			maxHeight = $(`.m-info-type:nth-child(${i+1}) .gap`).height();
-	console.log(maxHeight);
 		}
 	}
 	for (let i = cardLen - 1; i >= 0; i--) {

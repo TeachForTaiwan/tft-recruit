@@ -45,10 +45,9 @@ $('.btn-section').click(function () {
 var sameHeightAllCards = function sameHeightAllCards() {
 	var cardLen = $('.m-info-type .gap').length;
 	var maxHeight = 0;
-	for (var i = 0; i < cardLen; i++) {
+	for (var i = cardLen - 1; i >= 0; i--) {
 		if ($('.m-info-type:nth-child(' + (i + 1) + ') .gap').height() > maxHeight) {
 			maxHeight = $('.m-info-type:nth-child(' + (i + 1) + ') .gap').height();
-			console.log(maxHeight);
 		}
 	}
 	for (var _i = cardLen - 1; _i >= 0; _i--) {
