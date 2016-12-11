@@ -152,7 +152,6 @@ function drawCalendar(startDay, endDay, option){
 	option = option || 's';
 
 	let calendarRange = d3.timeDays(startDay, endDay);
-	console.log(calendarRange);
 
 	// Mon, Tue...
 	let x = d3.scaleTime()

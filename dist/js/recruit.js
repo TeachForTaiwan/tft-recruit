@@ -40,7 +40,7 @@ var endDay = d3.timeSunday(new Date(2016, today.getMonth() + 1));
 
 var calendarEvent; // read json
 
-d3.json('../../src/calendarEvent.json', function (error, data) {
+d3.json('../src/calendarEvent.json', function (error, data) {
 	if (error) alert('Parse calendar event ERROR!\n' + error);
 
 	calendarEvent = data;
@@ -143,7 +143,6 @@ function drawCalendar(startDay, endDay, option) {
 	option = option || 's';
 
 	var calendarRange = d3.timeDays(startDay, endDay);
-	console.log(calendarRange);
 
 	// Mon, Tue...
 	var x = d3.scaleTime().domain([startDay, d3.timeDay.offset(startDay, 6)]).range([margin.calendarX + rectWidth / 2, calendarWidth - margin.calendarX - rectWidth / 2]);
