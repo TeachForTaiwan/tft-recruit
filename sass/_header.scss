@@ -16,6 +16,7 @@
         flex-direction: row;
         flex: 1;
         justify-content: flex-start;
+        align-items: flex-start;
         @media (max-width: 767px) {
             display: none;
         }
@@ -23,7 +24,9 @@
             display: none;
         }
         a {
-            padding: 0 0 1em;
+            &:hover{
+                opacity: 0.6;
+            }
             img {
                 border-radius: 3px;
                 width: 2.2rem;
