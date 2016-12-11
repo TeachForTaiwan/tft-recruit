@@ -154,7 +154,6 @@ table{
         border: 1px solid $color-btn-card--border; 
         @media (max-width: 767px) {
         	margin: 0;
-    		float: right;
     		font-size: 0.8em;
         }
     }
@@ -167,7 +166,7 @@ table{
         margin: 10px 0px;
         @media (max-width: 767px) {
             button{
-                margin: auto;
+                margin: 0;
                 float: inherit;
                 font-size: 1.5em;
 
@@ -202,8 +201,11 @@ table{
             }
         }
         .content-event {
-            font-size: .9em;
+            // font-size: .9em;
             border-top: dashed 1px $color-white;
+            @media (max-width: 767px) {
+                margin:1em 0;
+            }
             td {
                 padding: 13px 10px 0px 0px;
             }
