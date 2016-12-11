@@ -145,10 +145,13 @@ table{
             font-size: 1.4em;
         }
     }
-    button {
+    .btn {
         font-size: 1em;
-        padding: .1em 1em;
-        margin: 5px auto;
+        padding: .5em 1em;
+        margin: 5px 0;
+        background: $color-btn-card--bg;
+        color: $color-btn-card--text;
+        border: 1px solid $color-btn-card--border; 
         @media (max-width: 767px) {
         	margin: 0;
     		float: right;
@@ -173,29 +176,26 @@ table{
     }
     .content-remind{
         font-size: .8em;
-        color:$color-light-yellow;
+        color:$color-md-content-remind;
     }
     .row {
         font-size: 1em;
         h2 {
             background-color: $color-white;
             color: $color-pink;
-            padding: .5em;
+            padding:0 15px;
             border-radius: $border-radius-button;
             width: 90%;
             font-size: 1.3em;
             font-weight: bold;
-            text-align: center;
             letter-spacing: $letter-spacing-m;
         }
-        tr{
-            color: $color-white;
-        }
-
         .subTitle {
             top: 1.3em;
             font-weight: bold;
             white-space: nowrap;
+            color: $color-subTitle;
+            padding:0 15px;
             @media (max-width: 767px) {
             	top:0;
             	padding: 10px 1em;

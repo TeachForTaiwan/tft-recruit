@@ -7,8 +7,10 @@ $color-green: #91B122;
 $color-yellow: #FDD000;
 $color-light-yellow: #FFFB46;
 $color-white: #FFFFFF;
+$color-black: #000000;
 $color-gray: #7D7B7D;
 $color-light-gray: #FAFAFA;
+$color-dark-gray: #666666;
 
 // old-color
 $color-waterBlue: #47ADC7;
@@ -25,9 +27,13 @@ $color-countdown--text: $color-pink;
 $color-btn-apply--bg: $color-pink;
 $color-btn-apply--text: $color-white;
 $color-main-title:$color-gray;
-$color-md-content--bg: $color-pink;
-$color-md-content--text: $color-white;
-
+$color-md-content--bg: $color-white;
+$color-md-content--text: $color-dark-gray;
+$color-subTitle: $color-green;
+$color-btn-card--bg: $color-yellow;
+$color-btn-card--text: $color-black;
+$color-btn-card--border: transparent;
+$color-md-content-remind: $color-pink;
 
 /**
  * fonts
