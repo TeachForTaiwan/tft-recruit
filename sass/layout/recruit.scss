@@ -277,6 +277,7 @@ table{
     padding: .5em;
     line-height: 1.5;
     font-size: .7em;
+    letter-spacing: $letter-spacing-s;
     &:after {
         content: "";
         position: absolute;
