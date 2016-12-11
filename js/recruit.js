@@ -64,7 +64,8 @@ let endDay = d3.timeSunday(new Date(2016, (today.getMonth()+ 1) ));
 
 var calendarEvent; // read json
 
-d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/src/calendarEvent.json', function(error, data){
+// d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/src/calendarEvent.json', function(error, data){
+d3.json('../../src/calendarEvent.json', function(error, data){
 	if(error)
 		alert('Parse calendar event ERROR!\n' + error);
 
@@ -267,6 +268,9 @@ function drawCalendar(startDay, endDay, option){
 		dayGrid
 			.append('text')
 				.attr('class', 'calendar-event')
+				.attr('data-date', function(d){
+					return d.getDate();	
+				})
 				.attr('x', function(d){
 					return getRectX(d) + 23;
 				})
@@ -282,7 +286,7 @@ function drawCalendar(startDay, endDay, option){
 					if(calendarEvent[month][d.getDate()] !== undefined)
 						return calendarEvent[month][d.getDate()].title;
 				})
-				.on("mousemove", function(d) {
+				.on("mousemove", function(d, i) {
 
 	        tooltip
 	        	.style('left', (d3.event.pageX - $('.tooltip').width() / 2) + 'px')
@@ -290,11 +294,11 @@ function drawCalendar(startDay, endDay, option){
 	        	.style("opacity", "1")
 	        	.style("display", "inline-block")
 	        	.html(
-	        		calendarEvent[month][d.getDate()].showing + 
-	        		" " + 
-	        		calendarEvent[month][d.getDate()].time + 
+	        		calendarEvent[month][calendarRange[i].getDate()].showing + 
+	        		"&nbsp;" + 
+	        		calendarEvent[month][calendarRange[i].getDate()].time + 
 	        		"<br>" + 
-	        		calendarEvent[month][d.getDate()].location
+	        		calendarEvent[month][calendarRange[i].getDate()].location
 	        	);
 	      })
 
@@ -311,8 +315,8 @@ function drawCalendar(startDay, endDay, option){
 		// console.log(calendarRange);
 		const monMiddle = calendarRange[15];
 
-		let dayGrid = svg.selectAll(".grid")
-		let di = 0, ti = 0, ci = 0;
+		let dayGrid = svg.selectAll(".grid").data(calendarRange);
+		let di = 0, ti = 0, ci = 0, datai = 0;
 		let month = _format(monMiddle, 'm');
 		 
 		dayGrid
@@ -336,34 +340,57 @@ function drawCalendar(startDay, endDay, option){
 			  })
 
 		// circle
-		di = 0, ci = 0;
+		datai = 0, di = 0, ci = 0;
 		dayGrid
 			.selectAll('.grid circle')
-				.style('display', function(){
-					if(calendarEvent[month][calendarRange[ci].getDate()] === undefined || displayNone(calendarRange[di], monMiddle) === 'none'){
-				  	ci += 1; di += 1;
-				  	return 'none';
-					}
-				  else{
-				  	ci += 1; di += 1;
-				  	return 'block';
-				  }
+				.attr('data-date', function(){
+					return calendarRange[datai++].getDate();	
+				})
+				.style('display', function(){					
+					let display ;
+					if(calendarEvent[month][calendarRange[ci].getDate()] === undefined || displayNone(calendarRange[di], monMiddle) === 'none')
+				  	display = 'none';
+				  else
+				  	display = 'block';
 
+				  ci++;
+				  di++;
+				  return display;
 			  })
 
 		// calendar-event
-		di = 0, ti = 0;
+		ci = 0, di = 0, datai = 0;
 		dayGrid
 			.selectAll('.calendar-event')
+				.attr('data-date', function(){
+					return calendarRange[datai++].getDate();	
+				})
 				.style('display', function(){
 					return displayNone(calendarRange[di++], monMiddle);
 				})
 				.text(function(){
-					if(calendarEvent[month][calendarRange[ti].getDate()] !== undefined)
-						return calendarEvent[month][calendarRange[ti++].getDate()].title;
+					// let date = $(this).data('date');
+					if(calendarEvent[month][calendarRange[ci].getDate()] !== undefined)
+						return calendarEvent[month][calendarRange[ci++].getDate()].title;
 
-					ti++;
+					ci++;
 				})
+				.on("mousemove", function() {
+					let date = $(this).data('date');
+
+	        tooltip
+	        	.style('left', (d3.event.pageX - $('.tooltip').width() / 2) + 'px')
+	        	.style('top', (d3.event.pageY + $('.tooltip').height() / 2) + "px")
+	        	.style("opacity", "1")
+	        	.style("display", "inline-block")
+	        	.html(
+	        		calendarEvent[month][date].showing + 
+	        		"&nbsp;" + 
+	        		calendarEvent[month][date].time + 
+	        		"<br>" + 
+	        		calendarEvent[month][date].location
+	        	);
+	      })
 	}
 		
 }
