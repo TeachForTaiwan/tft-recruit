@@ -60,8 +60,8 @@ var calendarEvent = void 0; // read json
 var startDay = d3.timeSunday(d3.timeMonth(today));
 var endDay = d3.timeSunday(new Date(2016, today.getMonth() + 1));
 
-// d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/src/calendarEvent.json', function(error, data){
-d3.json('../../src/calendarEvent.json', function (error, data) {
+d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/src/calendarEvent.json', function (error, data) {
+	// d3.json('../../src/calendarEvent.json', function(error, data){
 
 	if (error) alert('Parse calendar event ERROR!\n' + error);
 
