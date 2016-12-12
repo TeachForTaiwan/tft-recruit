@@ -60,16 +60,11 @@ let calendarEvent; // read json
 let startDay = d3.timeSunday(d3.timeMonth(today));
 let endDay = d3.timeSunday(new Date(2016, (today.getMonth()+ 1) ));
 
-d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/src/calendarEvent.json', function(error, data){
-// d3.json('../../src/calendarEvent.json', function(error, data){
+// d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/src/calendarEvent.json', function(error, data){
+d3.json('../../src/calendarEvent.json', function(error, data){
 	
 	if(error)
 		alert('Parse calendar event ERROR!\n' + error);
-	// var height;
-  //  $(window).resize(function() {
-  //    height=$(window).height();
-  //    // $("span").text(height);
-  //  });
 
   // @BUG : 不知道為什麼手機版需要在這裡重新讀取一次高度才行
   if(isMobile)
@@ -376,12 +371,10 @@ function drawCalendar(startDay, endDay, option){
 		// $('.calendar-event').off('mousemove');
 
 		dayGrid
-			.attr('data-date', function(){
-					return calendarRange[datai++].getDate();	
-				})
-
-		dayGrid
 		  .selectAll('rect')
+		  	.attr('id', function(){
+					return 'date-' + calendarRange[datai++].getDate();	
+				})
 				.attr('class', function(){
 					if(calendarEvent[month][calendarRange[ci++].getDate()] !== undefined)
 				  	return 'rect-active day';
@@ -391,10 +384,10 @@ function drawCalendar(startDay, endDay, option){
 			  .on("click", null)
 			  .on("click", function(d,i){
 	      	if(isMobile){
-	      		let date = $(this).next().data('date');
+	      		let date = this.id.split('-')[1];
 	      		let event = calendarEvent[month][date];
 	      		console.log(event, date);
-	      		console.log($(this).next());
+	      		console.log($(this));
 	      		if(event){
 			      	$('#c-mobile-content').html(
 			      		event.title + 

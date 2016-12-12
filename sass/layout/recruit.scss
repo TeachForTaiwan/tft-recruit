@@ -390,6 +390,9 @@ table{
             stroke: $color-pink;
             stroke-width: 2px;
         }
+        text{
+            font-size: .9em;
+        }
     }
     
     .calendar-desktop{
@@ -424,6 +427,12 @@ table{
 
         p{
             margin: 0px;
+        }
+    }
+
+    .xAxial{
+        text{
+            font-size: 1.5em;
         }
     }
 }
