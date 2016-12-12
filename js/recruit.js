@@ -46,8 +46,8 @@ $('.btn-section').click(function() {
   }
 })
 
-// d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/src/calendarEvent.json', function(error, data){
-d3.json('../../src/calendarEvent.json', function(error, data){
+d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/src/calendarEvent.json', function(error, data){
+// d3.json('../../src/calendarEvent.json', function(error, data){
 	
 	if(error)
 		alert('Parse calendar event ERROR!\n' + error);
