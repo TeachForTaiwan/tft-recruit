@@ -95,18 +95,19 @@ table{
         font-weight: bold;
         font-size: 1.1rem;
         letter-spacing: $letter-spacing-s;
+        margin-bottom: .5em;
         @media (max-width: 767px) {
         	// margin: 0.5em 0 0;
         }
     }
     .sub-title{
-        padding:0 2em;
+        padding:0 2.5em;
         text-align: justify;
         text-align-last: left;
     }
     p {
         transition: $recruit-info-transition;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         color: $color-gray;
     }
     em{
@@ -239,6 +240,8 @@ table{
     > .content-container {
         font-size: .8em;
         padding: 5px 40px 1.5em;
+        font-family: 'Roboto Condensed', sans-serif;
+        
         @media (max-width: 767px) {
         	padding: 10px;
         }

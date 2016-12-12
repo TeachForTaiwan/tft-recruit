@@ -46,15 +46,15 @@ $('.btn-section').click(function() {
   }
 })
 
-d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/src/calendarEvent.json', function(error, data){
-// d3.json('../../src/calendarEvent.json', function(error, data){
+// d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/src/calendarEvent.json', function(error, data){
+d3.json('../../src/calendarEvent.json', function(error, data){
 	
 	if(error)
 		alert('Parse calendar event ERROR!\n' + error);
 
   // @BUG : 不知道為什麼手機版需要在這裡重新讀取一次高度才行
   if(isMobile)
-  	deviceHeight = $(window).height();
+  	deviceHeight = $(window).height() + 30;
 
 	calendarWidth = $('#recruit-calendar').width();
 	calendarHeight = deviceHeight - $('header').height() - $('main').height();
@@ -67,9 +67,11 @@ d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/s
 	  })
 	  .attr('height', function(){
 	  	if(isMobile)
-		  	calendarHeight += 100;
-		  return calendarHeight;
+		  	calendarHeight += 90;
+
+		  return (calendarHeight < 420)? 420 : calendarHeight;
 	  });
+	  // .attr('height', 420)
 
 	calendarEvent = data;
 	drawCalendar(startDay, endDay);
@@ -259,6 +261,9 @@ function drawCalendar(startDay, endDay, option){
 		      		$('#c-mobile-location').html('敬請期待 ^_^');    			
 	      		}
 
+	      		$('hrml,body').animate({
+	      			scrollTop: calendarHeight
+	      		})
 		      }else ;
 	      })
 
@@ -329,7 +334,10 @@ function drawCalendar(startDay, endDay, option){
 		  .append('text')
 		  	.attr('class', 'date')
 			  .attr('x', function(d) {
-			    return getRectX(d) + 10;
+			  	let x = 0;
+			  	if(isMobile)
+			  		x = -3;
+			    return getRectX(d) + 10 + x;
 			  })
 			  .attr('y', function(d) {
 			    return getRectY(d) + 30;
@@ -385,6 +393,10 @@ function drawCalendar(startDay, endDay, option){
 			      	$('#c-mobile-content').html('這天還沒有活動喔！')
 		      		$('#c-mobile-location').html('敬請期待 ^_^');    			
 	      		}
+
+	      		$('hrml,body').animate({
+	      			scrollTop: calendarHeight
+	      		})
 		      }else ;
 	      })
 			.transition()
