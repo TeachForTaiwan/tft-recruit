@@ -21,6 +21,16 @@ var rectWidth = void 0;
 var rectHeight = void 0;
 
 var curSelectId = 'info';
+var calendarEvent = void 0; // read json
+var startDay = d3.timeSunday(d3.timeMonth(today));
+var endDay = d3.timeSunday(new Date(2016, today.getMonth() + 1));
+
+// TODO: 等開放之後再把時間加進來
+// initializeClock('countdownDIV', deadline);
+
+// set all info-box same height 
+sameHeightAllCards();
+
 $('.btn-section').click(function () {
 	if (this.id === curSelectId) {
 		;
@@ -37,29 +47,6 @@ $('.btn-section').click(function () {
 	}
 });
 
-// Info Code-------------
-
-// same height all info cards
-var sameHeightAllCards = function sameHeightAllCards() {
-
-	var cardLen = $('.m-info-type .gap').length;
-	var maxHeight = 0;
-	for (var i = cardLen - 1; i >= 0; i--) {
-		if ($('.m-info-type:nth-child(' + (i + 1) + ') .gap').height() > maxHeight) {
-			maxHeight = $('.m-info-type:nth-child(' + (i + 1) + ') .gap').height();
-		}
-	}
-	for (var _i = cardLen - 1; _i >= 0; _i--) {
-		$('.m-info-type:nth-child(' + (_i + 1) + ') .gap').height(maxHeight);
-	}
-};
-sameHeightAllCards();
-
-// Calendar Code-------------
-var calendarEvent = void 0; // read json
-var startDay = d3.timeSunday(d3.timeMonth(today));
-var endDay = d3.timeSunday(new Date(2016, today.getMonth() + 1));
-
 d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/src/calendarEvent.json', function (error, data) {
 	// d3.json('../../src/calendarEvent.json', function(error, data){
 
@@ -73,13 +60,10 @@ d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/s
 	rectWidth = (calendarWidth - margin.calendarX * 8) / 7;
 	rectHeight = (calendarHeight - margin.calendarY * 7) / 5; // 4(間距) + 2(兩側)
 
-	console.log($(window).height(), deviceHeight);
-
 	svg.attr('width', function () {
 		return calendarWidth;
 	}).attr('height', function () {
 		if (isMobile) calendarHeight += 100;
-
 		return calendarHeight;
 	});
 
@@ -89,33 +73,15 @@ d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/s
 
 $('.calendar-month').click(function () {
 	var arr = this.id.split('-')[1];
+	var rangeArray = void 0;
+
 	$('.calendar-month').removeClass('month-active');
 	$('#' + this.id).addClass('month-active');
 
-	switch (arr) {
-		case 'December':
-			startDay = d3.timeSunday(new Date(2016, 11));
-			endDay = d3.timeSunday(new Date(2016, today.getMonth() + 1));
-			break;
-		case 'January':
-			startDay = d3.timeSunday(new Date(2016, 12));
-			endDay = d3.timeSunday(d3.timeWeek.offset(new Date(2017, 1), 1));
-			break;
-		case 'February':
-			startDay = d3.timeSunday(new Date(2017, 1));
-			endDay = d3.timeSunday(d3.timeWeek.offset(new Date(2017, 2), 1));
-			break;
-		case 'March':
-			startDay = d3.timeSunday(new Date(2017, 2));
-			endDay = d3.timeSunday(d3.timeWeek.offset(new Date(2017, 3), 1));
-			break;
-	}
-	drawCalendar(startDay, endDay, 'c');
+	rangeArray = setCalendarRange(arr);
+	drawCalendar(rangeArray[0], rangeArray[1], 'c');
 });
 
-// TODO: 等開放之後再把時間加進來
-// initializeClock('countdownDIV', deadline);
-// ---------------------
 function _format(time, option) {
 	switch (option) {
 		case 'd':
@@ -158,6 +124,31 @@ function getRectY(time) {
 	if (_format(time, 'd') === 0) getWeek += 1;
 
 	return (getWeek - 1) * (rectHeight + margin.calendarY) + margin.calendarY + margin.xaxisY / 2; // Add padding in section
+}
+
+function setCalendarRange(arr) {
+	var startDay = void 0;
+	var endDay = void 0;
+	switch (arr) {
+		case 'December':
+			startDay = d3.timeSunday(new Date(2016, 11));
+			endDay = d3.timeSunday(new Date(2016, today.getMonth() + 1));
+			break;
+		case 'January':
+			startDay = d3.timeSunday(new Date(2016, 12));
+			endDay = d3.timeSunday(d3.timeWeek.offset(new Date(2017, 1), 1));
+			break;
+		case 'February':
+			startDay = d3.timeSunday(new Date(2017, 1));
+			endDay = d3.timeSunday(d3.timeWeek.offset(new Date(2017, 2), 1));
+			break;
+		case 'March':
+			startDay = d3.timeSunday(new Date(2017, 2));
+			endDay = d3.timeSunday(d3.timeWeek.offset(new Date(2017, 3), 1));
+			break;
+	}
+
+	return [startDay, endDay];
 }
 
 /*
@@ -217,7 +208,6 @@ function drawCalendar(startDay, endDay, option) {
 		}).on("click", function (d, i) {
 			if (isMobile) {
 				var event = calendarEvent[month][d.getDate()];
-				console.log(event);
 				if (event) {
 					$('#c-mobile-content').html(event.title + "&nbsp;" + event.date + "&nbsp;" + event.time);
 					$('#c-mobile-location').html(event.location);
@@ -279,17 +269,13 @@ function drawCalendar(startDay, endDay, option) {
 	}
 
 	function _change() {
-		// console.log(calendarRange);
 		var monMiddle = calendarRange[15];
-
 		var dayGrid = svg.selectAll(".grid").data(calendarRange);
 		var di = 0,
 		    ti = 0,
 		    ci = 0,
 		    datai = 0;
 		var month = _format(monMiddle, 'm');
-		// $('rect').off('click');
-		// $('.calendar-event').off('mousemove');
 
 		dayGrid.selectAll('rect').attr('id', function () {
 			return 'date-' + calendarRange[datai++].getDate();
@@ -299,8 +285,6 @@ function drawCalendar(startDay, endDay, option) {
 			if (isMobile) {
 				var date = this.id.split('-')[1];
 				var event = calendarEvent[month][date];
-				console.log(event, date);
-				console.log($(this));
 				if (event) {
 					$('#c-mobile-content').html(event.title + "&nbsp;" + event.date + "&nbsp;" + event.time);
 					$('#c-mobile-location').html(event.location);
@@ -310,7 +294,6 @@ function drawCalendar(startDay, endDay, option) {
 				}
 			} else ;
 		}).transition().duration(500).style('display', 'block').style('opacity', function () {
-			// console.log(opacityHidden(calendarRange[di++], monMiddle));
 			return opacityHidden(calendarRange[di++], monMiddle);
 		});
 
@@ -365,5 +348,20 @@ function initRecruitPage() {
 		$('#recruit-calendar').removeClass('is-hidden');
 		$('.btn-section').toggleClass('btn-recruit-disable');
 		curSelectId = 'calendar';
+	}
+}
+
+// same height all info cards
+function sameHeightAllCards() {
+
+	var cardLen = $('.m-info-type .gap').length;
+	var maxHeight = 0;
+	for (var i = cardLen - 1; i >= 0; i--) {
+		if ($('.m-info-type:nth-child(' + (i + 1) + ') .gap').height() > maxHeight) {
+			maxHeight = $('.m-info-type:nth-child(' + (i + 1) + ') .gap').height();
+		}
+	}
+	for (var _i = cardLen - 1; _i >= 0; _i--) {
+		$('.m-info-type:nth-child(' + (_i + 1) + ') .gap').height(maxHeight);
 	}
 }

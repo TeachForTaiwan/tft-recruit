@@ -21,6 +21,16 @@ let rectHeight;
 
 
 let curSelectId = 'info';
+let calendarEvent; // read json
+let startDay = d3.timeSunday(d3.timeMonth(today));
+let endDay = d3.timeSunday(new Date(2016, (today.getMonth()+ 1) ));
+
+// TODO: 等開放之後再把時間加進來
+// initializeClock('countdownDIV', deadline);
+
+// set all info-box same height 
+sameHeightAllCards();
+
 $('.btn-section').click(function() {
   if (this.id === curSelectId) {;
   } else {
@@ -35,30 +45,6 @@ $('.btn-section').click(function() {
     console.log("switch to : " + '#recruit-' + this.id);
   }
 })
-
-// Info Code-------------
-
-// same height all info cards
-const sameHeightAllCards = ()=>{
-
-	const cardLen = $('.m-info-type .gap').length;
-	let maxHeight = 0;
-	for (let i = cardLen - 1; i >= 0; i--) {
-		if($(`.m-info-type:nth-child(${i+1}) .gap`).height()>maxHeight){
-			maxHeight = $(`.m-info-type:nth-child(${i+1}) .gap`).height();
-		}
-	}
-	for (let i = cardLen - 1; i >= 0; i--) {
-		$(`.m-info-type:nth-child(${i+1}) .gap`).height(maxHeight);
-	}	
-}
-sameHeightAllCards();
-
-
-// Calendar Code-------------
-let calendarEvent; // read json
-let startDay = d3.timeSunday(d3.timeMonth(today));
-let endDay = d3.timeSunday(new Date(2016, (today.getMonth()+ 1) ));
 
 d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/src/calendarEvent.json', function(error, data){
 // d3.json('../../src/calendarEvent.json', function(error, data){
@@ -75,8 +61,6 @@ d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/s
 	rectWidth = (calendarWidth - margin.calendarX * 8) / 7;
 	rectHeight = (calendarHeight - margin.calendarY * 7) / 5; // 4(間距) + 2(兩側)
 
-	console.log($(window).height() , deviceHeight);
-
 	svg
 	  .attr('width', function(){
 	  	return calendarWidth;
@@ -84,7 +68,6 @@ d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/s
 	  .attr('height', function(){
 	  	if(isMobile)
 		  	calendarHeight += 100;
-
 		  return calendarHeight;
 	  });
 
@@ -95,33 +78,16 @@ d3.json('https://raw.githubusercontent.com/TeachForTaiwan/tft-recruit/gh-pages/s
 
 $('.calendar-month').click(function(){
 	let arr = this.id.split('-')[1];
+	let rangeArray ;
+
 	$('.calendar-month').removeClass('month-active');
 	$('#' + this.id).addClass('month-active');
 
-	switch(arr){
-		case 'December':
-			startDay = d3.timeSunday(new Date(2016, 11));
-			endDay = d3.timeSunday(new Date(2016, (today.getMonth()+ 1) ));
-			break ;
-		case 'January':
-			startDay = d3.timeSunday(new Date(2016, 12));
-			endDay = d3.timeSunday(d3.timeWeek.offset(new Date(2017, 1), 1));
-			break ;
-		case 'February':
-			startDay = d3.timeSunday(new Date(2017, 1));
-			endDay = d3.timeSunday(d3.timeWeek.offset(new Date(2017, 2), 1));
-			break ;
-		case 'March':
-			startDay = d3.timeSunday(new Date(2017, 2));
-			endDay = d3.timeSunday(d3.timeWeek.offset(new Date(2017, 3), 1));
-			break ;
-	}
-	drawCalendar(startDay, endDay, 'c');
+	rangeArray = setCalendarRange(arr);
+	drawCalendar(rangeArray[0], rangeArray[1], 'c');
 })
 
-// TODO: 等開放之後再把時間加進來
-// initializeClock('countdownDIV', deadline);
-// ---------------------
+
 function _format(time, option) {
   switch (option) {
     case 'd':
@@ -172,6 +138,31 @@ function getRectY(time) {
     getWeek += 1;
 
   return (getWeek - 1) * (rectHeight + margin.calendarY) + margin.calendarY + margin.xaxisY / 2; // Add padding in section
+}
+
+function setCalendarRange(arr){
+	let startDay;
+	let endDay;
+	switch(arr){
+		case 'December':
+			startDay = d3.timeSunday(new Date(2016, 11));
+			endDay = d3.timeSunday(new Date(2016, (today.getMonth()+ 1) ));
+			break ;
+		case 'January':
+			startDay = d3.timeSunday(new Date(2016, 12));
+			endDay = d3.timeSunday(d3.timeWeek.offset(new Date(2017, 1), 1));
+			break ;
+		case 'February':
+			startDay = d3.timeSunday(new Date(2017, 1));
+			endDay = d3.timeSunday(d3.timeWeek.offset(new Date(2017, 2), 1));
+			break ;
+		case 'March':
+			startDay = d3.timeSunday(new Date(2017, 2));
+			endDay = d3.timeSunday(d3.timeWeek.offset(new Date(2017, 3), 1));
+			break ;
+	}
+
+	return [startDay, endDay];
 }
 
 /*
@@ -254,7 +245,6 @@ function drawCalendar(startDay, endDay, option){
 	      .on("click", function(d,i){
 	      	if(isMobile){
 	      		let event = calendarEvent[month][d.getDate()];
-	      		console.log(event);
 	      		if(event){
 			      	$('#c-mobile-content').html(
 			      		event.title + 
@@ -361,14 +351,10 @@ function drawCalendar(startDay, endDay, option){
 	}
 
 	function _change(){
-		// console.log(calendarRange);
 		const monMiddle = calendarRange[15];
-
 		let dayGrid = svg.selectAll(".grid").data(calendarRange);
 		let di = 0, ti = 0, ci = 0, datai = 0;
 		let month = _format(monMiddle, 'm');
-		// $('rect').off('click');
-		// $('.calendar-event').off('mousemove');
 
 		dayGrid
 		  .selectAll('rect')
@@ -386,8 +372,6 @@ function drawCalendar(startDay, endDay, option){
 	      	if(isMobile){
 	      		let date = this.id.split('-')[1];
 	      		let event = calendarEvent[month][date];
-	      		console.log(event, date);
-	      		console.log($(this));
 	      		if(event){
 			      	$('#c-mobile-content').html(
 			      		event.title + 
@@ -407,7 +391,6 @@ function drawCalendar(startDay, endDay, option){
 			.duration(500)
 			  .style('display', 'block')
 			  .style('opacity', function(){
-			  	// console.log(opacityHidden(calendarRange[di++], monMiddle));
 			  	return opacityHidden(calendarRange[di++], monMiddle);
 			  });
 
@@ -492,4 +475,19 @@ function initRecruitPage(){
   	$('.btn-section').toggleClass('btn-recruit-disable');
   	curSelectId = 'calendar';
   }
+}
+
+// same height all info cards
+function sameHeightAllCards(){
+
+	const cardLen = $('.m-info-type .gap').length;
+	let maxHeight = 0;
+	for (let i = cardLen - 1; i >= 0; i--) {
+		if($(`.m-info-type:nth-child(${i+1}) .gap`).height()>maxHeight){
+			maxHeight = $(`.m-info-type:nth-child(${i+1}) .gap`).height();
+		}
+	}
+	for (let i = cardLen - 1; i >= 0; i--) {
+		$(`.m-info-type:nth-child(${i+1}) .gap`).height(maxHeight);
+	}	
 }
