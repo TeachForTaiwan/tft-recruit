@@ -8,30 +8,6 @@ let curSelectId = 'info';
 
 sameHeightAllCards(); // set all info-box same height 
 
-$('.btn-section').click(function() {
-  if (this.id === curSelectId) {;
-  } else {
-    $('#recruit-' + curSelectId).addClass('is-hidden');
-    $('#recruit-' + this.id).removeClass('is-hidden')
-    $('.btn-section').toggleClass('btn-recruit-disable');
-
-    window.location.hash = '#recruit-' + this.id;
-
-    curSelectId = this.id;
-    $('html,body').scrollTop(0);
-    console.log("switch to : " + '#recruit-' + this.id);
-  }
-})
-
-$('.calendar-month').click(function(){
-	let arr = this.id.split('-')[1];
-	let rangeArray ;
-
-	$('.calendar-month').removeClass('month-active');
-	$('#' + this.id).addClass('month-active');
-
-})
-
 let vm = new Vue({
 	delimiters: ['${', '}'],
 	el: '#recruit-calendar',
@@ -97,6 +73,32 @@ let vm = new Vue({
 			}
 		}
 	}
+})
+
+
+$('.btn-section').click(function() {
+  if (this.id === curSelectId) {;
+  } else {
+    $('#recruit-' + curSelectId).addClass('is-hidden');
+    $('#recruit-' + this.id).removeClass('is-hidden')
+    $('.btn-section').toggleClass('btn-recruit-disable');
+
+    window.location.hash = '#recruit-' + this.id;
+
+    curSelectId = this.id;
+    $('html,body').scrollTop(0);
+    console.log("switch to : " + '#recruit-' + this.id);
+  }
+})
+
+
+$('.calendar-month').click(function(){
+	let arr = this.id.split('-')[1];
+	let rangeArray ;
+
+	$('.calendar-month').removeClass('month-active');
+	$('#' + this.id).addClass('month-active');
+
 })
 
 function getCalendarEname(month){
