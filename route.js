@@ -15,39 +15,39 @@ var route = [
     {
       data: {
         path: './',
-        title: '問題與解方',
+        title: '問題是什麼？',
         first_word: 'It is a good template'
       },
       partials: './partial.js',
-      layout:  "./layout/solution.hbs",
-      filename: "./solution.html"
+      layout:  "./layout/what.hbs",
+      filename: "./what.html"
     },{
       data: {
         path: './',
-        title: '改變與成果',
+        title: 'TFT怎麼做？',
         first_word: 'It is a good template'
       },
       partials: './partial.js',
-      layout:  "./layout/achievment.hbs",
-      filename: "./achievment.html"
+      layout:  "./layout/how.hbs",
+      filename: "./how.html"
     },{
       data: {
         path: './',
-        title: '申請與甄選',
+        title: '為什麼是你？',
+        first_word: 'It is a good template'
+      },
+      partials: './partial.js',
+      layout:  "./layout/why.hbs",
+      filename: "./why.html"
+    },{
+      data: {
+        path: './',
+        title: '如何申請？',
         first_word: 'It is a good template'
       },
       partials: './partial.js',
       layout:  "./layout/apply.hbs",
       filename: "./apply.html"
-    },{
-      data: {
-        path: './',
-        title: '資源與收穫',
-        first_word: 'It is a good template'
-      },
-      partials: './partial.js',
-      layout:  "./layout/gain.hbs",
-      filename: "./gain.html"
     },{
       data: {
         path: './',

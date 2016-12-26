@@ -69,3 +69,19 @@
 	from{ opacity: 0;}
 	to{ opacity: 1;}
 }
+
+
+.article{
+	.title{
+		padding: 1em 0 .5em;
+		border-bottom: 2px solid $color-title--border;
+		@media (max-width: 767px) {
+			padding:1rem;
+		}
+	}
+	.content{
+		@media (max-width: 767px) {
+			padding: 1rem;
+		}
+	}
+}
