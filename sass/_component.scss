@@ -71,7 +71,13 @@
 }
 
 
+.content{
+	padding: 1rem;
+	text-align: justify;
+}
+
 .article{
+	padding: 2rem 0 1rem;
 	.title{
 		padding: 1em 0 .5em;
 		border-bottom: 2px solid $color-title--border;
@@ -80,8 +86,6 @@
 		}
 	}
 	.content{
-		@media (max-width: 767px) {
-			padding: 1rem;
-		}
+		
 	}
 }

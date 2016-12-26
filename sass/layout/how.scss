@@ -1,0 +1,31 @@
+@import 'main';
+
+.flex-box{
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  @media (max-width: 767px) {
+    flex-direction: row;
+  }
+}
+
+.how-set{
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+  @media (max-width:767px) {
+   flex-direction: column;
+   width: 50%;
+  }
+  @media (max-width: 479px) {
+    width: 100%;
+  }
+  .img-container{
+    flex:1;
+    padding: 1em;
+  }
+  .content{
+    flex:3;
+    padding: 1em;
+  }
+}
