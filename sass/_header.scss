@@ -39,11 +39,10 @@
     .m-logo {
         flex: 1;
         display: flex;
-        flex-direction: column;
         align-items: center;
+        justify-content: center;
         img {
-            margin-bottom: 0.2rem;
-            max-height: 80px;
+            max-height: 95px;
         }
         .main-title{
             font-size: 1.2rem;
@@ -51,10 +50,8 @@
         }
     }
     .m-apply {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+        position: absolute;
+        right: 0;
         @media (max-width: 767px) {
             display: none;
         }
