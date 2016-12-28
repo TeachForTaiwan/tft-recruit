@@ -10,6 +10,7 @@
     background: $color-default--bg;
     z-index: 9;
     top: 0;
+    height: $height-header;
     padding: 0.5em 1em;
     background: url('/dist/img/background.png');
     background-size: contain;
@@ -41,8 +42,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align:center;
         img {
-            max-height: 95px;
+            max-height: 190px;
         }
         .main-title{
             font-size: 1.2rem;
@@ -72,7 +74,7 @@
 
 .menu {
     position: relative;
-    background: $color-menu--bg;
+    background: $color-primary;
     height: $height-menu;
     .m-nav {
         color: $color-menu--text;
@@ -83,12 +85,12 @@
         margin: 0;
         padding: 0;
         width: 100%;
-        top: $height-header;
+        // top: $height-header;
         z-index: 9;
         white-space: nowrap;
         .list {
             &:hover {
-                background: lighten($color-menu--bg, 2%);
+                color: $color-menu--text-active;
             }
         }
         .text {

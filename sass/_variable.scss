@@ -4,25 +4,28 @@
 
 $color-pink:#e95371;
 $color-green: #91B122;
-$color-yellow: #FDD000;
+$color-yellow: #F3C91D;
 $color-light-yellow: #FFFB46;
 $color-white: #FFFFFF;
 $color-black: #000000;
 $color-gray: #7D7B7D;
 $color-light-gray: #FAFAFA;
-$color-dark-gray: #666666;
+$color-dark-gray: #595757;
 
 // old-color
 $color-waterBlue: #47ADC7;
 $color-pinkRed: #EE1F24;
 // -----------
+$color-primary: $color-yellow;
+
 
 $color-btn--text: $color-pink;
 $color-btn--bg: $color-white;
 $color-btn--border: $color-pink;
 $color-default--bg: $color-light-gray;
 $color-menu--bg: $color-waterBlue;
-$color-menu--text: $color-white;
+$color-menu--text: $color-dark-gray;
+$color-menu--text-active: $color-white;
 $color-countdown--text: $color-pink;
 $color-btn-apply--bg: $color-pink;
 $color-btn-apply--text: $color-white;
@@ -58,7 +61,7 @@ $letter-spacing-m: 4px;
  * W & H
  */
 
-$height-header: 110px;
+$height-header: 230px;
 $height-menu: 50px;
 $height-footer: 50px;
 

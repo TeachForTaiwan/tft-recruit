@@ -1,91 +1,122 @@
 /*
  * State
  */
-.is-hidden{
-	display: none !important;
+
+.is-hidden {
+    display: none !important;
 }
 
-.is-btn-disable{
-	cursor: not-allowed;
-
-	&:hover{
-		cursor: not-allowed;		
-	}
+.is-btn-disable {
+    cursor: not-allowed;
+    &:hover {
+        cursor: not-allowed;
+    }
 }
+
 
 /*
  * color
  */
-.color-yellow{
-	color: $color-yellow;
-	letter-spacing: $letter-spacing-m;
+
+.color-yellow {
+    color: $color-yellow;
+    letter-spacing: $letter-spacing-m;
 }
 
-.color-light-yellow{
-	color: $color-light-yellow;
-	letter-spacing: $letter-spacing-m;
+.color-light-yellow {
+    color: $color-light-yellow;
+    letter-spacing: $letter-spacing-m;
 }
 
-.color-gray{
-	color: $color-gray !important; 
-	letter-spacing: $letter-spacing-m;
+.color-gray {
+    color: $color-gray !important;
+    letter-spacing: $letter-spacing-m;
 }
+
 
 /*
  * Btn
  */
-.btn-bg-white{
-	background-color: $color-white !important;
-	color: $color-pink !important;
-	font-weight: bold;
+
+.btn-bg-white {
+    background-color: $color-white !important;
+    color: $color-pink !important;
+    font-weight: bold;
 }
 
-.btn-bg-red{
-	background-color: $color-pink !important;
-	color: $color-white !important;
-	font-weight: bold;
+.btn-bg-red {
+    background-color: $color-pink !important;
+    color: $color-white !important;
+    font-weight: bold;
 }
 
-.btn-bg-gray{
-	background-color: $color-gray !important;
-	color: $color-white !important;
-	font-weight: bold;
+.btn-bg-gray {
+    background-color: $color-gray !important;
+    color: $color-white !important;
+    font-weight: bold;
 }
 
-%btn-reset{
-	color: $color-btn--text;
-	background-color: $color-btn--bg;
-	border: 1px solid $color-btn--border;
-	border-radius: $border-radius-button;
-	font-size: 1rem;
-  	padding: 0.5em 1.5em;
+%btn-reset {
+    color: $color-btn--text;
+    background-color: $color-btn--bg;
+    border: 1px solid $color-btn--border;
+    border-radius: $border-radius-button;
+    font-size: 1rem;
+    padding: 0.5em 1.5em;
 }
 
 
 /*
  * Keyframes
  */
+
 @include keyframes(section-show) {
-	from{ opacity: 0;}
-	to{ opacity: 1;}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-
-.content{
-	padding: 1rem;
-	text-align: justify;
+.content {
+    padding: 1rem;
+    text-align: justify;
 }
 
-.article{
-	padding: 2rem 0 1rem;
-	.title{
-		padding: 1em 0 .5em;
-		border-bottom: 2px solid $color-title--border;
-		@media (max-width: 767px) {
-			padding:1rem;
-		}
-	}
-	.content{
-		
-	}
+.article {
+    padding: 2rem 0 1rem;
+    .title {
+        padding: 1em 0 .5em;
+        border-bottom: 2px solid $color-title--border;
+        @media (max-width: 767px) {
+            padding: 1rem;
+        }
+    }
+    .content {}
+}
+
+.banner-container {
+    position: relative;
+    .quote {
+        @media (min-width: 992px) {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            width: 420px;
+            top: 100px;
+            left: 10vw;
+            padding: 2em 1.5em;
+            &.quote--left {
+                left: 10vw;
+                right: initial;
+            }
+            &.quote--right {
+                left: initial;
+                right: 10vw;
+            }
+        }
+        .author {
+            float: right;
+        }
+    }
 }
