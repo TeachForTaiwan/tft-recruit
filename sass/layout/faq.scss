@@ -1,9 +1,14 @@
 @import 'main';
+.container{
+    margin-bottom: 2em;
+}
 .list {
     list-style: none;
     padding: 0;
     .collapse {
+        margin: .5em 0 1em;
         padding-bottom: 1em;
+        border-left: 2px dotted rgba($color-yellow, 0.3);
     }
     .content {
         padding: .2rem 1.8rem 0;
