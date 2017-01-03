@@ -14,6 +14,9 @@
     padding: 0.5em 1em;
     background: url('/dist/img/background.png');
     background-size: contain;
+    @media (max-width: 767px) {
+        display: none;
+    }
     .m-social {
         display: flex;
         flex-direction: row;
@@ -27,7 +30,7 @@
             display: none;
         }
         a {
-            &:hover{
+            &:hover {
                 opacity: 0.6;
             }
             img {
@@ -42,11 +45,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        text-align:center;
+        text-align: center;
         img {
             max-height: 190px;
         }
-        .main-title{
+        .main-title {
             font-size: 1.2rem;
             color: $color-main-title;
         }
@@ -64,9 +67,8 @@
                 display: none;
             }
         }
-
-        .btn-apply{
-            margin: .2em 2em 0px 0px ;
+        .btn-apply {
+            margin: .2em 2em 0px 0px;
             padding: .3em 1.5em;
         }
     }
@@ -76,6 +78,13 @@
     position: relative;
     background: $color-primary;
     height: $height-menu;
+    @media (max-width: 767px) {
+        height: auto;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 99;
+    }
     .m-nav {
         color: $color-menu--text;
         list-style: none;
@@ -127,48 +136,46 @@
         transform: translateY(-100%);
         &.is-active {
             transform: translateY(0);
-            .list:after{
-                opacity:0.2;
+            .list:after {
+                opacity: 0.2;
             }
+        }
+        @media (max-width: 767px) {
+            display: block;
         }
         .list {
             padding: 0.5em;
             padding-left: 1.2em;
             position: relative;
-            
-            &:after{
-                content:"";
+            &:after {
+                content: "";
                 left: 0;
                 height: 2px;
                 width: 100%;
                 opacity: 0;
                 background: $color-menu--text;
                 position: absolute;
-                transition:1s;
+                transition: 1s;
             }
-            &:hover{
-                &:after{
+            &:hover {
+                &:after {
                     opacity: 0.5;
-                }   
+                }
             }
-        }
-        @media (max-width: 767px) {
-            display: block;
         }
     }
     .menu_button {
-        @media (min-width: 768px) {
-            display: none;
-        }
         width: 50px;
         height: 50px;
         transition: .7s;
         position: absolute;
         right: 0;
-        bottom: 0;
-        transform: translateX(-50%);
+        top: 0;
         z-index: 99;
         cursor: pointer;
+        @media (min-width: 768px) {
+            display: none;
+        }
         .menu_button_container {
             position: relative;
             .menu-line {
@@ -202,8 +209,5 @@
                 }
             }
         }
-    }
-    @media (max-width: 767px) {
-        height: $height-menu;
     }
 }

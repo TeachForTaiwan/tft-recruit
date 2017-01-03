@@ -1,1 +1,11 @@
-@import 'main';
+@import "compass/support";
+@import "compass/css3";
+@import "variable";
+@import "mixin";
+@import "font";
+@import "component";
+@import "base";
+@import "ie";
+@import "loading";
+@import "header";
+@import "footer";
