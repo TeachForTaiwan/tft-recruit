@@ -198,6 +198,10 @@ em {
   outline: none !important;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /*
     header css
 */
@@ -463,4 +467,8 @@ em {
 .l-footer .list .item.m-social img {
   width: 35px;
   margin: 0 .5rem;
+}
+
+.main-desc {
+  padding: 3rem 0;
 }

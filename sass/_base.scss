@@ -29,9 +29,13 @@ em {
     font-style: normal;
 }
 
-.btn{
+.btn {
     @extend %btn-reset;
-    &:focus{
+    &:focus {
         outline: none !important;
     }
+}
+
+.text-center {
+    text-align: center;
 }

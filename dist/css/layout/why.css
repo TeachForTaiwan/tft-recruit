@@ -198,6 +198,10 @@ em {
   outline: none !important;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /*
     header css
 */

@@ -1,32 +1,69 @@
 <!DOCTYPE html>
 
-<html style = "height:100%;width:100%;margin:0px;">
+<html style="height:100%;width:100%;margin:0;">
+
 <head>
 	{{> head}}
-	<title>TFT 教師招募網站 {{title}}</title>
-	<link rel="stylesheet" href = "./dist/css/layout/index.css">
+	<title gDoc="title">TFT 教師招募網站 {{title}}</title>
+	<link rel="stylesheet" href="./dist/css/layout/index.css"> {{!--gDoc.js--}}
+	<script src="src/gDoc.js/gDoc.min.js"></script>
 </head>
+
 <body>
 	{{> header}}
 	<!-- Swiper -->
-    <div class="swiper-container swiper-index">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="https://dummyimage.com/1920x1080/000/fff" alt=""></div>
-            <div class="swiper-slide"><img src="https://dummyimage.com/1920x1080/000/fff" alt=""></div>
-            <div class="swiper-slide"><img src="https://dummyimage.com/1920x1080/000/fff" alt=""></div>
-            <div class="swiper-slide"><img src="https://dummyimage.com/1920x1080/000/fff" alt=""></div>
-            <div class="swiper-slide"><img src="https://dummyimage.com/1920x1080/000/fff" alt=""></div>
-            <div class="swiper-slide"><img src="https://dummyimage.com/1920x1080/000/fff" alt=""></div>
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination--index"></div>
-    </div>
-
+	<div class="swiper-container swiper-index">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><img src="dist/img/banner/banner-1.jpg" alt=""></div>
+		</div>
+		<!-- Add Pagination -->
+		<div class="swiper-pagination--index"></div>
+	</div>
+	<section class="container">
+		<div class="row">
+			<article class="main-desc" gDoc="article-1">
+				Teach For Taiwan是一個兩年全職的教師計畫，我們招募並培訓富教育使命感與領導潛力的青年成為老師，投入有師資需求的偏鄉國小進行教學工作，並在兩年期間提供500小時專業的培訓課程與支持，致力提升教師教學品質，並媒合各界資源，為孩子創造平等優質的教育環境。
+			</article>
+		</div>
+	</section>
+	<section class="container">
+		<div class="row">
+			招募影片嵌入
+		</div>
+	</section>
+	<section class="container">
+		<div class="row">
+			<article class="main-desc text-center" gDoc="article-2">
+				願有一天，台灣所有的孩子，無論出身，<br> 都能擁有優質的教育和自我發展的機會。
+			</article>
+		</div>
+	</section>
+	<section class="container">
+		<div class="row">
+			第四屆招募故事集
+		</div>
+	</section>
 	{{> footer}}
 </body>
 <!-- Jquery -->
 <script type="text/javascript" src="./src/jquery-2.2.4.min.js"></script>
+{{!--gDoc.js--}}
+<script>
+	if (gDoc) {
+		gDoc('1KS_oVcNGcAQe-wQrVSDjJlpHiPJpKSvqh8EqQUJfMRQ', 'index');
+	}
+</script>
 <!-- swiper -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.min.js" integrity="sha256-mPcYboxAQddS1GRB/EMb+sp0NBVB5oTBwRMv/y5hoOg=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="./dist/js/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.min.js" integrity="sha256-mPcYboxAQddS1GRB/EMb+sp0NBVB5oTBwRMv/y5hoOg="
+	crossorigin="anonymous"></script>
+<script src="dist/js/index.js"></script>
+<script src="dist/js/main.js"></script>
+<script>
+	var mainBanner = new Swiper('.swiper-container', {
+		speed: 400,
+		spaceBetween: 100,
+		grabCursor: true,
+	});   
+</script>
+
 </html>
