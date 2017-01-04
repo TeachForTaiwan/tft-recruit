@@ -6,6 +6,7 @@
   <title>TFT 教師招募網站 | {{title}}</title>
   <link rel="stylesheet" href="./dist/css/layout/index.css">
   <link rel="stylesheet" href="./dist/css/layout/apply.css">
+  <script src="src/gDoc.js/gDoc.min.js"></script>
 </head>
 
 <body>
@@ -130,6 +131,13 @@
   {{> footer}}
 
 </body>
+{{!--gDoc.js--}}
+<script>
+  if (gDoc) {
+    gDoc('1KS_oVcNGcAQe-wQrVSDjJlpHiPJpKSvqh8EqQUJfMRQ', 'apply');
+  }
+</script>
+
 <script src="dist/js/main.js"></script>
 
 </html>
