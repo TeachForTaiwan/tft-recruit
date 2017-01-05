@@ -1,0 +1,3 @@
+[submodule "src/gDoc.js"]
+	path = src/gDoc.js
+	url = https://github.com/jadeallencook/gDoc.js.git
