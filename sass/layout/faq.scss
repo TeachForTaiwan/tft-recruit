@@ -10,6 +10,11 @@
 @import "header";
 @import "footer";
 
+.wrap{
+    @extend %wrap-banner;
+    background-image: url(../../img/banner/banner-6.jpg);
+}
+
 .container{
     margin-bottom: 2em;
 }

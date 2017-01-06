@@ -1,6 +1,6 @@
 'use strict';
 
-var deadline = new Date(2016, 11, 31); //2016/12/31--24:00
+var deadline = new Date(2017, 4, 5); //2016/12/31--24:00
 initializeClock('countdownDIV', deadline);
 
 // document.addEventListener('DOMContentLoaded', ()=> {

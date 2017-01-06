@@ -1,4 +1,15 @@
 /**
+ * break-point
+ */
+$screen-xl:1350px;
+$screen-l: 1280px;
+$screen-s: 1024px;
+$table-l: 767px;
+$table-s: 480px;
+$mobile-l: 320px;
+$mobile-s: 240px;
+
+/**
  * colors
  */
 
@@ -8,6 +19,7 @@ $color-yellow: #F3C91D;
 $color-light-yellow: #FFFB46;
 $color-white: #FFFFFF;
 $color-black: #000000;
+$color-black-light:#2A2B2A;
 $color-gray: #7D7B7D;
 $color-light-gray: #FAFAFA;
 $color-dark-gray: #595757;
@@ -19,13 +31,13 @@ $color-pinkRed: #EE1F24;
 $color-primary: $color-yellow;
 
 
-$color-btn--text: $color-pink;
-$color-btn--bg: $color-white;
+$color-btn--text: $color-white;
+$color-btn--bg: $color-pink;
 $color-btn--border: $color-pink;
 $color-default--bg: $color-light-gray;
 $color-menu--bg: $color-yellow;
-$color-menu--text: $color-white;
-$color-menu--text-active: $color-white;
+$color-menu--text: $color-light-gray;
+$color-menu--text-active: $color-dark-gray;
 $color-countdown--text: $color-pink;
 $color-btn-apply--bg: $color-pink;
 $color-btn-apply--text: $color-white;
@@ -45,6 +57,7 @@ $color-footer--text: $color-white;
  * fonts
  */
 
+$header-font-btn: .7em;
 $font-default: "Roboto Condensed",
 "Georgia",
 "Xin Gothic",
@@ -56,11 +69,18 @@ sans-serif;
 
 $letter-spacing-s: 2px;
 $letter-spacing-m: 4px;
+$letter-spacing-l: 8px;
+$letter-spacing-xl: 10px;
+
+/**
+ * Padding & Margin
+ */
+
+$padding-container: 3rem;
 
 /**
  * W & H
  */
-
 $height-header: 230px;
 $height-menu: 50px;
 $height-footer: 50px;

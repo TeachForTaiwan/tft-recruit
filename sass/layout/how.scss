@@ -10,6 +10,11 @@
 @import "header";
 @import "footer";
 
+.wrap{
+  @extend %wrap-banner;
+  background-image: url(../../img/banner/banner-3.jpg);
+}
+
 .flex-box{
   display: flex;
   flex-direction: column;

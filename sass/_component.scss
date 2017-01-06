@@ -1,4 +1,57 @@
 /*
+ * Layout
+ */
+
+%wrap-banner{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background: $color-default--bg url(../../img/banner/banner-1.jpg) center no-repeat;
+    background-size: contain;
+    margin-top: $padding-container;
+    color: $color-black-light;
+
+    h3{
+        position: absolute;
+        width: 30%;
+        min-width: 200px;
+        padding: .4em .2em;
+        left: 10%;
+        bottom: 0px;
+        font-weight: bold;
+        background-color: rgba(255,255,255,.6);
+
+        &.right{
+            left: auto;
+            right: 10%;
+            bottom: 10%;
+        }
+
+        &.quote{
+            width: 35%;
+            padding: .5em .4em;
+            line-height: 1.1;
+            font-size: 1rem;
+            font-weight: lighter;
+
+            @media(max-width: $table-l){
+                width: 90%;
+                bottom: -2.5em;
+            }
+        }
+
+        @media(max-width: $table-l){
+            width: 80%;
+            left: 5%;
+        }
+    }
+
+    .author{
+         font-size: .7em;      
+    }
+}
+
+/*
  * State
  */
 
@@ -48,6 +101,11 @@
     background-color: $color-pink !important;
     color: $color-white !important;
     font-weight: bold;
+
+    &:hover{
+        color: $color-pink !important;
+        background-color: $color-white !important;
+    }
 }
 
 .btn-bg-gray {
@@ -59,8 +117,8 @@
 %btn-reset {
     color: $color-btn--text;
     background-color: $color-btn--bg;
-    border: 1px solid $color-btn--border;
-    border-radius: $border-radius-button;
+    border: solid 1px $color-btn--border;
+    border-radius: 0px;
     font-size: 1rem;
     padding: 0.5em 1.5em;
 }

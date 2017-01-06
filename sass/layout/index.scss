@@ -10,6 +10,29 @@
 @import "header";
 @import "footer";
 
+body{
+	color: $color-gray;
+	letter-spacing: $letter-spacing-s;
+}
+
 .main-desc{
-  padding:3rem 0;
+	width: 80%;
+  padding: 1rem $padding-container;
+  margin: $padding-container auto;
+  border-top: solid $color-yellow;
+  border-bottom: solid $color-yellow;
+}
+
+.wrap{
+	@extend %wrap-banner;
+}
+
+@media (max-width: $table-l){
+	$padding-container: 1.5rem;
+
+	.main-desc{
+		width: 90%;
+		padding: 1rem $padding-container;
+	  margin: $padding-container auto;
+	}
 }
