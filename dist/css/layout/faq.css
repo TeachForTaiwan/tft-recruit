@@ -464,10 +464,20 @@ em {
 .list {
   list-style: none;
   padding: 0; }
+  .list li {
+    padding: .2em 0; }
   .list .collapse {
-    margin: .5em 0 1em;
+    padding-top: .5em;
     padding-bottom: 1em;
-    border-left: 2px dotted rgba(243, 201, 29, 0.3); }
+    position: relative;
+    transition: .1s ease-in-out; }
+    .list .collapse:after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      border-left: 3px dotted rgba(243, 201, 29, 0.3);
+      left: 0;
+      top: 0; }
   .list .content {
     padding: .2rem 1.8rem 0;
     margin: 0;

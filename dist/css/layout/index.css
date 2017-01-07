@@ -534,8 +534,7 @@ body {
   max-width: 1200px;
   width: 80%;
   max-height: 100%;
-  padding: 1em 0;
-  filter: blur(0); }
+  padding: 1em 0; }
   @media (max-width: 767px) {
     .md-modal {
       width: 100%;

@@ -2,6 +2,7 @@
  * @import "main";
  * 正式上線的時候inmport 一個 main即可（開發的時候為求方便import比較多）
  */
+
 @import "compass/support";
 @import "compass/css3";
 @import "variable";
@@ -13,22 +14,34 @@
 @import "loading";
 @import "header";
 @import "footer";
-
-.wrap{
+.wrap {
     @extend %wrap-banner;
     background-image: url(../../img/banner/banner-6.jpg);
 }
 
-.container{
+.container {
     margin-bottom: 2em;
 }
+
 .list {
     list-style: none;
     padding: 0;
+    li{
+        padding: .2em 0;
+    }
     .collapse {
-        margin: .5em 0 1em;
+        padding-top: .5em;
         padding-bottom: 1em;
-        border-left: 2px dotted rgba($color-yellow, 0.3);
+        position: relative;
+        transition: .1s ease-in-out;
+        &:after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            border-left: 3px dotted rgba(243, 201, 29, 0.3);
+            left: 0;
+            top: 0;
+        }
     }
     .content {
         padding: .2rem 1.8rem 0;
@@ -37,8 +50,8 @@
     }
 }
 
-@media(max-width: $table-s){
-    .container{
+@media(max-width: $table-s) {
+    .container {
         margin-top: 13em;
     }
 }
