@@ -185,6 +185,19 @@
     strong{
         color: $color-pink;
     }
+
+    .count-ul{
+        list-style-type: decimal;
+    }
+
+    .circle-ul{
+        list-style-type: circle;
+    }
+
+    .use-heart {
+        color: $color-pink;
+        letter-spacing: $letter-spacing-m;
+    }
 }
 
 .banner-container {

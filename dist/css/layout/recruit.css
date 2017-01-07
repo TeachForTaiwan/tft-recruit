@@ -140,6 +140,13 @@
     font-weight: bold; }
   .article strong {
     color: #e95371; }
+  .article .count-ul {
+    list-style-type: decimal; }
+  .article .circle-ul {
+    list-style-type: circle; }
+  .article .use-heart {
+    color: #e95371;
+    letter-spacing: 4px; }
 
 .banner-container {
   position: relative; }
