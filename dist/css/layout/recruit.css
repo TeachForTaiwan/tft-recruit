@@ -132,7 +132,8 @@
     padding-top: 2rem; }
   .article .title {
     padding-bottom: .3em;
-    border-bottom: 2px solid #F3C91D; }
+    border-bottom: 2px solid #F3C91D;
+    letter-spacing: 2.4; }
     @media (max-width: 767px) {
       .article .title {
         padding: 1rem; } }

@@ -47,14 +47,35 @@ var initializeClock = function initializeClock(id, endtime) {
 
 // ----- Main CODE -------
 
+
 document.addEventListener('DOMContentLoaded', function () {
   var menuBtn = document.querySelector('.menu_button');
   var menuList = document.querySelector('.m-nav--mobile');
   var mask = document.querySelector('.overlay');
+  var $banner = $('.wrap');
+  var quoteH = $('.wrap .quote').height();
+  var setBannerBottom = function setBannerBottom(quoteH) {
+    if (window.innerWidth < 768) {
+      $banner.css({
+        "margin-bottom": quoteH
+      });
+    } else {
+      $banner.css({
+        "margin-bottom": "initial"
+      });
+    }
+  };
+
+  setBannerBottom(quoteH);
 
   menuBtn.addEventListener('click', function (e) {
     menuBtn.classList.toggle('is-active');
     menuList.classList.toggle('is-active');
     mask.classList.toggle('is-active');
+  });
+
+  window.addEventListener('resize', function () {
+    var quoteH = $('.wrap .quote').height();
+    setBannerBottom(quoteH);
   });
 });

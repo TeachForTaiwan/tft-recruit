@@ -153,10 +153,10 @@
     @media (max-width: 767px) {
       .wrap .quote {
         position: relative;
-        width: 80%;
-        left: 5%;
-        bottom: 0px;
-        top: 112%; } }
+        width: 100%;
+        top: 100%;
+        left: 0;
+        padding: 1em; } }
   .wrap .author {
     font-size: .7em; }
   .wrap h3 {
@@ -174,7 +174,8 @@
     padding-top: 2rem; }
   .article .title {
     padding-bottom: .3em;
-    border-bottom: 2px solid #F3C91D; }
+    border-bottom: 2px solid #F3C91D;
+    letter-spacing: 2.4; }
     @media (max-width: 767px) {
       .article .title {
         padding: 1rem; } }

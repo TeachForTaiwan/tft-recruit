@@ -49,10 +49,28 @@ const initializeClock = (id, endtime) => {
 
 // ----- Main CODE -------
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.querySelector('.menu_button');
   const menuList = document.querySelector('.m-nav--mobile');
   const mask = document.querySelector('.overlay');
+  const $banner = $('.wrap');
+  const quoteH = $('.wrap .quote').height();
+  const setBannerBottom = (quoteH) => {
+    if (window.innerWidth < 768) {
+      $banner.css({
+        "margin-bottom": quoteH,
+      });
+    } else {
+      $banner.css({
+        "margin-bottom": "initial",
+      });
+    }
+
+  };
+
+  setBannerBottom(quoteH);
 
   menuBtn.addEventListener('click', (e) => {
     menuBtn.classList.toggle('is-active');
@@ -60,4 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
     mask.classList.toggle('is-active');
   });
 
+  window.addEventListener('resize', () => {
+    const quoteH = $('.wrap .quote').height();
+    setBannerBottom(quoteH);
+  });
 });
+
