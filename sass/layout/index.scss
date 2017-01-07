@@ -35,6 +35,10 @@ body {
     margin: 0 auto $padding-container;
     border-top: solid $color-yellow;
     border-bottom: solid $color-yellow;
+    @media (max-width: $table-l) {
+        width: 90%;
+        padding: 1rem 0;
+    }
 }
 
 .wrap {
@@ -58,16 +62,24 @@ body {
     @media (max-width: $screen-s) {
         width: 50%;
     }
-    @media (max-width: $table-l) {
+    @media (max-width: $table-s) {
         width: 100%;
     }
-    &:hover{
+    &:hover {
         opacity: .8;
     }
     .story-img {
         height: auto;
     }
-    .story-name {}
+    .story-name {
+        @media (max-width: $table-s) {
+            width: 100%;
+            padding: 0.5em;
+            font-size: 1.2em;
+            border: 1px solid rgba(158, 158, 158, 0.4);
+            border-top: none;
+        }
+    }
 }
 
 .md-content {
@@ -77,22 +89,22 @@ body {
     color: $color-black-light;
     font-size: .8rem;
     @media (max-width: $table-l) {
-        max-height: 100%;
+        max-height: none;
         display: block;
-        overflow: auto;
+        border-radius: 18px;   
     }
     .info-container {
         flex: 1;
-        .name{
+        .name {
             color: $color-pink;
             padding: .5em 0;
             font-weight: bold;
         }
-        .about-1{
+        .about-1 {
             color: $color-green;
             padding: .5em 0;
         }
-        .about-2{
+        .about-2 {
             padding: .5em 0;
         }
     }
@@ -103,31 +115,38 @@ body {
         overflow: auto;
         @media (max-width: $table-l) {
             overflow: initial;
+            padding: 1em;
         }
     }
 }
 
 .md-modal {
     max-width: 1200px;
-    width: 80%;
+    width: 85%;
     max-height: 100%;
     padding: 1em 0;
     // filter: blur(0);
+    @media (max-width: $screen-s) {
+        width: 95%;
+    }
     @media (max-width: $table-l) {
         width: 100%;
         height: 100%;
-        padding: 0;
+        margin: 1em 0;
+        margin-top: 0;
+        overflow: auto;
     }
 }
 
-.md-overlay{
-    background: rgba(10,10,10,0.5);
+.md-overlay {
+    background: rgba(10, 10, 10, 0.5);
 }
 
-.md-show ~ .md-overlay {
-	opacity: 1;
-	visibility: visible;
+.md-show~.md-overlay {
+    opacity: 1;
+    visibility: visible;
 }
+
 .btn-story {
     color: $color-black-light;
     position: absolute;
@@ -135,22 +154,16 @@ body {
     border: none;
     padding: 1.2em;
     background: transparent;
-    &:active{
+    &:active {
         box-shadow: none;
         opacity: .5;
+    }
+    @media (max-width: $table-l) {
+        position: fixed;
     }
 }
 
 // youtube iframe
-.embed-responsive{
+.embed-responsive {
     width: 100%;
-}
-
-@media (max-width: $table-l) {
-    $padding-container: 1.5rem;
-    .main-desc {
-        width: 90%;
-        padding: 1rem $padding-container;
-        margin: $padding-container auto;
-    }
 }

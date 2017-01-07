@@ -124,7 +124,7 @@
   height: 50%;
   background: #FAFAFA url(../../img/banner/banner-1.jpg) center no-repeat;
   background-size: contain;
-  margin-top: 3rem;
+  margin-top: 50px;
   color: #2A2B2A; }
   @media (max-width: 767px) {
     .wrap {
@@ -184,7 +184,7 @@
     letter-spacing: 2.4; }
     @media (max-width: 767px) {
       .article .title {
-        padding: 1rem; } }
+        padding: 1rem 0; } }
   .article .content-bold {
     font-weight: bold; }
   .article strong {
@@ -447,8 +447,7 @@ em {
       margin: .5rem 0; }
       @media (max-width: 767px) {
         .l-footer .list .item {
-          flex: none;
-          margin: .2rem 0px; } }
+          flex: none; } }
       .l-footer .list .item.logo img {
         vertical-align: sub; }
       @media (max-width: 767px) {

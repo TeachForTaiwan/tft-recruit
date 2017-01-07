@@ -110,7 +110,7 @@
     height: 50%;
     background: $color-default--bg url(../../img/banner/banner-1.jpg) center no-repeat;
     background-size: contain;
-    margin-top: $padding-container;
+    margin-top: $height-menu;
     color: $color-black-light;
     @media(max-width: $table-l) {
         background-size: cover;
@@ -175,8 +175,8 @@
         padding-bottom: .3em;
         border-bottom: 2px solid $color-title--border;
         letter-spacing: 2.4;
-        @media (max-width: 767px) {
-            padding: 1rem;
+        @media (max-width: $table-l) {
+            padding: 1rem 0;
         }
     }
     .content-bold {
