@@ -484,14 +484,34 @@ body {
 
 .md-content {
   display: flex;
-  max-height: 80vh; }
+  max-height: 80vh;
+  background: #FAFAFA;
+  color: #2A2B2A;
+  font-size: .8rem; }
+  @media (max-width: 767px) {
+    .md-content {
+      max-height: 100%;
+      display: block;
+      overflow: auto; } }
   .md-content .info-container {
     flex: 1; }
+    .md-content .info-container .name {
+      color: #e95371;
+      padding: .5em 0;
+      font-weight: bold; }
+    .md-content .info-container .about-1 {
+      color: #91B122;
+      padding: .5em 0; }
+    .md-content .info-container .about-2 {
+      padding: .5em 0; }
   .md-content .content-container {
     flex: 3;
     padding: 2rem;
     padding-right: 2.4rem;
     overflow: auto; }
+    @media (max-width: 767px) {
+      .md-content .content-container {
+        overflow: initial; } }
 
 .md-modal {
   max-width: 1200px;
@@ -499,12 +519,18 @@ body {
   max-height: 100%;
   padding: 1em 0;
   filter: blur(0); }
+  @media (max-width: 767px) {
+    .md-modal {
+      width: 100%;
+      height: 100%;
+      padding: 0; } }
 
 .md-overlay.is-active {
   visibility: visible;
   opacity: 1; }
 
 .btn-story {
+  color: #2A2B2A;
   position: absolute;
   right: 0;
   border: none;
