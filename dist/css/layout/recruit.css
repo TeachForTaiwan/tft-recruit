@@ -219,6 +219,10 @@ em {
     header css
 */
 .l-header {
+  -moz-transition: background 0.3s ease-in;
+  -o-transition: background 0.3s ease-in;
+  -webkit-transition: background 0.3s ease-in;
+  transition: background 0.3s ease-in;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -596,14 +600,20 @@ table {
           padding: 10px 1em; } }
     .md-content .row .content-event {
       border-top: dashed 1px #FFFFFF; }
-      @media (max-width: 767px) {
-        .md-content .row .content-event {
-          margin: 1em 0; } }
+      .md-content .row .content-event .btn-bg-finish {
+        cursor: not-allowed;
+        background-color: #e95371;
+        color: #FFFFFF; }
+        .md-content .row .content-event .btn-bg-finish a {
+          cursor: not-allowed; }
       .md-content .row .content-event .desc {
         padding-left: 0;
         padding-right: 0; }
       .md-content .row .content-event td {
         padding: 13px 10px 0px 0px; }
+      @media (max-width: 767px) {
+        .md-content .row .content-event {
+          margin: 1em 0; } }
     .md-content .row .btn-type-1 {
       position: relative;
       left: 4em; }

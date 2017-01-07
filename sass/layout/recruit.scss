@@ -259,8 +259,13 @@ table{
         .content-event {
             // font-size: .9em;
             border-top: dashed 1px $color-white;
-            @media (max-width: 767px) {
-                margin:1em 0;
+            .btn-bg-finish{
+                cursor: not-allowed;
+                background-color: $color-pink;
+                color: $color-white;
+                a{
+                    cursor: not-allowed;
+                }
             }
             .desc{
                 padding-left: 0;
@@ -268,6 +273,9 @@ table{
             }
             td {
                 padding: 13px 10px 0px 0px;
+            }
+            @media (max-width: 767px) {
+                margin:1em 0;
             }
         }
         .btn-type-1 {

@@ -3,6 +3,7 @@
 */
 
 .l-header {
+    @include transition(background .3s ease-in);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -32,9 +33,9 @@
         
         a{
             &:hover{
-            color: $color-pink;
+                color: $color-pink;   
                 img{
-                    height: 17%;
+                    height: 17%; 
                 }
             }
         }
