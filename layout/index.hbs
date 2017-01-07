@@ -5,13 +5,15 @@
 <head>
 	{{> head}}
 	<title gDoc="title">TFT 教師招募網站 {{title}}</title>
-	<link rel="stylesheet" href="./dist/css/layout/index.css"> 
+	<!-- Modal Effect -->
+	<link rel="stylesheet" type="text/css" href="src/modalEffect/modalEffect.css" />
+	<link rel="stylesheet" href="./dist/css/layout/index.css">
 </head>
 
 <body>
 	{{> header}}
 	<!-- Swiper -->
-<!-- 	<div class="swiper-container swiper-index">
+	<!-- 	<div class="swiper-container swiper-index">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide"><img src="dist/img/banner/banner-1.jpg" alt=""></div>
 		</div>
@@ -20,7 +22,7 @@
 	</div> -->
 
 	<div class="wrap">
-		<div class="quote" >
+		<div class="quote">
 			<h3>
 				願有一天，台灣所有的孩子，無論出身，都能擁有優質的教育和自我發展的機會。
 			</h3>
@@ -41,54 +43,95 @@
 			</div>
 		</div>
 	</section>
-
 	<section class="container">
 		<div class="row">
-				<h2 class="title">第四屆招募故事集</h2>
+			<h2 class="title">第四屆招募故事集</h2>
 			<div class="main-desc">
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-1">
 					<img src="../../tft-recruit/dist/img/story/zhang_yu_ting.jpg" alt="" class="story-img">
 					<figcaption class="story-name">張瑜婷</figcaption>
 				</figure>
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-2">
 					<img src="../../tft-recruit/dist/img/story/he_xue_jing.jpg" alt="" class="story-img">
 					<figcaption class="story-name">何雪菁</figcaption>
 				</figure>
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-3">
 					<img src="../../tft-recruit/dist/img/story/song_wan_rong.jpg" alt="" class="story-img">
 					<figcaption class="story-name">宋琬榕</figcaption>
 				</figure>
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-4">
 					<img src="../../tft-recruit/dist/img/story/zheng_ya_xin.jpg" alt="" class="story-img">
 					<figcaption class="story-name">鄭雅心</figcaption>
 				</figure>
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-5">
 					<img src="../../tft-recruit/dist/img/story/xu_cong_min.jpg" alt="" class="story-img">
 					<figcaption class="story-name">許琮閔</figcaption>
 				</figure>
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-6">
 					<img src="https://dummyimage.com/800x800/000/fff" alt="" class="story-img">
 					<figcaption class="story-name">李珊</figcaption>
 				</figure>
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-7">
 					<img src="../../tft-recruit/dist/img/story/li_si_hui.jpg" alt="" class="story-img">
 					<figcaption class="story-name">李思慧</figcaption>
 				</figure>
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-8">
 					<img src="https://dummyimage.com/800x800/000/fff" alt="" class="story-img">
 					<figcaption class="story-name">徐凡甘</figcaption>
 				</figure>
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-9">
 					<img src="https://dummyimage.com/800x800/000/fff" alt="" class="story-img">
 					<figcaption class="story-name">伍麗華</figcaption>
 				</figure>
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-10">
 					<img src="https://dummyimage.com/800x800/000/fff" alt="" class="story-img">
 					<figcaption class="story-name">珊媽</figcaption>
 				</figure>
 			</div>
+			<div class="m-lightbox">
+				<article class="md-modal md-effect-8" id="story-set-1">
+					<div class="md-content">
+						<button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button>
+						<div class="info-container">
+							
+						</div>
+						<div class="content-container">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure est repellendus ut consequatur aliquam, tempora obcaecati qui fuga molestiae explicabo repellat, eligendi non corporis nemo earum magnam quos voluptatum dolorum.
+						</div>
+					</div>
+				</article>
+				<article class="md-modal md-effect-8" id="story-set-2">
+					<div class="md-content"><button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button></div>
+				</article>
+				<article class="md-modal md-effect-8" id="story-set-3">
+					<div class="md-content"><button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button></div>
+				</article>
+				<article class="md-modal md-effect-8" id="story-set-4">
+					<div class="md-content"><button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button></div>
+				</article>
+				<article class="md-modal md-effect-8" id="story-set-5">
+					<div class="md-content"><button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button></div>
+				</article>
+				<article class="md-modal md-effect-8" id="story-set-6">
+					<div class="md-content"><button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button></div>
+				</article>
+				<article class="md-modal md-effect-8" id="story-set-7">
+					<div class="md-content"><button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button></div>
+				</article>
+				<article class="md-modal md-effect-8" id="story-set-8">
+					<div class="md-content"><button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button></div>
+				</article>
+				<article class="md-modal md-effect-8" id="story-set-9">
+					<div class="md-content"><button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button></div>
+				</article>
+				<article class="md-modal md-effect-8" id="story-set-10">
+					<div class="md-content"><button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button></div>
+				</article>
+			</div>
 		</div>
 	</section>
+	<!-- overlay element for ModalEffect -->
+	<div class="md-overlay"></div>
 	{{> footer}}
 </body>
 <script>
@@ -96,12 +139,14 @@
 		speed: 400,
 		spaceBetween: 100,
 		grabCursor: true,
-	});   
-	
+	});
+
 	if (gDoc) {
 		gDoc('1JP0tnjFoTQO388FpDELkfM318KSxFMbJgkCaNgR_WZQ', 'index');
 	}
 </script>
+<script src="src/modalEffect/classie.js"></script>
+<script src="src/modalEffect/modalEffects.js"></script>
 <script src="dist/js/index.js"></script>
 
 </html>

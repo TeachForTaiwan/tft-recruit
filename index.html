@@ -1,11 +1,13 @@
 <html style="height:100%;width:100%;margin:0;"><head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="author" content="Teach For Taiwan"><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><!-- bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><!-- swiper --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css" integrity="sha256-qmCTrpLvkz/GexFbP14i9p8vymHbYOEQEZflvEKaXHU=" crossorigin="anonymous"><link rel="icon" href="./dist/img/favicon.ico"><!-- JS --><script type="text/javascript" src="./src/jquery-2.2.4.min.js"></script><script type="text/javascript" src="./dist/js/global.js"></script><script src="src/gDoc.js/gDoc.min.js"></script>	<title gdoc="title">TFT 教師招募網站 </title>
-	<link rel="stylesheet" href="./dist/css/layout/index.css"> 
+	<!-- Modal Effect -->
+	<link rel="stylesheet" type="text/css" href="src/modalEffect/modalEffect.css">
+	<link rel="stylesheet" href="./dist/css/layout/index.css">
 </head>
 
 <body>
 	<header class="l-header"><div class="m-logo"><a href="index.html"><img src="dist/img/logo_apply_red.png" alt=""><br>TFT 第四屆教師招募網站</a></div><!-- <div class="m-apply">第四屆教師招募將於2017年1月9日開啟</div> --><div class="m-apply"><div class="countdown">距離報名截止時間還有<wbr><span id="countdownDIV"><span class="days"> </span><span class="smalltext">天</span><span class="hours"> </span><span class="smalltext">小時</span><span class="minutes"> </span><span class="smalltext">分</span><!-- <span class="seconds"> </span><span class="smalltext">秒</span> --></span></div><a href="javascript:;"><button class="btn btn-bg-red">立即申請</button></a></div></header><nav class="menu"><div class="menu_button"><div class="menu_button_container"><div class="menu-line"></div><div class="menu-line"></div><div class="menu-line"></div></div></div><ul class="m-nav"><li class="list"><a href="what.html"><em class="text">問題是什麼？</em></a></li><li class="list"><a href="how.html"><em class="text">TFT怎麼做？</em></a></li><li class="list"><a href="why.html"><em class="text">為什麼是你？</em></a></li><li class="list"><a href="apply.html"><em class="text">如何申請？</em></a></li><li class="list"><a href="faq.html"><em class="text">常見問答</em></a></li><li class="list"><a href="recruit.html"><em class="text">招募活動</em></a></li></ul><ul class="m-nav--mobile"><li class="list"><a href="index.html"><em class="text">招募首頁</em></a></li><li class="list"><a href="what.html"><em class="text">問題是什麼？</em></a></li><li class="list"><a href="how.html"><em class="text">TFT怎麼做？</em></a></li><li class="list"><a href="why.html"><em class="text">為什麼是你？</em></a></li><li class="list"><a href="apply.html"><em class="text">如何申請？</em></a></li><li class="list"><a href="faq.html"><em class="text">常見問答</em></a></li><li class="list"><a href="recruit.html"><em class="text">招募活動</em></a></li></ul></nav>	<!-- Swiper -->
-<!-- 	<div class="swiper-container swiper-index">
+	<!-- 	<div class="swiper-container swiper-index">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide"><img src="dist/img/banner/banner-1.jpg" alt=""></div>
 		</div>
@@ -35,54 +37,90 @@
 			</div>
 		</div>
 	</section>
-
 	<section class="container">
 		<div class="row">
-				<h2 class="title">第四屆招募故事集</h2>
+			<h2 class="title">第四屆招募故事集</h2>
 			<div class="main-desc">
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-1">
 					<img src="../../tft-recruit/dist/img/story/zhang_yu_ting.jpg" alt="" class="story-img">
 					<figcaption class="story-name">張瑜婷</figcaption>
 				</figure>
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-2">
 					<img src="../../tft-recruit/dist/img/story/he_xue_jing.jpg" alt="" class="story-img">
 					<figcaption class="story-name">何雪菁</figcaption>
 				</figure>
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-3">
 					<img src="../../tft-recruit/dist/img/story/song_wan_rong.jpg" alt="" class="story-img">
 					<figcaption class="story-name">宋琬榕</figcaption>
 				</figure>
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-4">
 					<img src="../../tft-recruit/dist/img/story/zheng_ya_xin.jpg" alt="" class="story-img">
 					<figcaption class="story-name">鄭雅心</figcaption>
 				</figure>
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-5">
 					<img src="../../tft-recruit/dist/img/story/xu_cong_min.jpg" alt="" class="story-img">
 					<figcaption class="story-name">許琮閔</figcaption>
 				</figure>
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-6">
 					<img src="https://dummyimage.com/800x800/000/fff" alt="" class="story-img">
 					<figcaption class="story-name">李珊</figcaption>
 				</figure>
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-7">
 					<img src="../../tft-recruit/dist/img/story/li_si_hui.jpg" alt="" class="story-img">
 					<figcaption class="story-name">李思慧</figcaption>
 				</figure>
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-8">
 					<img src="https://dummyimage.com/800x800/000/fff" alt="" class="story-img">
 					<figcaption class="story-name">徐凡甘</figcaption>
 				</figure>
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-9">
 					<img src="https://dummyimage.com/800x800/000/fff" alt="" class="story-img">
 					<figcaption class="story-name">伍麗華</figcaption>
 				</figure>
-				<figure class="story-set">
+				<figure class="story-set md-trigger" data-modal="story-set-10">
 					<img src="https://dummyimage.com/800x800/000/fff" alt="" class="story-img">
 					<figcaption class="story-name">珊媽</figcaption>
 				</figure>
 			</div>
+			<div class="m-lightbox">
+				<article class="md-modal md-effect-8" id="story-set-1">
+					<div class="md-content">
+						<button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button>
+						test
+					</div>
+				</article>
+				<article class="md-modal md-effect-8" id="story-set-2">
+					<div class="md-content"><button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button></div>
+				</article>
+				<article class="md-modal md-effect-8" id="story-set-3">
+					<div class="md-content"><button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button></div>
+				</article>
+				<article class="md-modal md-effect-8" id="story-set-4">
+					<div class="md-content"><button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button></div>
+				</article>
+				<article class="md-modal md-effect-8" id="story-set-5">
+					<div class="md-content"><button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button></div>
+				</article>
+				<article class="md-modal md-effect-8" id="story-set-6">
+					<div class="md-content"><button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button></div>
+				</article>
+				<article class="md-modal md-effect-8" id="story-set-7">
+					<div class="md-content"><button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button></div>
+				</article>
+				<article class="md-modal md-effect-8" id="story-set-8">
+					<div class="md-content"><button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button></div>
+				</article>
+				<article class="md-modal md-effect-8" id="story-set-9">
+					<div class="md-content"><button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button></div>
+				</article>
+				<article class="md-modal md-effect-8" id="story-set-10">
+					<div class="md-content"><button class="md-close type-button"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button></div>
+				</article>
+			</div>
 		</div>
 	</section>
+	<!-- overlay element for ModalEffect -->
+	<div class="md-overlay"></div>
 	<footer class="l-footer">
   <ul class="list">
     <li class="item"><a href="http://www.teach4taiwan.org/" target="_blank">官方網站</a></li>
@@ -102,12 +140,14 @@
 		speed: 400,
 		spaceBetween: 100,
 		grabCursor: true,
-	});   
-	
+	});
+
 	if (gDoc) {
 		gDoc('1JP0tnjFoTQO388FpDELkfM318KSxFMbJgkCaNgR_WZQ', 'index');
 	}
 </script>
+<script src="src/modalEffect/classie.js"></script>
+<script src="src/modalEffect/modalEffects.js"></script>
 <script src="dist/js/index.js"></script>
 
 </body></html>
