@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var menuList = document.querySelector('.m-nav--mobile');
   var mask = document.querySelector('.overlay');
   var $banner = $('.wrap');
-  var quoteH = $('.wrap .quote').height();
+  var quoteH = $('.wrap .quote').innerHeight();
+
   var setBannerBottom = function setBannerBottom(quoteH) {
     if (window.innerWidth < 768) {
       $banner.css({
@@ -75,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   window.addEventListener('resize', function () {
-    var quoteH = $('.wrap .quote').height();
+    var quoteH = $('.wrap .quote').innerHeight();
     setBannerBottom(quoteH);
   });
 });

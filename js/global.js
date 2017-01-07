@@ -56,7 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuList = document.querySelector('.m-nav--mobile');
   const mask = document.querySelector('.overlay');
   const $banner = $('.wrap');
-  const quoteH = $('.wrap .quote').height();
+  const quoteH = $('.wrap .quote').innerHeight();
+  
   const setBannerBottom = (quoteH) => {
     if (window.innerWidth < 768) {
       $banner.css({
@@ -79,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   window.addEventListener('resize', () => {
-    const quoteH = $('.wrap .quote').height();
+    const quoteH = $('.wrap .quote').innerHeight();
     setBannerBottom(quoteH);
   });
 });

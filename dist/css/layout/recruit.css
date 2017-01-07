@@ -119,10 +119,6 @@
 /*
  * Layout
  */
-@media (max-width: 767px) {
-  .container {
-    margin-top: 10em; } }
-
 .content {
   text-align: justify; }
 
@@ -130,6 +126,9 @@
   padding: 0; }
   .article:nth-of-type(1) {
     padding-top: 2rem; }
+    @media (max-width: 767px) {
+      .article:nth-of-type(1) {
+        padding-top: 0; } }
   .article .title {
     padding-bottom: .3em;
     border-bottom: 2px solid #F3C91D;
