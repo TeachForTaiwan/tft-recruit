@@ -43,7 +43,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="container">
+	<section class="container" id="story-box">
 		<div class="row">
 			<h2 class="title">第四屆招募故事集</h2>
 			<div class="main-desc">
@@ -135,15 +135,18 @@
 	{{> footer}}
 </body>
 <script>
-	var mainBanner = new Swiper('.swiper-container', {
-		speed: 400,
-		spaceBetween: 100,
-		grabCursor: true,
-	});
+	const deadline = new Date(2017, 4, 5); 
+	// var mainBanner = new Swiper('.swiper-container', {
+	// 	speed: 400,
+	// 	spaceBetween: 100,
+	// 	grabCursor: true,
+	// });
 
 	if (gDoc) {
 		gDoc('1JP0tnjFoTQO388FpDELkfM318KSxFMbJgkCaNgR_WZQ', 'index');
 	}
+
+	initializeClock('countdownDIV', deadline);
 </script>
 <script src="src/modalEffect/classie.js"></script>
 <script src="src/modalEffect/modalEffects.js"></script>

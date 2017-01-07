@@ -32,8 +32,10 @@
 <script type="text/javascript" src="./dist/js/calendarData.js"></script>
 <script type="text/javascript" src="./dist/js/recruit.js"></script>
 <script>
+	const deadline = new Date(2017, 4, 5); 
+
 	// this is important for IEs in Md-effects
-	var polyfilter_scriptpath = '/src/modalEffect/';
+	const polyfilter_scriptpath = '/src/modalEffect/';
 
 	$('.md-trigger').on('click', function(e) {
 		$('.md-modal').addClass('blurFix');
@@ -43,6 +45,7 @@
 	});
 	
 	initRecruitPage();
+	initializeClock('countdownDIV', deadline);
 </script>
 
 </html>

@@ -32,7 +32,7 @@ var initializeClock = function initializeClock(id, endtime) {
     daysSpan.innerHTML = t.days;
     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+    // secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
     if (t.total <= 0) {
       clearInterval(timeinterval);
@@ -45,7 +45,8 @@ var initializeClock = function initializeClock(id, endtime) {
 
 // -------------------------------
 
-// Nav-mobile Bar
+// ----- Main CODE -------
+
 document.addEventListener('DOMContentLoaded', function () {
   var menuBtn = document.querySelector('.menu_button');
   var menuList = document.querySelector('.m-nav--mobile');

@@ -307,9 +307,10 @@ em {
       color: #e95371; }
     .l-header .m-apply .btn {
       padding: 0.5em 1em;
-      margin-right: 2em;
+      margin: .5em 2em 0px 0px;
       float: right;
-      font-size: 0.7em;
+      font-size: 1.1em;
+      letter-spacing: 2px;
       border-color: #e95371; }
 
 .menu {
@@ -461,26 +462,36 @@ em {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap; }
-  @media (max-width: 767px) {
-    .flex-box {
-      flex-direction: row; } }
 
 .how-set {
   display: flex;
   flex-wrap: wrap;
-  align-items: center; }
-  @media (max-width: 767px) {
-    .how-set {
-      flex-direction: column;
-      width: 50%; } }
-  @media (max-width: 479px) {
-    .how-set {
-      width: 100%; } }
+  align-items: center;
+  border-bottom: solid 2px #F3C91D; }
   .how-set .img-container {
     flex: 1;
-    padding: 1em; }
+    padding: 1em;
+    text-align: center; }
   .how-set .content {
     flex: 3;
     padding: 1em; }
+  .how-set img {
+    width: 80%; }
+  .how-set:nth-child(5) {
+    margin-bottom: 3em; }
+
+@media (max-width: 767px) {
+  .flex-box {
+    flex-direction: row; }
+
+  .how-set {
+    flex-direction: column;
+    width: 50%; }
+
+  .container {
+    margin-top: 14em; } }
+@media (max-width: 480px) {
+  .how-set {
+    width: 100%; } }
 
 /*# sourceMappingURL=how.css.map */

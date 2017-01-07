@@ -307,9 +307,10 @@ em {
       color: #e95371; }
     .l-header .m-apply .btn {
       padding: 0.5em 1em;
-      margin-right: 2em;
+      margin: .5em 2em 0px 0px;
       float: right;
-      font-size: 0.7em;
+      font-size: 1.1em;
+      letter-spacing: 2px;
       border-color: #e95371; }
 
 .menu {

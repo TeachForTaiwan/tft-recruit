@@ -52,9 +52,10 @@
 
         .btn{
             padding: 0.5em 1em;
-            margin-right: 2em;
+            margin: .5em 2em 0px 0px;
             float: right;
-            font-size: $header-font-btn;
+            font-size: 1.1em;
+            letter-spacing: $letter-spacing-s;
             border-color: $color-pink;
         }
     }

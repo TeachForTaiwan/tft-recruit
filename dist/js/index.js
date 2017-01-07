@@ -1,7 +1,4 @@
-'use strict';
 
-var deadline = new Date(2017, 4, 5); //2016/12/31--24:00
-initializeClock('countdownDIV', deadline);
 
 // document.addEventListener('DOMContentLoaded', ()=> {
 //   const menuBtn = document.querySelector('.menu_button');
@@ -11,3 +8,4 @@ initializeClock('countdownDIV', deadline);
 //     menuList.classList.toggle('is-active');
 //   });
 // });
+"use strict";
