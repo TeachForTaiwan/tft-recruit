@@ -53,11 +53,16 @@ body {
     justify-content: flex-end;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
+    transition: .1s ease-in-out;
     @media (max-width: $screen-s) {
         width: 50%;
     }
     @media (max-width: $table-l) {
         width: 100%;
+    }
+    &:hover{
+        opacity: .8;
     }
     .story-img {
         height: auto;
@@ -116,12 +121,13 @@ body {
 }
 
 .md-overlay{
-    &.is-active{
-        visibility: visible;
-        opacity: 1;
-    }    
+    background: rgba(10,10,10,0.5);
 }
 
+.md-show ~ .md-overlay {
+	opacity: 1;
+	visibility: visible;
+}
 .btn-story {
     color: $color-black-light;
     position: absolute;
@@ -129,6 +135,10 @@ body {
     border: none;
     padding: 1.2em;
     background: transparent;
+    &:active{
+        box-shadow: none;
+        opacity: .5;
+    }
 }
 
 @media (max-width: $table-l) {
