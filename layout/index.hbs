@@ -5,8 +5,7 @@
 <head>
 	{{> head}}
 	<title gDoc="title">TFT 教師招募網站 {{title}}</title>
-	<link rel="stylesheet" href="./dist/css/layout/index.css"> {{!--gDoc.js--}}
-	<script src="src/gDoc.js/gDoc.min.js"></script>
+	<link rel="stylesheet" href="./dist/css/layout/index.css"> 
 </head>
 
 <body>
@@ -50,25 +49,17 @@
 	</section>
 	{{> footer}}
 </body>
-<!-- Jquery -->
-<script type="text/javascript" src="./src/jquery-2.2.4.min.js"></script>
-{{!--gDoc.js--}}
-<script>
-	if (gDoc) {
-		gDoc('1JP0tnjFoTQO388FpDELkfM318KSxFMbJgkCaNgR_WZQ', 'index');
-	}
-</script>
-<!-- swiper -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.min.js" integrity="sha256-mPcYboxAQddS1GRB/EMb+sp0NBVB5oTBwRMv/y5hoOg="
-	crossorigin="anonymous"></script>
-<script src="dist/js/index.js"></script>
-<script src="dist/js/main.js"></script>
 <script>
 	var mainBanner = new Swiper('.swiper-container', {
 		speed: 400,
 		spaceBetween: 100,
 		grabCursor: true,
 	});   
+	
+	if (gDoc) {
+		gDoc('1JP0tnjFoTQO388FpDELkfM318KSxFMbJgkCaNgR_WZQ', 'index');
+	}
 </script>
+<script src="dist/js/index.js"></script>
 
 </html>

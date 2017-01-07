@@ -11,7 +11,7 @@
     z-index: 9;
     top: 0;
     padding: 0.5em 1em;
-    background: url('/dist/img/background_color.png');
+    background: url(../../img/background_color.png);
     background-size: contain;
     color: $color-dark-gray;
     font-size: $header-font-btn;
@@ -23,9 +23,10 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+        font-size: 1.5em;
         img {
             max-height: 190px;
-            height: 17%;
+            height: 13%;
         }
     }
     .m-apply {
@@ -63,7 +64,7 @@
         white-space: nowrap;
         letter-spacing: $letter-spacing-s;
         .list {
-            margin: .4em 0px;
+            margin: .2em 0px;
             &:hover {
                 color: $color-menu--text-active;
             }

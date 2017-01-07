@@ -11,6 +11,10 @@
     margin-top: $padding-container;
     color: $color-black-light;
 
+    @media(max-width: $table-l){
+        background-size: cover;
+    }
+
     h3{
         position: absolute;
         width: 30%;

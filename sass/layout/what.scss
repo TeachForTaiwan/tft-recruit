@@ -1,3 +1,7 @@
+/*
+ * @import "main";
+ * 正式上線的時候inmport 一個 main即可（開發的時候為求方便import比較多）
+ */
 @import "compass/support";
 @import "compass/css3";
 @import "variable";
@@ -9,7 +13,6 @@
 @import "loading";
 @import "header";
 @import "footer";
-
 
 .wrap{
 	@extend %wrap-banner;
