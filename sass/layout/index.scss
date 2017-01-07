@@ -1,7 +1,8 @@
 /*
  * @import "main";
- * 正式上線的時候inmport 一個 main即可（開發的時候為求方便import比較多）
+ * 正式上線的時候import 一個 main即可（開發的時候為求方便import比較多）
  */
+
 @import "compass/support";
 @import "compass/css3";
 @import "variable";
@@ -13,30 +14,39 @@
 @import "loading";
 @import "header";
 @import "footer";
-
-body{
-	color: $color-gray;
-	letter-spacing: $letter-spacing-s;
+body {
+    color: $color-gray;
+    letter-spacing: $letter-spacing-s;
 }
 
-.main-desc{
-	width: 80%;
-  padding: 1rem $padding-container;
-  margin: $padding-container auto;
-  border-top: solid $color-yellow;
-  border-bottom: solid $color-yellow;
+.main-desc {
+    display: flex;
+		flex-wrap: wrap;
+    width: 80%;
+    padding: 1rem $padding-container;
+    margin: $padding-container auto;
+    border-top: solid $color-yellow;
+    border-bottom: solid $color-yellow;
 }
 
-.wrap{
-	@extend %wrap-banner;
+.wrap {
+    @extend %wrap-banner;
 }
 
-@media (max-width: $table-l){
-	$padding-container: 1.5rem;
+.story-set {
+    width: 25%;
+    padding: .5rem;
+    .story-img {
+        height: auto;
+    }
+    .story-name {}
+}
 
-	.main-desc{
-		width: 90%;
-		padding: 1rem $padding-container;
-	  margin: $padding-container auto;
-	}
+@media (max-width: $table-l) {
+    $padding-container: 1.5rem;
+    .main-desc {
+        width: 90%;
+        padding: 1rem $padding-container;
+        margin: $padding-container auto;
+    }
 }
