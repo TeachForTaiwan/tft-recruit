@@ -71,6 +71,11 @@
   color: #e95371 !important;
   font-weight: bold; }
 
+.btn-bg-yellow {
+  background-color: #F3C91D !important;
+  color: #7D7B7D !important;
+  font-weight: bold; }
+
 .btn-bg-red {
   background-color: #e95371 !important;
   color: #FFFFFF !important;
@@ -84,7 +89,7 @@
   color: #FFFFFF !important;
   font-weight: bold; }
 
-.btn {
+.i-want-apply .btn, .btn {
   color: #FFFFFF;
   background-color: #e95371;
   border: solid 1px #e95371;
@@ -113,6 +118,10 @@
 /*
  * Layout
  */
+@media (max-width: 767px) {
+  .container {
+    margin-top: 10em; } }
+
 .wrap {
   position: relative;
   width: 100%;
@@ -139,11 +148,15 @@
       bottom: 10%; }
       @media (max-width: 767px) {
         .wrap .quote.right {
-          bottom: -3em; } }
+          right: 0px;
+          left: 5%; } }
     @media (max-width: 767px) {
       .wrap .quote {
+        position: relative;
         width: 80%;
-        left: 5%; } }
+        left: 5%;
+        bottom: 0px;
+        top: 112%; } }
   .wrap .author {
     font-size: .7em; }
   .wrap h3 {
@@ -165,6 +178,8 @@
     @media (max-width: 767px) {
       .article .title {
         padding: 1rem; } }
+  .article .content-bold {
+    font-weight: bold; }
   .article strong {
     color: #e95371; }
 
@@ -198,6 +213,14 @@
   pointer-events: none; }
   .overlay.is-active {
     opacity: 0.6; }
+
+.i-want-apply {
+  text-align: center;
+  margin-bottom: 2em; }
+  .i-want-apply .btn {
+    border: none; }
+    .i-want-apply .btn:hover {
+      color: #FFFFFF !important; }
 
 /*
     reset base ccs
@@ -253,10 +276,16 @@ em {
     text-align: center;
     font-size: 1.5em; }
     .l-header .m-logo img {
+      -moz-transition: all 0.3s ease-in;
+      -o-transition: all 0.3s ease-in;
+      -webkit-transition: all 0.3s ease-in;
+      transition: all 0.3s ease-in;
       max-height: 190px;
       height: 13%; }
-    .l-header .m-logo:hover {
+    .l-header .m-logo a:hover {
       color: #e95371; }
+      .l-header .m-logo a:hover img {
+        height: 17%; }
   .l-header .m-apply {
     position: absolute;
     right: 0;

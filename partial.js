@@ -6,6 +6,7 @@ module.exports= function (hbs) {
   hbs.registerPartial('header', getPartials('header'));
   hbs.registerPartial('footer', getPartials('footer'));
   hbs.registerPartial('nav', getPartials('nav'));
+  hbs.registerPartial('apply-button', getPartials('apply-button'));
 
   hbs.registerPartial('recruit-info', getPartials('recruit-info'));
   hbs.registerPartial('recruit-calendar', getPartials('recruit-calendar'));

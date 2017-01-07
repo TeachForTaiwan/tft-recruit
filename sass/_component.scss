@@ -51,6 +51,12 @@
     font-weight: bold;
 }
 
+.btn-bg-yellow{
+    background-color: $color-yellow !important;
+    color: $color-gray !important;
+    font-weight: bold;   
+}
+
 .btn-bg-red {
     background-color: $color-pink !important;
     color: $color-white !important;
@@ -95,6 +101,12 @@
  * Layout
  */
 
+.container{
+    @media(max-width: $table-l){
+        margin-top: 10em;
+    }
+}
+
 %wrap-banner{
     position: relative;
     width: 100%;
@@ -124,13 +136,17 @@
             bottom: 10%;
 
             @media(max-width: $table-l){
-                bottom: -3em;
+                right: 0px;
+                left: 5%;
             }
         }
 
         @media(max-width: $table-l){
+            position: relative;
             width: 80%;
             left: 5%;
+            bottom: 0px;
+            top: 112%;
         }
     }
 
@@ -162,8 +178,8 @@
             padding: 1rem;
         }
     }
-    .content {
-
+    .content-bold{
+        font-weight: bold;
     }
 
     strong{
@@ -207,5 +223,18 @@
     pointer-events: none;
     &.is-active {
         opacity: 0.6;
+    }
+}
+
+.i-want-apply{
+    text-align: center;
+    margin-bottom: 2em;
+    .btn{
+        @extend %btn-reset;
+        border: none;
+
+        &:hover{
+            color: $color-white !important;
+        }
     }
 }

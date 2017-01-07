@@ -25,11 +25,18 @@
         text-align: center;
         font-size: 1.5em;
         img {
+            @include transition(all .3s ease-in);
             max-height: 190px;
             height: 13%;
         }
-        &:hover{
+        
+        a{
+            &:hover{
             color: $color-pink;
+                img{
+                    height: 17%;
+                }
+            }
         }
     }
     .m-apply {

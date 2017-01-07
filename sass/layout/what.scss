@@ -18,3 +18,13 @@
 	@extend %wrap-banner;
 	background-image: url(../../img/banner/banner-2.jpg);
 }
+
+@media(max-width: $table-l){
+	.what-set{
+		text-align: center;
+
+		img{
+			height: 50%;
+		}
+	}	
+}
