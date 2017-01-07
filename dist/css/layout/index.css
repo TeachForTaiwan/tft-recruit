@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
  * @import "main";
- * 正式上線的時候inmport 一個 main即可（開發的時候為求方便import比較多）
+ * 正式上線的時候import 一個 main即可（開發的時候為求方便import比較多）
  */
 /**
  * break-point
@@ -418,6 +418,8 @@ body {
   letter-spacing: 2px; }
 
 .main-desc {
+  display: flex;
+  flex-wrap: wrap;
   width: 80%;
   padding: 1rem 3rem;
   margin: 3rem auto;
@@ -427,6 +429,12 @@ body {
 .wrap h3 {
   font-size: 1.2em;
   font-weight: bold; }
+
+.story-set {
+  width: 25%;
+  padding: .5rem; }
+  .story-set .story-img {
+    height: auto; }
 
 @media (max-width: 767px) {
   .main-desc {
