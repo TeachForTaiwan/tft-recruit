@@ -29,6 +29,11 @@ body{
 
 .wrap{
 	@extend %wrap-banner;
+
+	h3{
+		font-size: 1.2em;
+		font-weight: bold;
+	}
 }
 
 @media (max-width: $table-l){

@@ -28,6 +28,9 @@
             max-height: 190px;
             height: 13%;
         }
+        &:hover{
+            color: $color-pink;
+        }
     }
     .m-apply {
         position: absolute;
