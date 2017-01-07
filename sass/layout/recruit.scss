@@ -34,13 +34,13 @@ table{
         font-weight: bold;
         letter-spacing: $letter-spacing-s;
         background-color: $color-btn--bg;
-        color: $color-btn--text;
+        color: $color-white;
         border: 1px solid $color-btn--border;
         padding: 0.8em 4em;
         transition: $recruit-btn-transition;
         &:hover {
             background-color: $color-btn--bg;
-            color: $color-btn--text;
+            color: $color-white;
             border: 1px solid $color-btn--border;
             font-weight: bold;
         }
@@ -66,8 +66,9 @@ table{
     margin-bottom: 2em;
     &:hover{
         > .gap{
-            background: $color-pink;
+            background: $color-yellow;
             color: $color-white;
+            border-color: $color-yellow;
         }
         figcaption{
             color: $color-white;
@@ -91,11 +92,13 @@ table{
     > .gap{
         cursor: pointer;
         transition: $recruit-info-transition;
-        border:1px solid $color-pink;
+        border:.5px solid $color-dark-gray;
         padding:1em;
+        height: auto !important;
     }
     .info-icons{
         width: 100%;
+        height: 25%;
         margin:1.5em auto;
         .icon-item{
             transition:$recruit-info-transition;
@@ -127,6 +130,36 @@ table{
     em{
         transition: $recruit-info-transition;
     }
+}
+
+#compaign-1{
+    background: url(/dist/img/recruit/campaign-1.png) center no-repeat;
+    background-size: contain;
+}
+
+#compaign-2{
+    background: url(/dist/img/recruit/campaign-2.png) center no-repeat;
+    background-size: contain;
+}
+
+#compaign-3{
+    background: url(/dist/img/recruit/campaign-3.png) center no-repeat;
+    background-size: contain;
+}
+
+#compaign-4{
+    background: url(/dist/img/recruit/campaign-4.png) center no-repeat;
+    background-size: contain;
+}
+
+#compaign-5{
+    background: url(/dist/img/recruit/campaign-5.png) center no-repeat;
+    background-size: contain;
+}
+
+#compaign-6{
+    background: url(/dist/img/recruit/campaign-6.png) center no-repeat;
+    background-size: contain;
 }
 
 // Modal css
@@ -315,7 +348,7 @@ table{
     }
 
     .month-active{
-        color: $color-pink;
+        color: $color-yellow;
     }
 }
 
@@ -331,7 +364,7 @@ table{
     h2{
         width: 13%;
         font-size: 1.2em;
-        color: $color-pink;
+        color: $color-gray;
         margin: .3em 0px .1em 0px;
     }
 
@@ -349,7 +382,7 @@ table{
         min-height: 50px;
         
         margin: 8px 0px;
-        border: solid 1px $color-pink;
+        border: solid 1px $color-gray;
         background-color: transparent;
         @include transition(opacity .3s linear);
         @include animation(section-show .3s linear);
@@ -377,7 +410,7 @@ table{
     letter-spacing: $letter-spacing-s - 1px;
     cursor: context-menu;
     &:before{
-        background: $color-pink;
+        background: $color-yellow;
         width: 10px;
         height: 10px;
         border-radius: 50%;
@@ -394,7 +427,7 @@ table{
     }
 
     &:hover{
-        color: $color-pink;
+        color: $color-yellow;
     }
 
     @media(max-width: 1100px){
@@ -412,8 +445,8 @@ table{
 .tooltip{
     transition: opacity linear .2s;
 
-    background-color: $color-pink;
-    color: $color-white;
+    background-color: $color-yellow;
+    color: $color-gray;
     
     text-align: center;    
     padding: .5em;
@@ -428,7 +461,7 @@ table{
         margin-left: -10px;
         border-width: 10px;
         border-style: solid;
-        border-color: transparent transparent $color-pink;
+        border-color: transparent transparent $color-yellow;
     }
 }
 

@@ -7,9 +7,11 @@
 	<link rel="stylesheet" type="text/css" href="src/modalEffect/modalEffect.css" />
 	<link rel="stylesheet" href = "./dist/css/layout/recruit.css">
 	<script src="src/modalEffect/modernizr.custom.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/vue@2.1.6/dist/vue.js"></script>
 </head>
 <body>
 	{{> header}}
+
 	<div class="overlay"></div>	
 	<main class="main-recruit">
 		<button class="btn btn-section" id="info">活動說明</button>
@@ -23,17 +25,16 @@
 	<section class="container is-hidden" id="recruit-calendar">
 		{{> recruit-calendar}}
 	</section>
+
 </body>
-<script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="./src/modalEffect/classie.js"></script>
 <script src="./src/modalEffect/modalEffects.js"></script>
+<script type="text/javascript" src="./dist/js/calendarData.js"></script>
 <script type="text/javascript" src="./dist/js/recruit.js"></script>
 <script>
 	// this is important for IEs in Md-effects
 	var polyfilter_scriptpath = '/src/modalEffect/';
 
-	// transform cause text blurry
-	// set filter:blur(1px) and remove can fix it
 	$('.md-trigger').on('click', function(e) {
 		$('.md-modal').addClass('blurFix');
 		setTimeout(function(){

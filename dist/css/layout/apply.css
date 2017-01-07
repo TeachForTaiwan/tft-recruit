@@ -90,9 +90,9 @@
   font-weight: bold; }
 
 .i-want-apply .btn, .btn {
-  color: #FFFFFF;
-  background-color: #e95371;
-  border: solid 1px #e95371;
+  color: #7D7B7D;
+  background-color: #F3C91D;
+  border: solid 1px #F3C91D;
   border-radius: 0px;
   font-size: 1rem;
   padding: 0.5em 1.5em; }
@@ -305,7 +305,8 @@ em {
       padding: 0.5em 1em;
       margin-right: 2em;
       float: right;
-      font-size: 0.7em; }
+      font-size: 0.7em;
+      border-color: #e95371; }
 
 .menu {
   position: relative;

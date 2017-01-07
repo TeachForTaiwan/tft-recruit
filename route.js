@@ -15,7 +15,7 @@ var route = [
     {
       data: {
         path: './',
-        title: '問題是什麼？',
+        title: 'TFT看見的問題',
         first_word: 'It is a good template'
       },
       partials: './partial.js',
@@ -24,7 +24,7 @@ var route = [
     },{
       data: {
         path: './',
-        title: 'TFT怎麼做？',
+        title: 'TFT計畫概覽',
         first_word: 'It is a good template'
       },
       partials: './partial.js',
@@ -42,7 +42,7 @@ var route = [
     },{
       data: {
         path: './',
-        title: '如何申請？',
+        title: '如何申請',
         first_word: 'It is a good template'
       },
       partials: './partial.js',
