@@ -560,6 +560,9 @@ body {
     box-shadow: none;
     opacity: .5; }
 
+.embed-responsive {
+  width: 100%; }
+
 @media (max-width: 767px) {
   .main-desc {
     width: 90%;
