@@ -5,7 +5,7 @@
   {{> head}}
   <title gDoc="title">TFT 教師招募網站 | {{title}}</title>
   <link rel="stylesheet" href="./dist/css/layout/how.css">
-	<link id="gDoc" data-name="how"></link>
+  <link id="gDoc" data-name="how"></link>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
       <span class="author" gDoc="quote-author"> —— 第一屆TFT教師李思慧</span>
     </div>
   </div>
-  
+
   <div class="container">
     <div class="col-sm-10 col-sm-offset-1">
       <article class="article">
@@ -72,11 +72,12 @@
     </div>
   </div>
 
-  {{> apply-button}}
+  {{> apply-button}} 
   {{> footer}}
 </body>
 <script>
-  const deadline = new Date(2017, 4, 5); 
+  const deadline = new Date(2017, 2, 7, 13); // 2017/03/07 - 13:00
   initializeClock('countdownDIV', deadline);
 </script>
+
 </html>

@@ -5,7 +5,7 @@
   {{> head}}
   <title gDoc="title">TFT 教師招募網站 | {{title}}</title>
   <link rel="stylesheet" href="./dist/css/layout/what.css">
-	<link id="gDoc" data-name="what"></link>
+  <link id="gDoc" data-name="what"></link>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
@@ -90,20 +90,21 @@
 
         <a href="#theory_2" data-toggle="collapse"><strong>教室內的改變</strong></a>
         <p id="theory_2" class="collapse">兩年期間，TFT將提供你500小時培訓課程、完整督導系統與外部資源，幫助老師有效發揮影響力。我們期待讓TFT教師鍛鍊卓越的教學力和領導力，從教室裡開始創造改變，協助孩子建立健全的自我認同、提昇其學習動機與成效。</p>
-        
+
         <a href="#theory_3" data-toggle="collapse"><strong>教室外的改變</strong></a>
         <p id="theory_3" class="collapse">從教室內往教室外走，更深一層的改變才有機會發生。學校、家庭、社區都是老師帶動學生學習的重要夥伴，走入孩子的生活環境與文化脈絡，從中找尋契機，帶動周遭的人們協力為孩子創造更多可能。</p>
-        
+
         <a href="#theory_4" data-toggle="collapse"><strong>系統性的改變</strong></a>
         <p id="theory_4" class="collapse">走過兩年歷程，TFT老師們將帶著在第一線累積的能力和視野，成為「校友」，有些校友會選擇繼續留在教育現場深耕，也有校友可能進入政府、媒體、學界、社區組織等領域發展，成為轉動改變的巨大齒輪，共同終結台灣教育不平等的問題，讓孩子的出身不再限制他的未來。</p>
       </div>
     </article>
   </div>
 
-  {{> apply-button}} {{> footer}}
+  {{> apply-button}} 
+  {{> footer}}
 </body>
 <script>
-  const deadline = new Date(2017, 4, 5);
+  const deadline = new Date(2017, 2, 7, 13); // 2017/03/07 - 13:00
   initializeClock('countdownDIV', deadline);
 </script>
 </head>

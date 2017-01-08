@@ -5,7 +5,7 @@
   {{> head}}
   <title gDoc="title">TFT 教師招募網站 | {{title}}</title>
   <link rel="stylesheet" href="./dist/css/layout/why.css">
-	<link id="gDoc" data-name="why"></link>
+  <link id="gDoc" data-name="why"></link>
 </head>
 
 <body>
@@ -67,10 +67,11 @@
     </article>
   </div>
 
-  {{> apply-button}} {{> footer}}
+  {{> apply-button}} 
+  {{> footer}}
 </body>
 <script>
-  const deadline = new Date(2017, 4, 5);
+  const deadline = new Date(2017, 2, 7, 13); // 2017/03/07 - 13:00
   initializeClock('countdownDIV', deadline);
 </script>
 
