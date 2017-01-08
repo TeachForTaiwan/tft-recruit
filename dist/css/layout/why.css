@@ -187,8 +187,6 @@
         padding: 1rem 0; } }
   .article .content-bold {
     font-weight: bold; }
-  .article strong {
-    color: #e95371; }
   .article .count-ul {
     list-style-type: decimal; }
   .article .circle-ul {
@@ -196,6 +194,32 @@
   .article .use-heart {
     color: #e95371;
     letter-spacing: 4px; }
+  .article strong {
+    color: #e95371; }
+  .article sub {
+    font-size: .8em; }
+  .article .quote {
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    border-radius: 25px;
+    border-left: solid 5px #F3C91D;
+    padding: .7em 1em;
+    margin: 1em .5em;
+    font-style: italic;
+    letter-spacing: 2px;
+    box-shadow: 2px 2px 8px 0px rgba(51, 51, 51, 0.2); }
+    .article .quote h2 {
+      font-size: 1.1rem;
+      font-weight: bold; }
+    .article .quote sub {
+      float: right;
+      margin-bottom: .3em; }
+    .article .quote:hover {
+      cursor: pointer;
+      border-radius: 0px;
+      box-shadow: 2px 2px 8px 0px rgba(51, 51, 51, 0.5); }
 
 .banner-container {
   position: relative; }
