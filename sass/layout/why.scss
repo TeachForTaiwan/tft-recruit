@@ -22,25 +22,3 @@
     @extend %wrap-banner;
     background-image: url(../../img/banner/banner-7.jpg);
 }
-
-.quote {
-    position: relative;
-    background: rgba(243, 201, 29, 0.25);
-    border-radius: 70px 0 0 70px;
-    margin: 1em 0 3em;
-    .avatar {
-        max-width: 150px;
-        border-radius: 50%;
-    }
-    .quote-text {
-        position: absolute;
-        top: 50%;
-        left: 150px;
-        transform: translateY(-50%);
-        border: none;
-        text-align: justify;
-        .author {
-            float: right;
-        }
-    }
-}
