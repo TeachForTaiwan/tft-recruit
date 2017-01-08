@@ -57,7 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const mask = document.querySelector('.overlay');
   const $banner = $('.wrap');
   const quoteH = $('.wrap .quote').innerHeight();
-  
+  const gDocTabName = document.getElementById('gDoc').dataset.name;
+
   const setBannerBottom = (quoteH) => {
     if (window.innerWidth < 768) {
       $banner.css({
@@ -68,9 +69,22 @@ document.addEventListener('DOMContentLoaded', () => {
         "margin-bottom": "initial",
       });
     }
-
   };
+  const loadingAnimEnd = () => {
+    document.querySelector('.loading-mask').classList.remove('is-loading');
+  };
+  const getGDoc = () => new Promise((reject, resolve) => {
+    if (gDoc) {
+      resolve(gDoc('1JP0tnjFoTQO388FpDELkfM318KSxFMbJgkCaNgR_WZQ', gDocTabName));
+    }else{
+      resolve();
+    }
+  });
 
+  getGDoc(gDocTabName)
+    .then(loadingAnimEnd);
+
+  loadingAnimEnd();
   setBannerBottom(quoteH);
 
   menuBtn.addEventListener('click', (e) => {

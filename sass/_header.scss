@@ -30,12 +30,11 @@
             max-height: 190px;
             height: 13%;
         }
-        
-        a{
-            &:hover{
-                color: $color-pink;   
-                img{
-                    height: 17%; 
+        a {
+            &:hover {
+                color: $color-pink;
+                img {
+                    height: 17%;
                 }
             }
         }
@@ -49,8 +48,7 @@
             margin-right: 2em;
             color: $color-countdown--text;
         }
-
-        .btn{
+        .btn {
             padding: 0.5em 1em;
             margin: .5em 2em 0px 0px;
             float: right;
@@ -84,34 +82,31 @@
         }
         .text {
             font-size: 1rem;
-            @media(max-width: 900px){
+            @media(max-width: 900px) {
                 font-size: .7rem;
             }
         }
     }
 }
 
-.m-nav--mobile{
+.m-nav--mobile {
     display: none;
 }
 
-
 @media (max-width: $table-l) {
-    .l-header{
+    .l-header {
         display: none;
         .m-apply {
             display: none;
         }
     }
-
-    .menu{
+    .menu {
         height: auto;
         position: fixed;
         top: 0;
         width: 100%;
         z-index: 99;
-
-        .m-nav{
+        .m-nav {
             display: none;
         }
         .menu_button {
@@ -197,5 +192,30 @@
                 }
             }
         }
+    }
+}
+
+.loading-mask {
+    visibility: hidden;
+    opacity: 0;
+    background: #fff8e3;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    transition: .7s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.is-loading {
+        opacity: 1;
+        visibility: visible;
+    }
+    .loading-logo {
+        width: 30%;
+        min-width: 150px;
+        max-width: 350px;
     }
 }

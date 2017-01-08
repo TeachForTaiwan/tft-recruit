@@ -476,6 +476,28 @@ em {
         transition: 1s; }
       .m-nav--mobile .list:hover:after {
         opacity: 0.5; } }
+.loading-mask {
+  visibility: hidden;
+  opacity: 0;
+  background: #fff8e3;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  transition: .7s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .loading-mask.is-loading {
+    opacity: 1;
+    visibility: visible; }
+  .loading-mask .loading-logo {
+    width: 30%;
+    min-width: 150px;
+    max-width: 350px; }
+
 .l-footer {
   background-color: #595757; }
   .l-footer .list {
