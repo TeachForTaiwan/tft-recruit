@@ -48,14 +48,15 @@ var initializeClock = function initializeClock(id, endtime) {
 // ----- Main CODE -------
 
 
+// ----- DOMContentLoaded -----
 document.addEventListener('DOMContentLoaded', function () {
+
   var menuBtn = document.querySelector('.menu_button');
   var menuList = document.querySelector('.m-nav--mobile');
   var mask = document.querySelector('.overlay');
   var $banner = $('.wrap');
   var quoteH = $('.wrap .quote').innerHeight();
   var gDocTabName = document.getElementById('gDoc').dataset.name;
-
   var setBannerBottom = function setBannerBottom(quoteH) {
     if (window.innerWidth < 768) {
       $banner.css({
@@ -67,22 +68,18 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   };
+  var getGDoc = function getGDoc(callback) {
+    if (gDoc) {
+      gDoc('1JP0tnjFoTQO388FpDELkfM318KSxFMbJgkCaNgR_WZQ', gDocTabName);
+    }
+    callback();
+  };
   var loadingAnimEnd = function loadingAnimEnd() {
-    document.querySelector('.loading-mask').classList.remove('is-loading');
-  };
-  var getGDoc = function getGDoc() {
-    return new Promise(function (reject, resolve) {
-      if (gDoc) {
-        resolve(gDoc('1JP0tnjFoTQO388FpDELkfM318KSxFMbJgkCaNgR_WZQ', gDocTabName));
-      } else {
-        resolve();
-      }
-    });
+    setTimeout(function () {
+      document.querySelector('.loading-mask').classList.remove('is-loading');
+    }, 500);
   };
 
-  getGDoc(gDocTabName).then(loadingAnimEnd);
-
-  loadingAnimEnd();
   setBannerBottom(quoteH);
 
   menuBtn.addEventListener('click', function (e) {
@@ -91,6 +88,12 @@ document.addEventListener('DOMContentLoaded', function () {
     mask.classList.toggle('is-active');
   });
 
+  // ----- onLoad -----
+  window.addEventListener('load', function () {
+    getGDoc(loadingAnimEnd);
+  });
+
+  // ----- onResize -----
   window.addEventListener('resize', function () {
     var quoteH = $('.wrap .quote').innerHeight();
     setBannerBottom(quoteH);

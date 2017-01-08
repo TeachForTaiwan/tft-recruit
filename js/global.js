@@ -50,15 +50,15 @@ const initializeClock = (id, endtime) => {
 // ----- Main CODE -------
 
 
-
+// ----- DOMContentLoaded -----
 document.addEventListener('DOMContentLoaded', () => {
+
   const menuBtn = document.querySelector('.menu_button');
   const menuList = document.querySelector('.m-nav--mobile');
   const mask = document.querySelector('.overlay');
   const $banner = $('.wrap');
   const quoteH = $('.wrap .quote').innerHeight();
   const gDocTabName = document.getElementById('gDoc').dataset.name;
-
   const setBannerBottom = (quoteH) => {
     if (window.innerWidth < 768) {
       $banner.css({
@@ -70,21 +70,18 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   };
-  const loadingAnimEnd = () => {
-    document.querySelector('.loading-mask').classList.remove('is-loading');
-  };
-  const getGDoc = () => new Promise((reject, resolve) => {
+  const getGDoc = (callback) => {
     if (gDoc) {
-      resolve(gDoc('1JP0tnjFoTQO388FpDELkfM318KSxFMbJgkCaNgR_WZQ', gDocTabName));
-    }else{
-      resolve();
+      gDoc('1JP0tnjFoTQO388FpDELkfM318KSxFMbJgkCaNgR_WZQ', gDocTabName);
     }
-  });
+    callback();
+  };
+  const loadingAnimEnd = () => {
+    setTimeout(() => {
+      document.querySelector('.loading-mask').classList.remove('is-loading');
+    }, 500);
+  };
 
-  getGDoc(gDocTabName)
-    .then(loadingAnimEnd);
-
-  loadingAnimEnd();
   setBannerBottom(quoteH);
 
   menuBtn.addEventListener('click', (e) => {
@@ -93,9 +90,16 @@ document.addEventListener('DOMContentLoaded', () => {
     mask.classList.toggle('is-active');
   });
 
+  // ----- onLoad -----
+  window.addEventListener('load', () => {
+    getGDoc(loadingAnimEnd);
+  });
+
+  // ----- onResize -----
   window.addEventListener('resize', () => {
     const quoteH = $('.wrap .quote').innerHeight();
     setBannerBottom(quoteH);
   });
+
 });
 
