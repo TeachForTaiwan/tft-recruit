@@ -18,3 +18,13 @@
 	@extend %wrap-banner;
 	background-image: url(../../img/banner/banner-5.jpg);
 }
+
+#timeline{
+    width: 80%;
+    margin: 2em 0px 2em 10%;
+
+    @media(max-width: $table-l){
+        width: auto;
+        margin-left: 0px;    
+    }
+}

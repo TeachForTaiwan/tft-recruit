@@ -23,3 +23,30 @@
   background-image: url(../../img/banner/banner-7.jpg);
 }
 
+.quote{
+	@include transition(all .3s ease-in);
+  border-radius: 25px;
+  border-left: solid 5px $color-yellow;
+  padding: .7em 1em;
+  margin: 1em .5em;
+  font-style: italic;
+  letter-spacing: $letter-spacing-s;
+  box-shadow: 2px 2px 8px 0px rgba(51, 51, 51, 0.2);
+
+  h2{
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  sub{
+  	float: right;
+  	margin-bottom: .3em;
+  }
+
+  &:hover{
+  	cursor: pointer;
+  	border-radius: 0px;
+  	box-shadow: 2px 2px 8px 0px rgba(51, 51, 51, 0.5);
+  }
+}
+

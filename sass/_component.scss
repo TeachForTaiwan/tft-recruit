@@ -182,9 +182,6 @@
     .content-bold {
         font-weight: bold;
     }
-    strong {
-        color: $color-pink;
-    }
     .count-ul {
         list-style-type: decimal;
     }
@@ -194,6 +191,12 @@
     .use-heart {
         color: $color-pink;
         letter-spacing: $letter-spacing-m;
+    }
+    strong {
+        color: $color-pink;
+    }
+    sub{
+        font-size: .8em;
     }
 }
 

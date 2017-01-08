@@ -187,8 +187,6 @@
         padding: 1rem 0; } }
   .article .content-bold {
     font-weight: bold; }
-  .article strong {
-    color: #e95371; }
   .article .count-ul {
     list-style-type: decimal; }
   .article .circle-ul {
@@ -196,6 +194,10 @@
   .article .use-heart {
     color: #e95371;
     letter-spacing: 4px; }
+  .article strong {
+    color: #e95371; }
+  .article sub {
+    font-size: .8em; }
 
 .banner-container {
   position: relative; }
@@ -463,5 +465,13 @@ em {
 
 .wrap {
   background-image: url(../../img/banner/banner-5.jpg); }
+
+#timeline {
+  width: 80%;
+  margin: 2em 0px 2em 10%; }
+  @media (max-width: 767px) {
+    #timeline {
+      width: auto;
+      margin-left: 0px; } }
 
 /*# sourceMappingURL=apply.css.map */
