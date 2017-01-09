@@ -48,6 +48,17 @@
   }
 }
 
+.how-img{
+  display:block;
+  width: 50%;
+  max-width:600px;
+  margin:1em auto;
+
+  @media(max-width: $table-l){
+    width: 100%;
+  }
+}
+
 @media(max-width: $table-l){
   .flex-box{
     flex-direction: row;

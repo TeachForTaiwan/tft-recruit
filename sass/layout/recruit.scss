@@ -48,9 +48,10 @@ table{
             box-shadow: none;
         }
         @media (max-width: 767px) {
-        	margin:45px 0;
+        	margin:45px 5%;
         	font-size: calc(1vw + 10px);
-            width: 50%;
+            width: 40%;
+            padding: .8em 1em;
         }
     }
     > .btn-recruit-disable {
@@ -58,6 +59,9 @@ table{
         color: $color-gray;
         border: 1px solid transparent;
         font-weight: normal;
+    }
+    @media (max-width: 767px) {
+        margin-top: 2em;
     }
 }
 
@@ -351,7 +355,7 @@ table{
         font-weight: bold;
         cursor: pointer;
         &:hover{
-            color: $color-pink;
+            color: $color-yellow;
         }
     }
 
@@ -508,7 +512,7 @@ table{
         }
 
         .calendar-active{
-            border: solid 3px $color-pink;   
+            border: solid 3px $color-yellow;   
         }
 
     }
@@ -521,7 +525,7 @@ table{
         bottom: -1 * $recruit-calendar-bottom;
         padding: 10px;
 
-        background: $color-pink;
+        background: $color-yellow;
         color: $color-white;
         text-align: center;
         letter-spacing: $letter-spacing-s;
@@ -533,7 +537,7 @@ table{
             margin-left: -10px;
             border-width: 15px;
             border-style: solid;
-            border-color: transparent transparent $color-pink;
+            border-color: transparent transparent $color-yellow;
         }
 
         p{

@@ -399,6 +399,9 @@ em {
 .m-nav--mobile {
   display: none; }
 
+.menu_button img {
+  display: none; }
+
 @media (max-width: 767px) {
   .l-header {
     display: none; }
@@ -444,6 +447,12 @@ em {
         transform: scale(0); }
       .menu .menu_button.is-active .menu-line:nth-child(3) {
         transform: translate(0, -5px) rotate(-45deg); }
+      .menu .menu_button img {
+        display: block;
+        position: relative;
+        height: 40%;
+        left: 50%;
+        transform: translate(-50%, 75%); }
 
   .m-nav--mobile {
     display: block;

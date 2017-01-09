@@ -93,6 +93,12 @@
     display: none;
 }
 
+.menu_button{
+    img{
+        display: none;
+    }
+}
+
 @media (max-width: $table-l) {
     .l-header {
         display: none;
@@ -151,6 +157,14 @@
                         transform: translate(0, -5px) rotate(-45deg);
                     }
                 }
+            }
+
+            img{
+                display: block;
+                position: relative;
+                height: 40%;
+                left: 50%;
+                transform: translate(-50% , 75%);
             }
         }
     }

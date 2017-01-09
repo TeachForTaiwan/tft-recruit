@@ -350,6 +350,9 @@ em {
 .m-nav--mobile {
   display: none; }
 
+.menu_button img {
+  display: none; }
+
 @media (max-width: 767px) {
   .l-header {
     display: none; }
@@ -395,6 +398,12 @@ em {
         transform: scale(0); }
       .menu .menu_button.is-active .menu-line:nth-child(3) {
         transform: translate(0, -5px) rotate(-45deg); }
+      .menu .menu_button img {
+        display: block;
+        position: relative;
+        height: 40%;
+        left: 50%;
+        transform: translate(-50%, 75%); }
 
   .m-nav--mobile {
     display: block;
@@ -515,14 +524,18 @@ table {
       box-shadow: none; }
     @media (max-width: 767px) {
       .main-recruit > .btn {
-        margin: 45px 0;
+        margin: 45px 5%;
         font-size: calc(1vw + 10px);
-        width: 50%; } }
+        width: 40%;
+        padding: .8em 1em; } }
   .main-recruit > .btn-recruit-disable {
     background-color: transparent;
     color: #7D7B7D;
     border: 1px solid transparent;
     font-weight: normal; }
+  @media (max-width: 767px) {
+    .main-recruit {
+      margin-top: 2em; } }
 
 .m-info-type {
   text-align: center;
@@ -745,7 +758,7 @@ table {
     font-weight: bold;
     cursor: pointer; }
     .calendar-month-box h2:hover {
-      color: #e95371; }
+      color: #F3C91D; }
   .calendar-month-box .month-active {
     color: #F3C91D; }
 
@@ -865,7 +878,7 @@ table {
     top: 1em;
     left: .2em; }
   .calendar-body .calendar-active {
-    border: solid 3px #e95371; }
+    border: solid 3px #F3C91D; }
 
   .mobile-content {
     display: block;
@@ -874,7 +887,7 @@ table {
     left: -15px;
     bottom: -6em;
     padding: 10px;
-    background: #e95371;
+    background: #F3C91D;
     color: #FFFFFF;
     text-align: center;
     letter-spacing: 2px; }
@@ -886,7 +899,7 @@ table {
       margin-left: -10px;
       border-width: 15px;
       border-style: solid;
-      border-color: transparent transparent #e95371; }
+      border-color: transparent transparent #F3C91D; }
     .mobile-content p {
       margin: 0px;
       padding-left: 5px;
