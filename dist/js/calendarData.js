@@ -389,7 +389,13 @@ var calendarData = {
 			"showing": "台北場",
 			"time": "14:00 - 16:00",
 			"location": "客家文化中心 3F 媒體簡報室"
-		}]
+		},{
+			"title": "台北之友會",
+			"date": "01/21",
+			"showing": "台北場",
+			"time": "18:00 - 20:00",
+			"location": "客家文化中心 3F 媒體簡報室"
+		},]
 	}, {
 		"date": 22,
 		"is_show": true,
@@ -797,7 +803,7 @@ var calendarData = {
 			"date": "03/11",
 			"showing": "高雄場",
 			"time": "10:00 - 16:00",
-			"location": "中山大學，地點待公告"
+			"location": "中山大學社會科學院2樓S2001教室"
 		}]
 	}, {
 		"date": 12,
@@ -814,7 +820,7 @@ var calendarData = {
 			"date": "03/12",
 			"showing": "台南場",
 			"time": "14:00 - 16:00",
-			"location": "成功大學光復校區國際會議廳 第二講堂"
+			"location": "成功大學光復校區雲平大樓8樓"
 		}]
 	}, {
 		"date": 13,

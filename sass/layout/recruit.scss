@@ -549,3 +549,9 @@ table{
 
 }
 
+@media(max-width: $table-l){
+    .i-want-apply{
+        display: none;
+    }
+}
+

@@ -198,6 +198,13 @@
     sub {
         font-size: .8em;
     }
+    .apply-watch-img{
+        width: 10%;
+        margin-top: 1em;
+        @media(max-width: $table-l){
+            width: 30%;
+        }
+    }
     .how-img{
       display:block;
       width: 50%;
