@@ -165,6 +165,7 @@
 
 .article {
     padding: 0;
+    margin: 1.2rem 0 2.4rem;
     &:nth-of-type(1) {
         padding-top: 2rem;
         @media (max-width: $table-l) {
@@ -175,6 +176,7 @@
         padding-bottom: .3em;
         border-bottom: 2px solid $color-title--border;
         letter-spacing: 2.4;
+        position: relative;
         @media (max-width: $table-l) {
             padding: 1rem 0;
         }
