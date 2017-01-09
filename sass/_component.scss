@@ -113,6 +113,7 @@
     margin-top: $height-menu;
     color: $color-black-light;
     @media(max-width: $table-l) {
+        height: 280px; // prevent image jump cause by android bar
         background-size: cover;
     }
     .quote {
