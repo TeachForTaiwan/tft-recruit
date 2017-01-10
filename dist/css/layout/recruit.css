@@ -172,7 +172,6 @@
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
     position: relative;
-    border-radius: 25px;
     border-left: solid 5px #F3C91D;
     padding: .7em 1em;
     margin: 1em .5em;
@@ -188,7 +187,6 @@
       margin-bottom: .3em; }
     .article .quote img {
       width: 125px;
-      border-radius: 50%;
       transform: translateX(-10%); }
       @media (max-width: 767px) {
         .article .quote img {
@@ -213,7 +211,6 @@
         padding: 1.2em; }
     .article .quote:hover {
       cursor: pointer;
-      border-radius: 0px;
       box-shadow: 2px 2px 8px 0px rgba(51, 51, 51, 0.5); }
 
 .banner-container {
