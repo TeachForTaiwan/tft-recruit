@@ -112,6 +112,9 @@
     background-size: contain;
     margin-top: $height-menu;
     color: $color-black-light;
+    @media (min-width: $table-l) {
+        min-height: 350px;
+    }
     @media(max-width: $table-l) {
         height: 280px; // prevent image jump cause by android bar
         background-size: cover;

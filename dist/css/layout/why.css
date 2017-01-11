@@ -126,6 +126,9 @@
   background-size: contain;
   margin-top: 50px;
   color: #2A2B2A; }
+  @media (min-width: 767px) {
+    .wrap {
+      min-height: 350px; } }
   @media (max-width: 767px) {
     .wrap {
       height: 280px;
