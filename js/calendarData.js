@@ -1150,8 +1150,8 @@ const calendarData = {
 					"title": "台北招募說明會",
 					"date": "03/25",
 					"showing": "台北場",
-					"time": " ",
-					"location": "待公告"
+					"time": "14:00 - 16:00 ",
+					"location": "CLBC八德大船艦"
 				}
 			]
 		},
