@@ -22,3 +22,13 @@
     @extend %wrap-banner;
     background-image: url(../../img/banner/banner-7.jpg);
 }
+
+.article{
+	&:nth-child(1){
+		margin-top: 0px;
+		.title{
+			border-bottom-width: 0px;
+			padding-bottom: 0px;
+		}
+	}
+}

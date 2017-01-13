@@ -235,6 +235,14 @@ table{
     .content-remind{
         font-size: .8em;
         color:$color-md-content-remind;
+
+        p{
+            padding: 0px;
+        }
+    }
+    .content-bold{
+        font-weight: bold;
+        padding-bottom: 0px;
     }
     .row {
         font-size: 1em;

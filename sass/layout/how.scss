@@ -19,47 +19,12 @@
   background-image: url(../../img/banner/banner-3.jpg);
 }
 
-.flex-box{
-  display: flex;
-  flex-direction: column;
-  flex-wrap:wrap;
-}
+.article{
+  margin-top: 2rem;
 
-.how-set{
-  display: flex;
-  flex-wrap:wrap;
-  align-items: center;
-  border-bottom: solid 2px $color-yellow;
-  .img-container{
-    flex:1;
-    padding: 1em;
-    text-align: center;
-  }
-  .content{
-    flex:3;
-    padding: 1em;
-  }
-  img{
-    width: 80%;
-  }
-  
-  &:nth-child(6){
-    margin-bottom: 3em;
+  &:nth-of-type(1){
+    padding-top: 0em;
   }
 }
 
-@media(max-width: $table-l){
-  .flex-box{
-    flex-direction: row;
-  }
-  .how-set{
-    flex-direction: column;
-    width: 50%;
-  }
-}
 
-@media(max-width: $table-s){
-  .how-set{
-    width: 100%;
-  }
-}

@@ -331,13 +331,7 @@ var calendarData = {
 		"date": 13,
 		"is_show": true,
 		"is_event": true,
-		"activities": [{
-			"title": "熱線你和我",
-			"date": "01/13",
-			"showing": "敬請期待",
-			"time": " ",
-			"location": "2017/1/9 開放報名熱線"
-		}]
+		"activities": []
 	}, {
 		"date": 14,
 		"is_show": true,
@@ -372,13 +366,7 @@ var calendarData = {
 		"date": 20,
 		"is_show": true,
 		"is_event": true,
-		"activities": [{
-			"title": "熱線你和我",
-			"date": "01/20",
-			"showing": "敬請期待",
-			"time": " ",
-			"location": "2017/1/9 開放報名熱線"
-		}]
+		"activities": []
 	}, {
 		"date": 21,
 		"is_show": true,
@@ -389,13 +377,7 @@ var calendarData = {
 			"showing": "台北場",
 			"time": "14:00 - 16:00",
 			"location": "客家文化中心 3F 媒體簡報室"
-		},{
-			"title": "台北之友會",
-			"date": "01/21",
-			"showing": "台北場",
-			"time": "18:00 - 20:00",
-			"location": "客家文化中心 3F 媒體簡報室"
-		},]
+		}]
 	}, {
 		"date": 22,
 		"is_show": true,
@@ -533,13 +515,7 @@ var calendarData = {
 		"date": 10,
 		"is_show": true,
 		"is_event": true,
-		"activities": [{
-			"title": "熱線你和我",
-			"date": "02/10",
-			"showing": "敬請期待",
-			"time": " ",
-			"location": "2017/1/9 開放報名熱線"
-		}]
+		"activities": []
 	}, {
 		"date": 11,
 		"is_show": true,
@@ -574,13 +550,7 @@ var calendarData = {
 		"date": 17,
 		"is_show": true,
 		"is_event": true,
-		"activities": [{
-			"title": "熱線你和我",
-			"date": "02/17",
-			"showing": "敬請期待",
-			"time": " ",
-			"location": "2017/1/9 開放報名熱線"
-		}]
+		"activities": []
 	}, {
 		"date": 18,
 		"is_show": true,
@@ -645,12 +615,6 @@ var calendarData = {
 			"showing": "台北場",
 			"time": "11:00 - 13:30",
 			"location": "台大小福前廣場"
-		}, {
-			"title": "熱線你和我",
-			"date": "02/24",
-			"showing": "敬請期待",
-			"time": " ",
-			"location": "2017/1/9 開放報名熱線"
 		}]
 	}, {
 		"date": 25,
@@ -722,13 +686,7 @@ var calendarData = {
 		"date": 3,
 		"is_show": true,
 		"is_event": true,
-		"activities": [{
-			"title": "熱線你和我",
-			"date": "03/03",
-			"showing": "敬請期待",
-			"time": " ",
-			"location": "2017/1/9 開放報名熱線"
-		}]
+		"activities": []
 	}, {
 		"date": 4,
 		"is_show": true,
@@ -749,7 +707,7 @@ var calendarData = {
 			"date": "03/05",
 			"showing": "台北場",
 			"time": "14:00 - 16:00",
-			"location": "台灣大學博雅教學館 103教室"
+			"location": ""
 		}]
 	}, {
 		"date": 6,
@@ -775,24 +733,12 @@ var calendarData = {
 		"date": 10,
 		"is_show": true,
 		"is_event": true,
-		"activities": [{
-			"title": "熱線你和我",
-			"date": "03/10",
-			"showing": "敬請期待",
-			"time": " ",
-			"location": "2017/1/9 開放報名熱線"
-		}]
+		"activities": []
 	}, {
 		"date": 11,
 		"is_show": true,
 		"is_event": true,
 		"activities": [{
-			"title": "交大校園博覽會",
-			"date": "03/11",
-			"showing": "新竹場",
-			"time": "10:00 - 16:00",
-			"location": "交通大學就業博覽會"
-		}, {
 			"title": "高屏博覽會",
 			"date": "03/11",
 			"showing": "高雄場",
@@ -802,8 +748,8 @@ var calendarData = {
 			"title": "高屏招募說明會",
 			"date": "03/11",
 			"showing": "高雄場",
-			"time": "10:00 - 16:00",
-			"location": "中山大學社會科學院2樓S2001教室"
+			"time": "14:00 - 16:00",
+			"location": "中山大學，中山社會科學院2樓S2001教室"
 		}]
 	}, {
 		"date": 12,
@@ -820,7 +766,7 @@ var calendarData = {
 			"date": "03/12",
 			"showing": "台南場",
 			"time": "14:00 - 16:00",
-			"location": "成功大學光復校區雲平大樓8樓"
+			"location": "成功大學光復校區國際會議廳 第二講堂"
 		}]
 	}, {
 		"date": 13,
@@ -852,13 +798,7 @@ var calendarData = {
 		"date": 17,
 		"is_show": true,
 		"is_event": true,
-		"activities": [{
-			"title": "熱線你和我",
-			"date": "03/17",
-			"showing": "敬請期待",
-			"time": " ",
-			"location": "2017/1/9 開放報名熱線"
-		}]
+		"activities": []
 	}, {
 		"date": 18,
 		"is_show": true,
@@ -868,13 +808,7 @@ var calendarData = {
 		"date": 19,
 		"is_show": true,
 		"is_event": true,
-		"activities": [{
-			"title": "台中招募說明會",
-			"date": "03/19",
-			"showing": "台中場",
-			"time": " ",
-			"location": "待公告"
-		}]
+		"activities": []
 	}, {
 		"date": 20,
 		"is_show": true,
@@ -900,11 +834,11 @@ var calendarData = {
 		"is_show": true,
 		"is_event": true,
 		"activities": [{
-			"title": "熱線你和我",
+			"title": "政大就業博覽會",
 			"date": "03/24",
-			"showing": "敬請期待",
+			"showing": "台北場",
 			"time": " ",
-			"location": "2017/1/9 開放報名熱線"
+			"location": "政治大學"
 		}]
 	}, {
 		"date": 25,
@@ -946,13 +880,7 @@ var calendarData = {
 		"date": 31,
 		"is_show": true,
 		"is_event": true,
-		"activities": [{
-			"title": "熱線你和我",
-			"date": "03/31",
-			"showing": "敬請期待",
-			"time": " ",
-			"location": "2017/1/9 開放報名熱線"
-		}]
+		"activities": []
 	}, {
 		"date": 0,
 		"is_show": false,
