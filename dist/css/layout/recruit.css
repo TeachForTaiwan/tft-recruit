@@ -328,8 +328,8 @@ em {
   z-index: 9;
   top: 0;
   padding: 0.5em 1em;
-  background: url(../../img/background_color.png);
-  background-size: contain;
+  background: url(../../img/background.png);
+  background-size: cover;
   color: #595757;
   font-size: 0.5em;
   font-weight: bold;
@@ -338,20 +338,26 @@ em {
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
     text-align: center;
-    font-size: 1.5em; }
+    height: 13%; }
     .l-header .m-logo img {
-      -moz-transition: all 0.3s ease-in;
-      -o-transition: all 0.3s ease-in;
-      -webkit-transition: all 0.3s ease-in;
-      transition: all 0.3s ease-in;
       max-height: 190px;
-      height: 13%; }
-    .l-header .m-logo a:hover {
-      color: #e95371; }
-      .l-header .m-logo a:hover img {
-        height: 17%; }
+      height: 160%; }
+    .l-header .m-logo a {
+      position: relative;
+      z-index: 10;
+      top: 1em;
+      left: 3em; }
+      .l-header .m-logo a:hover ~ h3 {
+        opacity: 1;
+        color: #e95371; }
+    .l-header .m-logo h3 {
+      position: absolute;
+      left: 20%;
+      top: 4em;
+      font-size: 1em;
+      font-weight: bold;
+      opacity: .3; }
   .l-header .m-apply {
     position: absolute;
     right: 0;
@@ -381,9 +387,9 @@ em {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: auto;
+    margin: auto 10% auto 20%;
     padding: 0;
-    width: 80%;
+    width: 70%;
     z-index: 9;
     white-space: nowrap;
     letter-spacing: 2px; }
@@ -485,7 +491,9 @@ em {
         position: absolute;
         transition: 1s; }
       .m-nav--mobile .list:hover:after {
-        opacity: 0.5; } }
+        opacity: 0.5; }
+      .m-nav--mobile .list .btn {
+        font-size: .7rem; } }
 .loading-mask {
   visibility: hidden;
   opacity: 0;

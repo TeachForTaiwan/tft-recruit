@@ -124,17 +124,6 @@ function getCalendarEname(month){
 	return monthEname;
 }
 
-function initRecruitPage(){
-  var hash = window.location.hash;
-
-  if (hash.indexOf('calendar') > 0) {
-  	$('#recruit-info').addClass('is-hidden');
-    $('#recruit-calendar').removeClass('is-hidden')
-  	$('.btn-section').toggleClass('btn-recruit-disable');
-  	curSelectId = 'calendar';
-  }
-}
-
 function initialCalendarMonth(monthEname){
 	$('.calendar-month').each(function(index, el){
 		let month = el.id.split("-")[1];

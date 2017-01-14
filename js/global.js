@@ -48,8 +48,6 @@ const initializeClock = (id, endtime) => {
 // -------------------------------
 
 // ----- Main CODE -------
-
-
 // ----- DOMContentLoaded -----
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -101,5 +99,47 @@ document.addEventListener('DOMContentLoaded', () => {
     setBannerBottom(quoteH);
   });
 
+  initPage();
+
 });
 
+
+function initPage(){
+  let pathname = window.location.pathname;
+
+  switch(pathname){
+    case '/index.html':
+      break;
+    case '/what.html':
+      $('#list-what').addClass('color-gray');
+      break;
+    case '/how.html':
+      $('#list-how').addClass('color-gray');
+      break;
+    case '/why.html':
+      $('#list-why').addClass('color-gray');
+      break;
+    case '/apply.html':
+      $('#list-apply').addClass('color-gray');
+      break;
+    case '/faq.html':
+      $('#list-faq').addClass('color-gray');
+      break;
+    case '/recruit.html':
+      initRecruitPage();
+      break;
+
+  }
+}
+
+
+function initRecruitPage(){
+  let hash = window.location.hash;
+
+  if (hash.indexOf('calendar') > 0) {
+    $('#recruit-info').addClass('is-hidden');
+    $('#recruit-calendar').removeClass('is-hidden')
+    $('.btn-section').toggleClass('btn-recruit-disable');
+    curSelectId = 'calendar';
+  }
+}
