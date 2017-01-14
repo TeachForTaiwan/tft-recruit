@@ -16,7 +16,11 @@
 
 .wrap{
 	@extend %wrap-banner;
-	background-image: url(../../img/banner/banner-2.jpg);
+	background-image: url(../../img/banner/new/banner-what.png);
+
+	@media(max-width: $table-l){
+		background-image: url(../../img/banner/banner-what.jpg);
+	}
 }
 
 @media(max-width: $table-l){

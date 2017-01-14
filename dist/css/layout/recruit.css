@@ -78,8 +78,10 @@
 
 .btn-bg-yellow {
   background-color: #F3C91D !important;
-  color: #7D7B7D !important;
+  color: #7D7B7D;
   font-weight: bold; }
+  .btn-bg-yellow:hover {
+    color: white; }
 
 .btn-bg-red {
   background-color: #e95371 !important;
@@ -354,7 +356,11 @@ em {
     position: absolute;
     right: 0;
     right: 3em;
-    top: 2em; }
+    top: 2em;
+    text-align: right; }
+    .l-header .m-apply .m-apply-btns {
+      display: flex;
+      align-items: center; }
     .l-header .m-apply .countdown {
       margin-right: 2em;
       color: #e95371; }

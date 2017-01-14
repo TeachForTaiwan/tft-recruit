@@ -44,6 +44,11 @@
         right: 0;
         right: 3em;
         top: 2em;
+        text-align: right;
+        .m-apply-btns{
+            display: flex;
+            align-items: center;
+        }
         .countdown {
             margin-right: 2em;
             color: $color-countdown--text;

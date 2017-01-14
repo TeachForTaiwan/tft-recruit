@@ -20,7 +20,11 @@
 
 .wrap {
     @extend %wrap-banner;
-    background-image: url(../../img/banner/banner-7.jpg);
+    background-image: url(../../img/banner/new/banner-why.png);
+
+    @media(max-width: $table-l){
+    	background-image: url(../../img/banner/banner-why.jpg);
+    }
 }
 
 .article{

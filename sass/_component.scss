@@ -61,8 +61,12 @@
 
 .btn-bg-yellow {
     background-color: $color-yellow !important;
-    color: $color-gray !important;
+    color: $color-gray;
     font-weight: bold;
+
+    &:hover{
+        color: white;
+    }
 }
 
 .btn-bg-red {
@@ -112,19 +116,29 @@
 %wrap-banner {
     position: relative;
     width: 100%;
-    height: 50%;
-    background: $color-default--bg url(../../img/banner/banner-1.jpg) center no-repeat;
-    background-size: contain;
-    margin-top: $height-menu;
+    height: 55%;
+    background: $color-default--bg url(../../img/banner/new/banner-index.png) center no-repeat;
+    background-size: cover;
+    // margin-top: $height-menu;
     color: $color-black-light;
     @media (min-width: $table-l) {
         min-height: 350px;
     }
     @media(max-width: $table-l) {
-        height: 280px; // prevent image jump cause by android bar
-        background-size: cover;
+        background-image: url(../../img/banner/banner-index.png) ;
+    }
+
+    a{
+        position: absolute;
+        bottom: 2em;
+        left: 13%;
+
+        .btn{
+            letter-spacing: $letter-spacing-m;
+        }
     }
     .quote {
+        display: none;
         position: absolute;
         width: 35%;
         min-width: 200px;
@@ -143,6 +157,7 @@
             }
         }
         @media(max-width: $table-l) {
+            display: block;
             position: relative;
             width: 100%;
             top: 100%;

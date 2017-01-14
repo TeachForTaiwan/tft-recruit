@@ -77,8 +77,10 @@
 
 .btn-bg-yellow {
   background-color: #F3C91D !important;
-  color: #7D7B7D !important;
+  color: #7D7B7D;
   font-weight: bold; }
+  .btn-bg-yellow:hover {
+    color: white; }
 
 .btn-bg-red {
   background-color: #e95371 !important;
@@ -125,19 +127,24 @@
 .wrap {
   position: relative;
   width: 100%;
-  height: 50%;
-  background: #FAFAFA url(../../img/banner/banner-1.jpg) center no-repeat;
-  background-size: contain;
-  margin-top: 50px;
+  height: 55%;
+  background: #FAFAFA url(../../img/banner/new/banner-index.png) center no-repeat;
+  background-size: cover;
   color: #2A2B2A; }
   @media (min-width: 767px) {
     .wrap {
       min-height: 350px; } }
   @media (max-width: 767px) {
     .wrap {
-      height: 280px;
-      background-size: cover; } }
+      background-image: url(../../img/banner/banner-index.png); } }
+  .wrap a {
+    position: absolute;
+    bottom: 2em;
+    left: 13%; }
+    .wrap a .btn {
+      letter-spacing: 4px; }
   .wrap .quote {
+    display: none;
     position: absolute;
     width: 35%;
     min-width: 200px;
@@ -156,6 +163,7 @@
           right: 0px; } }
     @media (max-width: 767px) {
       .wrap .quote {
+        display: block;
         position: relative;
         width: 100%;
         top: 100%;
@@ -407,7 +415,11 @@ em {
     position: absolute;
     right: 0;
     right: 3em;
-    top: 2em; }
+    top: 2em;
+    text-align: right; }
+    .l-header .m-apply .m-apply-btns {
+      display: flex;
+      align-items: center; }
     .l-header .m-apply .countdown {
       margin-right: 2em;
       color: #e95371; }
@@ -592,7 +604,10 @@ em {
           margin: 0 .5rem; }
 
 .wrap {
-  background-image: url(../../img/banner/banner-3.jpg); }
+  background-image: url(../../img/banner/new/banner-how.png); }
+  @media (max-width: 767px) {
+    .wrap {
+      background-image: url(../../img/banner/banner-how.png); } }
 
 .article {
   margin-top: 2rem; }
