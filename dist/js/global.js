@@ -13,8 +13,8 @@ var getTimeRemaining = function getTimeRemaining(endtime) {
     'total': t,
     'days': days,
     'hours': hours,
-    'minutes': minutes,
-    'seconds': seconds
+    'minutes': minutes
+    // 'seconds': seconds
   };
 };
 
@@ -23,7 +23,7 @@ var initializeClock = function initializeClock(id, endtime) {
   var daysSpan = clock.querySelector('.days');
   var hoursSpan = clock.querySelector('.hours');
   var minutesSpan = clock.querySelector('.minutes');
-  var secondsSpan = clock.querySelector('.seconds');
+  // var secondsSpan = clock.querySelector('.seconds');
   var schedule = [['Jul 25 2015', 'Sept 20 2015'], ['Sept 21 2015', 'Jul 25 2016'], ['Jul 25 2016', 'Jul 25 2030']];
 
   var updateClock = function updateClock() {
