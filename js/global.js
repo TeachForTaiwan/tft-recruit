@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       document.querySelector('.loading-mask').classList.remove('is-loading');
     }, 500);
+    initPage();
   };
 
   setBannerBottom(quoteH);
@@ -98,8 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const quoteH = $('.wrap .quote').innerHeight();
     setBannerBottom(quoteH);
   });
-
-  initPage();
 
 });
 
