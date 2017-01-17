@@ -49,7 +49,7 @@ let vm = new Vue({
 
 			$('.mobile-content').empty();
 			if(events.length == '0'){
-				$('.mobile-content').append('<p>請點選有紅色框框的事件</p>');
+				$('.mobile-content').append('<p>請點選有黃色框框的事件</p>');
 				$('.mobile-content').append('<p>日曆出現詳細資訊</p>'); 
 			}else{
 				events.forEach(function(value, index){

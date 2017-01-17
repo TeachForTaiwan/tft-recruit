@@ -632,6 +632,9 @@ body {
 .wrap h3 {
   font-size: 1.2em;
   font-weight: bold; }
+@media (max-width: 767px) {
+  .wrap {
+    background-position-x: 70%; } }
 
 .story-set {
   width: 25%;

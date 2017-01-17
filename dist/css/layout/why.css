@@ -614,7 +614,8 @@ em {
   background-image: url(../../img/banner/new/banner-why.png); }
   @media (max-width: 767px) {
     .wrap {
-      background-image: url(../../img/banner/banner-why.jpg); } }
+      background-image: url(../../img/banner/banner-why.jpg);
+      background-position-x: 65%; } }
 
 .article:nth-child(1) {
   margin-top: 0px; }

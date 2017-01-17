@@ -441,7 +441,7 @@ const calendarData = {
 		{
 			"date": 13,
 			"is_show": true,
-			"is_event": true,
+			"is_event": false,
 			"activities": [
 			]
 		},
@@ -490,7 +490,7 @@ const calendarData = {
 		{
 			"date": 20,
 			"is_show": true,
-			"is_event": true,
+			"is_event": false,
 			"activities": [
 			]
 		},
@@ -700,7 +700,7 @@ const calendarData = {
 		{
 			"date": 10,
 			"is_show": true,
-			"is_event": true,
+			"is_event": false,
 			"activities": [
 			]
 		},
@@ -749,7 +749,7 @@ const calendarData = {
 		{
 			"date": 17,
 			"is_show": true,
-			"is_event": true,
+			"is_event": false,
 			"activities": [
 			]
 		},
@@ -933,7 +933,7 @@ const calendarData = {
 		{
 			"date": 3,
 			"is_show": true,
-			"is_event": true,
+			"is_event": false,
 			"activities": [
 			]
 		},
@@ -997,7 +997,7 @@ const calendarData = {
 		{
 			"date": 10,
 			"is_show": true,
-			"is_event": true,
+			"is_event": false,
 			"activities": [
 			]
 		},
@@ -1081,7 +1081,7 @@ const calendarData = {
 		{
 			"date": 17,
 			"is_show": true,
-			"is_event": true,
+			"is_event": false,
 			"activities": [
 			]
 		},
@@ -1095,7 +1095,7 @@ const calendarData = {
 		{
 			"date": 19,
 			"is_show": true,
-			"is_event": true,
+			"is_event": false,
 			"activities": [
 			]
 		},

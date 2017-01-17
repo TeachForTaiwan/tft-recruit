@@ -46,6 +46,10 @@ body {
         font-size: 1.2em;
         font-weight: bold;
     }
+
+    @media(max-width: $table-l){
+        background-position-x: 70%;
+    }
 }
 
 .story-set {

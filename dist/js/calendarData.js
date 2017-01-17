@@ -330,7 +330,7 @@ var calendarData = {
 	}, {
 		"date": 13,
 		"is_show": true,
-		"is_event": true,
+		"is_event": false,
 		"activities": []
 	}, {
 		"date": 14,
@@ -365,7 +365,7 @@ var calendarData = {
 	}, {
 		"date": 20,
 		"is_show": true,
-		"is_event": true,
+		"is_event": false,
 		"activities": []
 	}, {
 		"date": 21,
@@ -514,7 +514,7 @@ var calendarData = {
 	}, {
 		"date": 10,
 		"is_show": true,
-		"is_event": true,
+		"is_event": false,
 		"activities": []
 	}, {
 		"date": 11,
@@ -549,7 +549,7 @@ var calendarData = {
 	}, {
 		"date": 17,
 		"is_show": true,
-		"is_event": true,
+		"is_event": false,
 		"activities": []
 	}, {
 		"date": 18,
@@ -685,7 +685,7 @@ var calendarData = {
 	}, {
 		"date": 3,
 		"is_show": true,
-		"is_event": true,
+		"is_event": false,
 		"activities": []
 	}, {
 		"date": 4,
@@ -732,7 +732,7 @@ var calendarData = {
 	}, {
 		"date": 10,
 		"is_show": true,
-		"is_event": true,
+		"is_event": false,
 		"activities": []
 	}, {
 		"date": 11,
@@ -797,7 +797,7 @@ var calendarData = {
 	}, {
 		"date": 17,
 		"is_show": true,
-		"is_event": true,
+		"is_event": false,
 		"activities": []
 	}, {
 		"date": 18,
@@ -807,7 +807,7 @@ var calendarData = {
 	}, {
 		"date": 19,
 		"is_show": true,
-		"is_event": true,
+		"is_event": false,
 		"activities": []
 	}, {
 		"date": 20,

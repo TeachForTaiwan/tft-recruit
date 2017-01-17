@@ -611,7 +611,8 @@ em {
   background-image: url(../../img/banner/new/banner-faq.png); }
   @media (max-width: 767px) {
     .wrap {
-      background-image: url(../../img/banner/banner-faq.jpg); } }
+      background-image: url(../../img/banner/banner-faq.jpg);
+      background-position-x: 80%; } }
 
 .container {
   margin-bottom: 2em; }

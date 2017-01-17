@@ -611,7 +611,8 @@ em {
   background-image: url(../../img/banner/new/banner-how.png); }
   @media (max-width: 767px) {
     .wrap {
-      background-image: url(../../img/banner/banner-how.png); } }
+      background-image: url(../../img/banner/banner-how.png);
+      background-position-x: 65%; } }
 
 .article {
   margin-top: 2rem; }
