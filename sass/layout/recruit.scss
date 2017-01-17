@@ -102,7 +102,7 @@ table{
     }
     .info-icons{
         width: 100%;
-        height: 25%;
+        height: 25vh;
         margin:1.5em auto;
         .icon-item{
             transition:$recruit-info-transition;
@@ -157,12 +157,12 @@ table{
 }
 
 #compaign-5{
-    background: url(../../img/recruit/campaign-5.png) center no-repeat;
+    background: url(../../img/recruit/campaign-6.png) center no-repeat;
     background-size: contain;
 }
 
 #compaign-6{
-    background: url(../../img/recruit/campaign-6.png) center no-repeat;
+    background: url(../../img/recruit/campaign-5.png) center no-repeat;
     background-size: contain;
 }
 
@@ -214,6 +214,11 @@ table{
         @media (max-width: 767px) {
         	margin: 0;
     		font-size: 0.8em;
+        }
+    }
+    .btn-bg-red{
+        &:hover{
+            border: solid 1px $color-pink ;
         }
     }
     table{
