@@ -1104,12 +1104,19 @@ const calendarData = {
 			"is_show": true,
 			"is_event": false,
 			"activities": [
+				{
+					"title": "中興大學演講",
+					"date": "03/20",
+					"showing": "中興場",
+					"time": "13:00 - 14:30",
+					"location": "國立中興大學圖書館"
+				}
 			]
 		},
 		{
 			"date": 21,
 			"is_show": true,
-			"is_event": false,
+			"is_event": true,
 			"activities": [
 			]
 		},
