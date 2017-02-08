@@ -68,18 +68,22 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   };
-  const getGDoc = (callback) => {
+  const getGDoc = () => {
     if (gDoc) {
       gDoc('1JP0tnjFoTQO388FpDELkfM318KSxFMbJgkCaNgR_WZQ', gDocTabName);
     }
-    callback();
+    initPage();
+    // callback();
   };
+
+  /*
   const loadingAnimEnd = () => {
     setTimeout(() => {
       document.querySelector('.loading-mask').classList.remove('is-loading');
     }, 500);
     initPage();
   };
+  */
 
   setBannerBottom(quoteH);
 
@@ -91,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ----- onLoad -----
   window.addEventListener('load', () => {
-    getGDoc(loadingAnimEnd);
+    getGDoc(); // Remove loading
   });
 
   // ----- onResize -----

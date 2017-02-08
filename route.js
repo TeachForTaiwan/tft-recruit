@@ -60,7 +60,7 @@ var route = [
     },{
       data: {
         path: './',
-        title: 'FAQ',
+        title: '常見問答',
         first_word: 'It is a good template'
       },
       partials: './partial.js',
