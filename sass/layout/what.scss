@@ -1,7 +1,8 @@
 /*
  * @import "main";
- * 正式上線的時候inmport 一個 main即可（開發的時候為求方便import比較多）
+ * 正式上線的時候import 一個 main即可（開發的時候為求方便import比較多）
  */
+
 @import "compass/support";
 @import "compass/css3";
 @import "variable";
@@ -13,22 +14,35 @@
 @import "loading";
 @import "header";
 @import "footer";
-
-.wrap{
-	@extend %wrap-banner;
-	background-image: url(../../img/banner/new/banner-what.png);
-
-	@media(max-width: $table-l){
-		background-image: url(../../img/banner/banner-what.jpg);
-	}
+.wrap {
+    @extend %wrap-banner;
+    background-image: url(../../img/banner/new/banner-what.png);
+    @media(max-width: $table-l) {
+        background-image: url(../../img/banner/banner-what.jpg);
+    }
 }
 
-@media(max-width: $table-l){
-	.what-set{
-		text-align: center;
+a[data-toggle] {
+    padding-left: 1em;
+    position: relative;
+    &.is-active {
+        .accordion-symbol {
+            transform: scale(.8) rotate(90deg);
+        }
+    }
+    .accordion-symbol {
+        position: absolute;
+        left: 0;
+        transition: .5s ease;
+        transform: scale(.8);
+    }
+}
 
-		img{
-			height: 50%;
-		}
-	}	
+@media(max-width: $table-l) {
+    .what-set {
+        text-align: center;
+        img {
+            max-width: 400px;
+        }
+    }
 }
