@@ -921,6 +921,13 @@ const calendarData = {
 			"is_show": true,
 			"is_event": false,
 			"activities": [
+				{
+					"title": "北藝大校園演講:你想要的未來，從你開始",
+					"date": "3/01",
+					"showing": "",
+					"time": "17:30 - 19:00",
+					"location": "北藝大師培中心"
+				}
 			]
 		},
 		{
@@ -928,6 +935,13 @@ const calendarData = {
 			"is_show": true,
 			"is_event": false,
 			"activities": [
+				{
+					"title": "輔大校園演講:你想要的未來，從你開始",
+					"date": "3/02",
+					"showing": "",
+					"time": "14:00 - 15:00",
+					"location": "輔大風華廣場"
+				}
 			]
 		},
 		{
@@ -962,7 +976,7 @@ const calendarData = {
 					"date": "03/05",
 					"showing": "台北場",
 					"time": "14:00 - 16:00",
-					"location": ""
+					"location": "台灣大學 普通103教室"
 				}
 			]
 		},
@@ -1031,15 +1045,15 @@ const calendarData = {
 					"title": "成大校園博覽會",
 					"date": "03/12",
 					"showing": "台南場",
-					"time": "13:00 - 12:00",
-					"location": "成功大學"
+					"time": "10:30 - 12:00",
+					"location": "成大光復校區雲平大樓8樓 27808"
 				},
 				{
 					"title": "成大招募說明會",
 					"date": "03/12",
 					"showing": "台南場",
 					"time": "14:00 - 15:30",
-					"location": "成功大學光復校區國際會議廳 第二講堂"
+					"location": "成大光復校區雲平大樓8樓 27808"
 				}
 			]
 		},
@@ -1105,7 +1119,7 @@ const calendarData = {
 			"is_event": false,
 			"activities": [
 				{
-					"title": "中興大學演講",
+					"title": "中興校園演講:你想要的未來，從你開始",
 					"date": "03/20",
 					"showing": "中興場",
 					"time": "13:00 - 14:30",
@@ -1118,6 +1132,13 @@ const calendarData = {
 			"is_show": true,
 			"is_event": true,
 			"activities": [
+				{
+					"title": "政大校園擺攤",
+					"date": "03/21 ~ 23",
+					"showing": "",
+					"time": "12:00 - 13:30",
+					"location": "麥側"
+				}
 			]
 		},
 		{
@@ -1125,6 +1146,13 @@ const calendarData = {
 			"is_show": true,
 			"is_event": false,
 			"activities": [
+				{
+					"title": "政大校園擺攤",
+					"date": "03/21 ~ 23",
+					"showing": "",
+					"time": "12:00 - 13:30",
+					"location": "麥側"
+				}
 			]
 		},
 		{
@@ -1132,6 +1160,13 @@ const calendarData = {
 			"is_show": true,
 			"is_event": false,
 			"activities": [
+				{
+					"title": "政大校園擺攤",
+					"date": "03/21 ~ 23",
+					"showing": "",
+					"time": "12:00 - 13:30",
+					"location": "麥側"
+				}
 			]
 		},
 		{
