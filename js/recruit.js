@@ -1,5 +1,3 @@
-const deadline = new Date(2017, 4, 5); //2016/12/31--24:00
-
 const today = new Date();
 let curSelectId = 'info';
 
