@@ -19,6 +19,9 @@ relative_assets = true
 line_comments = true
 sourcemap = true
 
+# Fix Chinese character 'Invalid CP950' error
+Encoding.default_external = "utf-8"
+
 
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:

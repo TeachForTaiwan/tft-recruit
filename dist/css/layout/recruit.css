@@ -349,23 +349,24 @@ em {
         color: #e95371; }
     .l-header .m-logo h3 {
       position: absolute;
-      left: 20%;
-      top: 4em;
-      font-size: 1em;
+      left: 15%;
+      top: 1em;
+      font-size: 2em;
       font-weight: bold;
       opacity: .3; }
   .l-header .m-apply {
     position: absolute;
     right: 0;
     right: 3em;
-    top: 2em;
+    top: 1em;
     text-align: right; }
     .l-header .m-apply .m-apply-btns {
       display: flex;
       align-items: center; }
     .l-header .m-apply .countdown {
       margin-right: 2em;
-      color: #e95371; }
+      color: #e95371;
+      font-size: 1.5em; }
     .l-header .m-apply .btn {
       padding: 0.5em 1em;
       margin: .5em 2em 0px 0px;
