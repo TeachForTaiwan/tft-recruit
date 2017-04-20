@@ -17,6 +17,10 @@ const getTimeRemaining = (endtime) => {
 }
 
 const initializeClock = (id, endtime) => {
+  if(!document.getElementById(id)){
+    console.log('There are no clock element in HTML');
+    return;
+  }
   var clock = document.getElementById(id);
   var daysSpan = clock.querySelector('.days');
   var hoursSpan = clock.querySelector('.hours');
