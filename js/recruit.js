@@ -112,7 +112,8 @@ function getCalendarEname(month){
 			monthEname = 'march';
 			break;
 		default:
-			alert('選取時間出錯了，shit!');
+			monthEname = 'december';
+			console.log('getCalendarEname: default');
 	}
 
 	initialCalendarMonth(monthEname);

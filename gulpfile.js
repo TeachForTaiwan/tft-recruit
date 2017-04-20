@@ -36,10 +36,7 @@ gulp.task('js', () => {
 		.pipe(babel({
 			presets: ['es2015']
 		}))
-    /* -- TODO --
-     MINIFY js ,if readt to online!!
-		*/
-		// .pipe(uglify())
+		.pipe(uglify()) // minify js, if ready to production
 		.pipe(rename(path => {
 			logPath(path, "yellow");
 		}))
