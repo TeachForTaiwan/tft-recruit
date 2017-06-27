@@ -58,7 +58,7 @@ gulp.task('default', ['sass', 'js', 'watch']);
 	All 'lib' js to all.min.js
   When you need , then you do it .
   -
-	If u need to concat , u can rewrite minify-css like this... 
+	If u need to concat , u can rewrite minify-css like this...
   gulp.task('minify-css',['concate-css'],function(){
     ...
   })
@@ -106,7 +106,7 @@ gulp.task('minify-js', () => {
 });
 
 /*
-	`gulp image` 
+	`gulp image`
 	When your project is completed , you can compress images
 */
 gulp.task('image', () => {
