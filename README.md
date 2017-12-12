@@ -1,6 +1,6 @@
 # tft-recruit
 
-[official website](http://recruitment.teach4taiwan.org)
+[official website](http://recruitment.teach4taiwan.org)  
 [GitHub page](https://teachfortaiwan.github.io/tft-recruit/)
 
 ## Prerequisites
