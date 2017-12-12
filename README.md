@@ -1,20 +1,21 @@
 # tft-recruit
 
-A GOOD PROJECT!
+[official website](http://recruitment.teach4taiwan.org)
+[GitHub page](https://teachfortaiwan.github.io/tft-recruit/)
 
-#### Prerequisites
+## Prerequisites
 - [npm](https://www.npmjs.com) ( we assume you have pre-installed [node.js](https://nodejs.org/en/) ).
 - For **`Ubuntu`** , you must have to install `ruby` and `ruby-compass`
   - **`$ sudo apt install ruby-compass`**
 
 ## Getting Started
 
-#### Install package
+### Install package
 ```
 npm install -i
 ```
 
-#### Usage
+### Usage
 
 build sass , js 
 ```
